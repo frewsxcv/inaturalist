@@ -3,7 +3,9 @@
 # Exit script on error
 set -e
 
-rvm use ruby --install --default --create
+. $RVM_PATH/scripts/rvm
+rvm install $(cat .ruby-version)
+rvm use $(cat .ruby-version)
 
 . $NVM_DIR/nvm.sh
 nvm install
