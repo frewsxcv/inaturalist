@@ -7,7 +7,7 @@ sudo apt-get update
 
 sudo apt-get install -y proj-bin postgresql-client
 
-rvm install 3.0.4
+rvm install $CODESPACE_VSCODE_FOLDER
 
 source $NVM_DIR/nvm.sh
 nvm install
