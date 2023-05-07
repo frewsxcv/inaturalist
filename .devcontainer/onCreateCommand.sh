@@ -6,14 +6,3 @@ set -ex
 sudo apt-get update
 
 sudo apt-get install -y proj-bin postgresql-client
-
-rvm use ruby --install --default --create
-
-source $NVM_DIR/nvm.sh
-nvm install
-
-cp docker-compose.override.yml.example docker-compose.override.yml
-
-docker-compose build
-
-bin/setup ruby
