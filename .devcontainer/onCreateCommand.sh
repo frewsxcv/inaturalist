@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Exit script on error
-set -ex
+set -e
 
 sudo apt-get update
 

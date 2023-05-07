@@ -1,8 +1,8 @@
 {
 	"image": "mcr.microsoft.com/devcontainers/universal:linux",
     // "dockerComposeFile": "../docker-compose.yml",
-	"onCreateCommand": ".devcontainer/onCreateCommand.sh",
-    "postCreateCommand": ".devcontainer/postCreateCommand.sh",
+	"onCreateCommand": ["bash", ".devcontainer/onCreateCommand.sh"],
+    "postCreateCommand": ["bash", ".devcontainer/postCreateCommand.sh"],
 	// "postStartCommand": "make services",
 	"forwardPorts": [3000],
 	"portsAttributes": {
