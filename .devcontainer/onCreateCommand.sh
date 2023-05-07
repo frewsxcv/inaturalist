@@ -17,3 +17,8 @@ rvm use $(cat .ruby-version)
 nvm install
 
 cp docker-compose.override.yml.example docker-compose.override.yml
+
+# `bin/setup ruby` requires services to be started
+docker-compose up -d
+
+bin/setup ruby

@@ -1,14 +1,13 @@
 {
 	"image": "mcr.microsoft.com/devcontainers/universal:linux",
-    // "dockerComposeFile": "../docker-compose.yml",
 	"onCreateCommand": ["bash", ".devcontainer/onCreateCommand.sh"],
-    "postCreateCommand": ["bash", ".devcontainer/postCreateCommand.sh"],
-	// "postStartCommand": "make services",
+	"postStartCommand": "docker-compose up -d",
 	"forwardPorts": [3000],
 	"portsAttributes": {
 		"3000": {
 		  "label": "iNaturalist Rails server",
-		  "onAutoForward": "openPreview"
+		  "onAutoForward": "openBrowserOnce",
+		  "protocol": "http"
 		}
 	},
 	"postAttachCommand": {
