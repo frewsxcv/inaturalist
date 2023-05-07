@@ -1,19 +1,23 @@
 {
-	"image": "mcr.microsoft.com/devcontainers/universal:linux",
-	"onCreateCommand": ["bash", ".devcontainer/onCreateCommand.sh"],
-	"postStartCommand": "docker-compose up -d",
-	"forwardPorts": [3000],
-	"portsAttributes": {
-		"3000": {
-		  "label": "iNaturalist Rails server",
-		  "onAutoForward": "openBrowserOnce",
-		  "protocol": "http"
-		}
-	},
-	"postAttachCommand": {
-		"server": "rails server"
-	},
-	"features": {
-		"ghcr.io/devcontainers/features/docker-in-docker:2": {}
-	}
+    "image": "mcr.microsoft.com/devcontainers/universal:linux",
+    "onCreateCommand": ["bash", ".devcontainer/onCreateCommand.sh"],
+    "postStartCommand": "docker-compose up -d",
+    "forwardPorts": [3000],
+    "portsAttributes": {
+        "3000": {
+          "label": "Rails server",
+          "onAutoForward": "openBrowserOnce",
+          "protocol": "http"
+        }
+    },
+    "postAttachCommand": {
+        "rails server": "rails server",
+        "postgis": "docker-compose logs -f pg",
+        "memached": "docker-compose logs -f memcached",
+        "redis": "docker-compose logs -f redis",
+        "elasticsearch": "docker-compose logs -f es"
+    },
+    "features": {
+        "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+    }
 }
