@@ -3,9 +3,17 @@
     // "dockerComposeFile": "../docker-compose.yml",
 	"onCreateCommand": ".devcontainer/onCreateCommand.sh",
     "postCreateCommand": ".devcontainer/postCreateCommand.sh",
-	// cp docker-compose.override.yml.example docker-compose.override.yml
 	// "postStartCommand": "make services",
 	"forwardPorts": [3000],
+	"portsAttributes": {
+		"3000": {
+		  "label": "iNaturalist Rails server",
+		  "onAutoForward": "openPreview"
+		}
+	},
+	"postAttachCommand": {
+		"server": "rails server"
+	},
 	"features": {
 		"ghcr.io/devcontainers/features/docker-in-docker:2": {}
 	}
