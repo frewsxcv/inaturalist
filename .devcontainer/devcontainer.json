@@ -1,7 +1,8 @@
 {
 	"image": "mcr.microsoft.com/devcontainers/universal:linux",
     // "dockerComposeFile": "../docker-compose.yml",
-    "postCreateCommand": "",
+	"onCreateCommand": ".devcontainer/onCreateCommand.sh",
+    "postCreateCommand": ".devcontainer/postCreateCommand.sh",
 	// cp docker-compose.override.yml.example docker-compose.override.yml
 	// "postStartCommand": "make services",
 	"forwardPorts": [3000],

@@ -1,11 +1,7 @@
 #!/bin/bash
 
-# Quit on error
+# Exit script on error
 set -e
-
-sudo apt-get update
-
-sudo apt-get install -y proj-bin postgresql-client
 
 rvm install $CODESPACE_VSCODE_FOLDER
 
