@@ -1,7 +1,7 @@
 {
 	"image": "mcr.microsoft.com/devcontainers/universal:linux",
     // "dockerComposeFile": "../docker-compose.yml",
-    "postCreateCommand": "sudo apt-get update && sudo apt-get install -y proj-bin postgresql-client && rvm install 3.0.4 && nvm install && cp docker-compose.override.yml.example docker-compose.override.yml && make services && bin/setup ruby",
+    "postCreateCommand": "",
 	// cp docker-compose.override.yml.example docker-compose.override.yml
 	// "postStartCommand": "make services",
 	"forwardPorts": [3000],
