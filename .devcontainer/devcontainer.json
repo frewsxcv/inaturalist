@@ -1,6 +1,9 @@
 {
-    "image": "mcr.microsoft.com/devcontainers/ruby:3.0",
-    "dockerComposeFile": "../docker-compose.yml",
-    "postCreateCommand": "sudo apt-get update && sudo apt-get install -y nodejs && bin/setup ruby",
-    "postStartCommand": "make services"
+	"image": "mcr.microsoft.com/devcontainers/universal:linux",
+    // "dockerComposeFile": "../docker-compose.yml",
+    "postCreateCommand": "sudo apt-get install proj && nvm install && bin/setup ruby",
+	"postStartCommand": "make services",
+	"features": {
+		"ghcr.io/devcontainers/features/docker-in-docker:2": {}
+	}
 }
