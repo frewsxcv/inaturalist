@@ -3,7 +3,6 @@
 @import "../users/user_image";
 @import "../users/user_popover";
 @import "../shared/taxon_photo";
-@import "../c3";
 @import "../shared/flash_message";
 @import "../shared/modals";
 @import "../shared/flag_an_item";
@@ -551,10 +550,12 @@ a {
     }
     .SplitTaxon {
       .display-name {
-        color: inherit;
         font-weight: 700;
       }
-      .secondary-name {
+      .sciname, .display-name {
+        color: inherit;
+      }
+      .secondary-names, & > .secondary-name {
         display: block;
       }
     }
@@ -651,7 +652,7 @@ a {
     a {
       color: inherit !important;
     }
-    .secondary-name {
+    .secondary-name, .secondary-names {
       display: none;
     }
   }
@@ -700,6 +701,7 @@ a {
       font-size: 16px;
       td.leader-name {
         padding-left: 8px;
+        max-width: 315px;
 
         .userimage,
         .taxon-image {
@@ -760,14 +762,14 @@ a {
           margin-top: -30px;
         }
         .display-name {
-          display: block;
           font-weight: 700;
           color: inherit;
           font-size: 16px;
         }
         .caption {
           height: 58px;
-          .display-name, .secondary-name {
+          .SplitTaxon > .display-name, .display-names,
+          .SplitTaxon > .secondary-name, .secondary-names {
             display: block;
             white-space: nowrap;
             overflow: hidden;
@@ -968,7 +970,7 @@ a {
     right: 0;
     width: 100%;
     text-align: center;
-    top: 85px;
+    top: 80px;
     font-size: 18px;
     font-weight: 700;
     pointer-events: none;
@@ -1103,7 +1105,6 @@ a {
       &.type {
         font-size: 18px;
         line-height: 20px;
-        text-transform: uppercase;
       }
     }
   }
@@ -1472,7 +1473,7 @@ $nav-btn-dim: 40px;
 }
 .quality_grade.research:after {
   border-color: #74ac00;
-  border-right-color: transparent;
+  border-inline-end-color: transparent;
 }
 
 .FlashMessage .alert {

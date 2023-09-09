@@ -182,8 +182,13 @@ class TaxonAutocomplete extends React.Component {
       const isVisionResults = items[0] && items[0].isVisionResult;
       let commonAncestorCategoryShown = false;
       let suggestionsCategoryShown = false;
+      let experimantalWarningShown = false;
       $.each( items, ( index, item ) => {
         if ( isVisionResults ) {
+          if ( item.isExperimental && !experimantalWarningShown ) {
+            ul.append( `<li class='non-option warning'>Experimental: ${item.isExperimental}</li>` );
+            experimantalWarningShown = true;
+          }
           if ( item.isCommonAncestor ) {
             const snakeCaseRank = _.snakeCase( item.rank );
             // Note: given the way we're doing fallbacks as of this writing on
@@ -258,7 +263,8 @@ class TaxonAutocomplete extends React.Component {
       // ensure the AC menu scrolls with the input
       appendTo: this.idElement( ).parent( ),
       minLength: 0,
-      renderMenu: renderMenuWithCategories
+      renderMenu: renderMenuWithCategories,
+      menuClass: "taxon-autocomplete"
     } );
     this.inputElement( ).genericAutocomplete( opts );
     this.fetchTaxon( );
@@ -315,8 +321,10 @@ class TaxonAutocomplete extends React.Component {
   returnVisionResults( response, callback ) {
     let { results } = response;
     const { viewNotNearby } = this.state;
-    const nearbyResults = _.filter( response.results,
-      r => r.frequency_score && r.frequency_score > 0 );
+    const nearbyResults = _.filter(
+      response.results,
+      r => r.frequency_score && r.frequency_score > 0
+    );
     this.setState( {
       // eslint-disable-next-line react/no-unused-state
       numSuggested: response.results.length,
@@ -331,12 +339,14 @@ class TaxonAutocomplete extends React.Component {
       taxon.isVisionResult = true;
       taxon.visionScore = r.vision_score;
       taxon.frequencyScore = r.frequency_score;
+      taxon.isExperimental = response.experimental;
       return taxon;
     } );
     if ( response.common_ancestor ) {
       const taxon = new iNatModels.Taxon( response.common_ancestor.taxon );
       taxon.isVisionResult = true;
       taxon.isCommonAncestor = true;
+      taxon.isExperimental = response.experimental;
       visionTaxa.unshift( taxon );
     }
     if ( visionTaxa.length === 0 ) {
@@ -437,6 +447,11 @@ class TaxonAutocomplete extends React.Component {
           }
         }
         : {};
+      const viewerIsAdmin = config.currentUser && config.currentUser.roles
+        && config.currentUser.roles.indexOf( "admin" ) >= 0;
+      if ( viewerIsAdmin && config.testFeature ) {
+        baseParams.test_feature = config.testFeature;
+      }
       if ( visionParams.image ) {
         inaturalistjs.computervision.score_image( Object.assign( baseParams, visionParams ) )
           .then( r => {
@@ -452,10 +467,8 @@ class TaxonAutocomplete extends React.Component {
           observationID = observationUUID;
         }
         const params = Object.assign( baseParams, { id: observationID } );
-        this.fetchingVision = true;
         inaturalistjs.computervision.score_observation( params ).then( r => {
           this.cachedVisionResponse = r;
-          this.fetchingVision = false;
           this.returnVisionResults( r, callback );
         } ).catch( e => {
           console.log( ["Error fetching vision response for observation", e] );
@@ -590,7 +603,14 @@ class TaxonAutocomplete extends React.Component {
       && config.currentUser
       && config.currentUser.prefers_scientific_name_first
     ) ) {
-      name = iNatModels.Taxon.titleCaseName( result.preferred_common_name ) || result.name;
+      if ( !_.isEmpty( result.preferred_common_names ) ) {
+        const names = _.map( result.preferred_common_names, taxonName => (
+          iNatModels.Taxon.titleCaseName( taxonName.name )
+        ) );
+        name = names.join( " · " );
+      } else {
+        name = iNatModels.Taxon.titleCaseName( result.preferred_common_name ) || result.name;
+      }
     }
     return name;
   }
@@ -613,7 +633,14 @@ class TaxonAutocomplete extends React.Component {
     }
     if ( result.title ) {
       if ( scinameFirst ) {
-        result.subtitle = iNatModels.Taxon.titleCaseName( result.preferred_common_name );
+        if ( !_.isEmpty( result.preferred_common_names ) ) {
+          const names = _.map( result.preferred_common_names, taxonName => (
+            iNatModels.Taxon.titleCaseName( taxonName.name )
+          ) );
+          result.subtitle = names.join( " · " );
+        } else {
+          result.subtitle = iNatModels.Taxon.titleCaseName( result.preferred_common_name );
+        }
       }
       if ( !result.subtitle && result.name !== result.title ) {
         if ( result.rank_level <= 20 ) {

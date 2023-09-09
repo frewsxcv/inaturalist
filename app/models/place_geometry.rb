@@ -22,6 +22,22 @@ class PlaceGeometry < ApplicationRecord
     "<PlaceGeometry #{id} place_id: #{place_id}>"
   end
 
+  def area_km2
+    return unless geom
+
+    @area_km2 ||= self.class.area_km2( geom )
+  end
+
+  def geom=( value )
+    @area_km2 = nil
+    super
+  end
+
+  def self.area_km2( geom )
+    # Discussion of ST_Area: https://gis.stackexchange.com/questions/169422/how-does-st-area-in-postgis-work
+    connection.query_value sanitize_sql_array( ["SELECT ST_Area(?::geography) / 1000 ^ 2", geom.as_text] )
+  end
+
   def validate_geometry
     # not sure why this is necessary, but validates_presence_of :geom doesn't always seem to run first
     if geom.blank?
@@ -146,13 +162,18 @@ class PlaceGeometry < ApplicationRecord
   end
 
   def simplified_geom
-    return if !geom
+    # if the geom does not exist, or RGeo thinks the geometry is invalid, return nil
+    begin
+      return if !geom
+    rescue RGeo::Error::InvalidGeometry => e
+      return
+    end
     if !place.bbox_area || place.bbox_area < 0.1
       # this method is currently only used for indexing places in Elasticsearch.
       # Running the cleangeometry method here helps fix geom validation errors
       # which psql is comfortable with but might cause ES to throw errors
       return PlaceGeometry.where(id: id).
-        select("id, cleangeometry(geom) as simpl").first.try(:simpl)
+        select("id, cleangeometry(geom) as simpl").first.try(:simpl) rescue nil
     end
     tolerance =
       if place.bbox_area < 1
@@ -171,7 +192,7 @@ class PlaceGeometry < ApplicationRecord
       return s
     end
     PlaceGeometry.where(id: id).
-      select("id, cleangeometry(ST_Buffer(ST_SimplifyPreserveTopology(geom, #{ tolerance }),0)) as simpl").first.simpl
+      select("id, cleangeometry(ST_Buffer(ST_SimplifyPreserveTopology(geom, #{ tolerance }),0)) as simpl").first.simpl rescue nil
   end
 
   def self.update_observations_places(place_geometry_id)
