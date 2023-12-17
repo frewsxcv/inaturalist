@@ -772,13 +772,11 @@ et:
   bioblitz: Välkvaatlus
   birds: linnud
   birthday: Sünnipäev
-  black: must
   block: Blokeeri
   blocking_description: Blokeerimine ei luba sinu ja teise kasutaja vahel mitte mingisugust suhtlust. See on olukordadeks, kus teine kasutaja võib ohustada sinu elu nagu jälitamine või solvav käitumine.
   block_removed: Blokeering eemaldatud
   blocked_users: Blokeeritud kasutajad
   blog_widget: Blogipidamise tööriist
-  blue: sinine
   blue_butterfly_etc: "sinine, sajajalgne, jne"
   body: Tekst
   #Common pattern for when we show some label and some value, e.g. "Name: Tony" or "Apr: 31 observations"
@@ -792,7 +790,6 @@ et:
   #shown
   breadcrumbs_description: "See asendab pealkirja h1 ja vaikimisi üleskutse, nii et kui nende sisu on projekti jaoks olulised, lisa ka need ning pea meeles, et maksimaalne laius on 950 pikslit."
   brief_caption: Lühikokkuvõte
-  brown: pruun
   browse: Sirvi
   browse_all_projects: Sirvi kõiki projekte
   browse_all_species: Sirvi kõiki liike
@@ -1007,8 +1004,6 @@ et:
     Praegu aktiivne masin-nägemismudel oskab seda taksonit tuvastada, mistõttu võib see takson ilmuda automaatsete pakkumiste all kategoorias "Visuaalselt sarnane".
   #Status of a taxon that the Computer Vision Model cannot yet recognize
   computer_vision_model_pending: Ootel
-  computer_vision_model_pending_desc: |
-    Praegu aktiivne masin-nägemismudel ei oska seda taksonit tuvastada, mistõttu võib see takson küll ilmuda automaatsete pakkumiste all kategoorias "Lähedal", kuid selle juures pole märkust "Visuaalselt sarnane". Kuigi nõuded mudelisse kaasamiseks muutuvad iga versiooniga, sõltub see peamiselt vaatluste arvust, mistõttu tuleks selle taksoni kaasamiseks järgmise mudelite treenimisse lisada või määrata rohkem selle taksoni vaatluseid.
   concept_status: Mõiste staatus
   confidential: Konfidentsiaalne
   configure: Uuenda
@@ -1646,44 +1641,10 @@ et:
   either_that_user_doesnt_exist_or: "Kas kasutajat ei eksisteeri või sa juba jälgid teda."
   eligible_for_research_grade: Taduskõlbulikuks sobiv
   email: E-post
-  email_description: Sinu e-posti aadressit ei jagata teiste iNaturalisti kasutajatega
   email_address_for_comments_and_other_feedback: E-posti aadress kommentaaride ja muu tagasiside saamiseks
-  email_conf_banner_email_delivered_click_link: |
-    Kinnituskiri kohalesaadetud. Palun vaja kirjas olevale lingile.
-  email_conf_banner_add_to_contacts_html: |
-    <strong>Lisa aadress <code>%{email}</code> oma kontaktide nimekirja ja <a href="%{url}">palu uue kinnituskirja saatmist</a>.</strong> Kui su e-posti haldaja kinnituskirja blokeeris, võib see samm neile näidata, et tõesti soovid meilt kirja saada.
-  email_conf_banner_check_your_spam_folder_html: <strong>Kontrolli oma rämpsposti kausta</strong>
-  email_conf_banner_contact_us_html: Ikka veel ei toimi? Saada meile kiri aadressile %{email} ja saame sind sedasi aidata.
-  email_conf_banner_please_click: |
-    Palun vajuta e-postiga saadetud lingile, et oma aadress kinnitada.
-  email_conf_banner_search_for_emails_html: <strong>Otsi aadresstil <code>%{email}</code> saabunud kirju</strong>
-  #%{date} will be formatted with time.formats.long
-  email_conf_banner_we_delivered_todos: |
-    Saatsime kuupäeval %{date} sulle kinnituskirja. Kui sa seda kätte ei saanud, siis siin on sulle mõned soovitused:
+  email_description: Sinu e-posti aadressit ei jagata teiste iNaturalisti kasutajatega
   email_conf_required_after_grace_period: |
     E-posti aadressi kinnitamine on alates kuupäevast %{requirement_date} kohustuslik ning sa ei kinnitanud enne tähtaja saabumist oma aadressit. Kontole sisenemiseks palun lähtesta oma salasõna.
-  email_conf_faq_html: |
-    Kui sul on küsimusi, siis külastan palun <a href="%{url}">KKK-d</a>.
-  email_confirmation_banner_html: |
-    <strong>%{link_start_tag}Palun kinnita oma e-posti aadress%{link_end_tag}</strong>.
-    Kõik kasutajad peavad oma e-posti aadressi kinnitama kuupäevaks %{date}. Peale seda kuupäeva ei saa aadressi mitte kinnitanud kasutajad enne sisse logida, kui uuendavad oma salasõna. E-posti aadressi kinnitamiseks külasta oma %{link_start_tag}konto sätteid%{link_end_tag}.
-  #Subject of an email prompting people to confirm their email address before
-  #we start requiring confirmation. @vow_or_con should work for %{site_name}
-  email_confirmation_reminder_confirm_your_site_email_address_before_date: Kinnita oma lehe %{site_name} e-posti aadress enne kuupäeva %{date} #Paragraph in an email prompting people to confirm their email address before # we start requiring confirmation. @vow_or_con should work for %{site_name}
-  email_confirmation_reminder_please_confirm: |
-    Palun kinnita oma e-posti aadress juba täna kindlustamaks, et saad ka edaspidi oma kontole sisse. %{site_name} ning mobiilirakendused iNaturalist ja Seek by iNaturalist ühendavad elurikkuse vaatluste jagamise kaudu inimesed looduse ja üksteisega. Aitäh, et oled osa iNaturalisti kogukonnast!
-  #Paragraph in an email prompting people to confirm their email address before
-  #we start requiring confirmation.
-  email_confirmation_reminder_we_will_require: |
-    Alates kuupäevast %{requirement_date} nõuame, et kõik kontod oleks oma e-posti aadressid kinnitanud. Võta palun hetk ja kinnita enda oma kohe:
-  #Paragraph in an email prompting people to confirm their email address before
-  #we start requiring confirmation.
-  email_confirmation_reminder_any_questions_html: |
-    Kui sul on küsimusi, siis vaata palun <a href="%{faq_url}">korduma kippuvaid küsimusi</a>. Aitäh, et leiad aega loodusega suhestumiseks ja lehe %{site_name} külastamiseks.
-  #Header in email prompting people to confirm their email address before we
-  #start requiring confirmation. This preceeds some details about the
-  #recipient's account.
-  email_confirmation_reminder_account_details: Konto üksikasjad
   email_notifications: E-posti teavitused
   embed: 'Manusta'
   embed_place_widget: Manusta koha koodijupp
@@ -1740,6 +1701,7 @@ et:
   exit_full_screen: "Sule täisekraan"
   examples_of_data_use_by_network_members: Näited sellest, kuidas võrgustiku liikmed on andmeid kasutanud
   examples_of_ranking_organizations: Kategooriaid määravad organisatsioonid
+  expected_nearby: Läheduses eeldatav
   explore: Avasta
   export: Ekspordi
   export_observations: Ekspordi vaatlused
@@ -1961,7 +1923,6 @@ et:
   graft: Poogi
   graft_taxon: Poogi %{taxon}
   grafting_attemps_to_insert_this_taxon: Pookimine proovib lisada seda taksonit sinu taksonoomilisse puusse, leides olemasoleva ülemtaksoni ning luues kõik vahepealsed taksonid.
-  grant_role: "%{grant} roll %{role}"
   grid: Ruudustik
   grid_layout: Koordinaadistik
   grid_tooltip: Näita ruudustikuna
@@ -2756,6 +2717,8 @@ et:
   must_be_observed_before: vaatlus peab olema tehtud enne %{operand}
   must_be_less_than_x_MB: "Peab olema väiksem kui %{x} MB"
   must_have_observation_field: "vaatluse peab väli '%{operand}' olema täidetud"
+  #Grades is a comma separated list of quality grades
+  must_have_quality_grades: "peab omama kvaliteedihinnanguid: %{grades}"
   must_have_x: "peab omama %{x}"
   #Imperative verb, label for a button that lets you mute another user
   mute: Vaigista
@@ -2792,7 +2755,7 @@ et:
   needs_id: vajab määramist
   needs_id_: Vajab määramist
   needs_id_expandable_html: "<span class='full'>Vajab </span>määramist"
-  needs_to_be_identified: Vajab määramist
+  needs_id_tooltip_html: '"Vajab määratlemist" tasemel vaatlustel on olemas multimeedia, asukoht, kuupäev, kuid need vajavad siiski täpseks määratlemiseks kogukonna ühisarvamust. <a href="https://www.inaturalist.org/pages/help#quality">Uuri lähemalt kvaliteedihinnangute kohta</a>'
   #Column header in a table listing iNaturalist Network members
   network_member: Võrgustiku liige
   new: Uued
@@ -3130,7 +3093,6 @@ et:
   #sign in with Apple OR Google
   or_all_caps: VÕI
   or_choose_high_level_taxa: "... või vali mõni kõrgema taseme takson"
-  orange: oranž
   order: Järjestus
   order_by: Järjesta
   organism_is_wild: Organism on metsik
@@ -3247,7 +3209,6 @@ et:
   data_transfer_consent_child_label: |
     Luban enda lapse isikliku info Ameerika Ühendriikidesse saatmisega
   pin_verb: Säilita
-  pink: roosa
   pinned_locations_desc: |
     Salvesta see koordinaatide, täpsuse, asukoha privaatsuse ja asukoha märkuste komplekt hilisemaks kasutamiseks.
   place: Koht
@@ -3657,7 +3618,6 @@ et:
   provider_authorizations: Autoriseri andmepakkujad
   public_domain: Üldkasutatav
   publish: Avalda
-  purple: lilla
   quality_grade: Kvaliteedihinnang
   quality_grade_: Kvaliteedihinnang
   quality_grade_colon: "Kvaliteedihinnang:"
@@ -3768,7 +3728,6 @@ et:
   recently_finished: Hiljuti lõppenud
   recently_observed: Hiljuti vaadeldud
   recently_resolved: Hiljuti lahendatud
-  red: punane
   redo_search_in_map: Tee otsing kaardil uuesti
   redo_search_in_map_area: Tee otsing kaardi piirkonnas uuesti
   refresh: Värskenda
@@ -3838,6 +3797,7 @@ et:
   research_: Teaduskõlbulik
   research_grade: Teaduskõlbulik
   research_grade_short_html: "T<span class='full'>eaduskõlbulik</span>"
+  research_grade_tooltip_html: '"Teaduskõlbulikel" vaatlustel on olemas multimeedia, asukoht, kuupäev ning kogukondlikult kinnitatud täpne määratlus (enamasti liigi täpsusega). <a href="https://www.inaturalist.org/pages/help#quality">Uuri lähemalt kvaliteedihinnangute kohta</a>'
   research_grade_observations_have: '"Teaduskõlbulikel" vaatlustel on kuupäev, foto, koordinaadid ning kogukondlikult kinnitatud määratlus. Vajuta siia, et näha andmete kvaliteedihinnangut.'
   research_grade_qualification: Teaduskõlbulikuse tingimused
   #Label for a button to reset search parameters, as in "Reset the observation search parameters"
@@ -4772,7 +4732,6 @@ et:
   where_were_they?: Kus need olid?
   where_were_you?: Kus sa olid?
   which_projects_can_add_your_observations?: Millised tavaprojektid saavad su vaatluseid lisada?
-  white: valge
   #Prompt to explain why a user is changing a record, e.g. changing a taxon name or updating a taxon
   why_are_you_making_this_change_optional: Miks soovid seda muudatust teha? (valikuline)
   why_you_can_see_the_coordinates: Miks sa koordinaate näed
@@ -4832,7 +4791,6 @@ et:
   year_in_review2: "Aasta %{year} kokkuvõte"
   year_month: aasta/kuu
   year_on_site: "Lehe %{site} aasta %{year}"
-  yellow: kollane
   'yes': "Jah"
   yes_find_them!: "Jah, leia need!"
   #Used when trusting a project and the user is agreeing to trust the project
@@ -5257,6 +5215,8 @@ et:
         cumulative_count_desc: 'Taksoni ja kõigi selle alamtaksonite määratluste hulk'
         curator_coordinate_access_disabled_desc_html: |
           See projekt ei luba lisada vaatluseid, mille koordinaate projekti kuraatorid näha ei saa. Kui sa ei soovi selle vaatluse koordinaate antud projekti kuraatoritega jagada, pead vaatluse projektist eemaldama.
+        data_quality_assessment_desc3_html: |
+          Kvaliteedihinnang võtab kokku iNaturalisti vaatluste selguse, täpsuse, täielikkuse, olulise ja sobivuse bioloogilist mitmekesisust kajastavate andmetena. Mõningaid omadusi määratakse automaatselt, kuid teiste puhul hääletavad iNati kasutajad. iNaturalist jagab "Teaduskõlbulikke" vaatluseid erinevate andmepartneritega teadustöös ja keskkonnahoius kasutamiseks.
         disagreement_count_desc: "Taksoni alamtaksonite seas mitte olevate määratluste hulk"
         identification_count_desc: 'Selle konkreetse taksoni määratluste hulk'
         flagged_photos_desc_html: |
@@ -5482,6 +5442,8 @@ et:
         project_summary_help: |
           Lisa oma projekti lühikokkuvõte. Projekti avalehe bänneri kõrval on sellest näha umbes 200 tähemärki, nii et pane kõige olulisem info algusse!
         project_summary_placeholder: Avasta ja jälgi Soomaa linde...
+        select_quality_grade: |
+          Vali vähemalt üks kvaliteedihinnang. Täpsemad seletused iga kvaliteedihinnangu kohta on leitavad <a href="%{url}">KKK lehelt</a>.
         start_and_end_times_for_bioblitzes: Alguse ja lõpu kuupäev/kellaaeg (välkvaatluste sarnaste ürituste puhul)
         umbrella_project_features: "Ülemprojekti võimalused:"
         unique_url_for_outreach: Levitamiseks unikaalne URL
@@ -5730,6 +5692,11 @@ et:
         curators_can_see: |
           Pea meeles, et projekti kuraatorid näevad nende vaatluste priivatseid ja varjatud koordinaate, mida sa projekti lisad.
       delete:
+        x_identifications_html:
+          one: |
+            <strong class="count">sinu %{count} määratlus</strong> mõne teise isiku vaatlusel, mis võib potentsiaalselt mõjutada tolle vaatluse andmete kvaliteedihinnangut.
+          other: |
+            <strong class="count">sinu %{count} määratlust</strong>, mis on tehtud <strong class="count">%{helpees_count} isiku</strong> vaatlustele, võivad potentsiaalselt mõjutada nende vaatluste andmete kvaliteedihinnangut.
         x_comments_html:
           one: <strong class="count">%{count} sinu lisatud kommentaar</strong>
           other: <strong class="count">%{count} sinu lisatud kommentaari</strong>
@@ -5896,6 +5863,14 @@ et:
     formats:
       #See https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html#method-i-strftime for formatting codes. Use %=B or %=b for lowercase months.
       default: '%d-%m-%Y'
+      #See https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html#method-i-strftime for formatting codes. Use %=B or %=b for lowercase months.
+      long: '%d. %B %Y'
+      #See https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html#method-i-strftime for formatting codes. Use %=B or %=b for lowercase months.
+      short: '%d. %b'
+      #See https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html#method-i-strftime for formatting codes. Use %=B or %=b for lowercase months.
+      short_with_year: '%d. %b %Y'
+      #See https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html#method-i-strftime for formatting codes. Use %=B or %=b for lowercase months.
+      month_day_year: '%d. %B %Y'
     month_names:
       - 
       - jaanuar
@@ -6007,7 +5982,15 @@ et:
     am: ennelõunat
     formats:
       #See https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html#method-i-strftime for formatting codes. Use %=B or %=b for lowercase months.
+      default: '%d. %b %Y %H:%M:%S %z'
+      #See https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html#method-i-strftime for formatting codes. Use %=B or %=b for lowercase months.
+      long: '%d. %B %Y %H:%M'
+      #See https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html#method-i-strftime for formatting codes. Use %=B or %=b for lowercase months.
+      short: '%d. %b %H:%M'
+      #See https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html#method-i-strftime for formatting codes. Use %=B or %=b for lowercase months.
       observed_at: '%H:%M %Z'
+      #See https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html#method-i-strftime for formatting codes. Use %=B or %=b for lowercase months.
+      day_month_year: "%d. %B %Y"
       #See https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html#method-i-strftime for formatting codes. Use %=B or %=b for lowercase months.
       hours: "%H:%M"
     pm: pealelõunat
@@ -6168,6 +6151,10 @@ et:
           attributes:
             base:
               guide_has_too_many_taxa: "juhendis saab olla kuni 500 taksonit"
+        moderator_note:
+          attributes:
+            user:
+              must_be_a_curator: peab olema kuraator
         observation:
           attributes:
             base:
@@ -6215,6 +6202,11 @@ et:
                 peab olema vaadeldud peale aega %{time}
               must_be_observed_before: |
                 peab olema vaadeldud enne aega %{time}
+        quality_metric:
+          attributes:
+            base:
+              no_votable_date: Vaatlusel pole kuupäeva, mida hinnata
+              no_votable_coordinates: Vaatlusel pole koordinaate, mida hinnata
         taxon:
           attributes:
             rank:

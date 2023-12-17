@@ -709,11 +709,9 @@ nb:
   bioblitz: Bioblitz
   birds: fugler
   birthday: Bursdag
-  black: svart
   block_removed: Blokkering fjernet
   blocked_users: Blokkerte brukere
   blog_widget: Bloggwidget
-  blue: blå
   blue_butterfly_etc: "blå, sommerfugl, osv."
   body: Innhold
   #Common pattern for when we show some label and some value, e.g. "Name: Tony" or "Apr: 31 observations"
@@ -727,7 +725,6 @@ nb:
   #shown
   breadcrumbs_description: "Dette vil erstatte h1'en og standardanmodninger, så sørg for at du inkluderer disse hvis de er viktige for dette prosjektet. Husk også at den tillatte bredden er maks 950 piksler"
   brief_caption: Kort bildetekst
-  brown: brun
   browse: Bla gjennom
   browse_all_projects: Bla gjennom alle prosjekter
   browse_all_species: Bla gjennom alle arter
@@ -1414,30 +1411,8 @@ nb:
   either_that_user_doesnt_exist_or: "Enten så finnes ikke den brukeren eller så følger du vedkommende allerede."
   eligible_for_research_grade: Kvalifisert for forskningskvalitet
   email: E-post
-  email_description: E-posten din er ikke delt med andre brukere på iNaturalist
   email_address_for_comments_and_other_feedback: E-postadresse for kommentarer og andre tilbakemeldinger
-  #Subject of an email prompting people to confirm their email address before
-  #we start requiring confirmation. @vow_or_con should work for %{site_name}
-  email_confirmation_reminder_confirm_your_site_email_address_before_date: Bekreft din %{site_name} e-postadresse før %{date} #Paragraph in an email prompting people to confirm their email address before # we start requiring confirmation. @vow_or_con should work for %{site_name}
-  email_confirmation_reminder_please_confirm: |
-    Vennligst bekreft din e-postadresse i dag for å sikre at du fortsatt har
-    tilgang til din konto. %{site_name} og de mobile appene
-    iNaturalist og Seek kobler mennesker til naturen og hverandre ved å dele observasjoner av biologisk mangfold. Takk for at du er en del av iNaturalist-felleskapet!
-  #Paragraph in an email prompting people to confirm their email address before
-  #we start requiring confirmation.
-  email_confirmation_reminder_we_will_require: |
-    Vi krever verifiserte e-postadresser for alle kontoer fra
-    %{requirement_date}. Ta et øyeblikk til å bekrefte nå.
-  #Paragraph in an email prompting people to confirm their email address before
-  #we start requiring confirmation.
-  email_confirmation_reminder_any_questions_html: |
-    Hvis du har noen spørsmål, se
-    <a href="%{faq_url}">ofte stilte spørsmål</a>. Takk for at du tar deg tid til å koble til
-    naturen og til %{site_name}.
-  #Header in email prompting people to confirm their email address before we
-  #start requiring confirmation. This preceeds some details about the
-  #recipient's account.
-  email_confirmation_reminder_account_details: Kontodetaljer
+  email_description: E-posten din er ikke delt med andre brukere på iNaturalist
   email_notifications: E-postvarslinger
   embed: 'Integrer'
   embed_place_widget: Integrer stedswidget
@@ -1698,7 +1673,6 @@ nb:
   graft: Pod
   graft_taxon: Pod %{taxon}
   grafting_attemps_to_insert_this_taxon: Poding forsøker å integrere dette taksonet i vårt taksonomiske tre, finne et eksisterende foreldretakson eller opprette alle taksa i mellom for å knytte det opp mot et takson på et høyere nivå.
-  grant_role: "%{grant} %{role}-rolle"
   grid: Raster
   grid_layout: Rastervisning
   grid_tooltip: Vis som raster
@@ -2391,7 +2365,6 @@ nb:
   needs_id: trenger ID
   needs_id_: Trenger ID
   needs_id_expandable_html: "<span class='full'>Trenger </span>ID"
-  needs_to_be_identified: Trenger å bli identifisert
   network_affiliation_prompt_from_other_site_html: |
     Ønsker du å endre din tilknytning fra <strong>%{other_site_name}</strong> til <strong>%{site_name}</strong>?
   new: Ny
@@ -2761,7 +2734,6 @@ nb:
   #sign in with Apple OR Google
   or_all_caps: ELLER
   or_choose_high_level_taxa: "... eller velg fra noen høyere taksa"
-  orange: oransje
   order: Sorter
   order_by: Sorter etter
   organism_is_wild: Organismen er vill
@@ -2870,7 +2842,6 @@ nb:
   pi_consent_child_label: |
     Jeg samtykker i at iNaturalist kan lagre og prosessere begrensede typer av personlig informasjon om mitt barn for å administrere kontoen til mitt barn
   pin_verb: Sett fast
-  pink: rosa
   pinned_locations_desc: |
     Husk denne kombinasjonen av koordinater, nøyaktighet, geosperring og lokalitetsnotater for senere bruk.
   place: Sted
@@ -3398,7 +3369,6 @@ nb:
   provider_authorizations: Tillatelser til tilbydere
   public_domain: Offentlig eiendom
   publish: Publiser
-  purple: lilla
   quality_grade: Kvalitetsgrad
   quality_grade_: Kvalitetsgrad
   quality_grade_colon: "Kvalitetsgrad:"
@@ -3560,7 +3530,6 @@ nb:
   recently_finished: Nylig avsluttet
   recently_observed: Nylig observert
   recently_resolved: Nylig løst
-  red: rød
   redo_search_in_map: Gjenta søk på kart
   redo_search_in_map_area: Gjenta søk på kartområde
   refresh: Last inn på nytt
@@ -4574,7 +4543,6 @@ nb:
   where_were_they?: Hvor var de?
   where_were_you?: Hvor var du?
   which_projects_can_add_your_observations?: Hvilke tradisjonelle prosjekter kan legge til dine observasjoner?
-  white: hvit
   why_you_can_see_the_coordinates: Hvorfor du kan se koordinatene
   who_can_add_observations_to_this_project?: Hvem kan legge til observasjoner til dette prosjektet?
   who_can_see_the_coordinates: Hvem kan se koordinatene
@@ -4642,7 +4610,6 @@ nb:
   year_in_review: "Årsoversikt %{year}"
   year_month: år/måned
   year_on_site: "Året %{year} på %{site}"
-  yellow: gul
   'yes': "Ja"
   yes_find_them!: "Ja, finn dem!"
   #Used when trusting a project and the user is agreeing to trust the project
@@ -6142,9 +6109,17 @@ nb:
       #See https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html#method-i-strftime for formatting codes. Use %=B or %=b for lowercase months.
       default: '%Y-%m-%d'
       #See https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html#method-i-strftime for formatting codes. Use %=B or %=b for lowercase months.
+      long: '%d. %B %Y'
+      #See https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html#method-i-strftime for formatting codes. Use %=B or %=b for lowercase months.
+      short: '%d. %b'
+      #See https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html#method-i-strftime for formatting codes. Use %=B or %=b for lowercase months.
       compact: "%b %e"
       #See https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html#method-i-strftime for formatting codes. Use %=B or %=b for lowercase months.
+      short_with_year: '%d. %b %Y'
+      #See https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html#method-i-strftime for formatting codes. Use %=B or %=b for lowercase months.
       month_year: '%B %Y'
+      #See https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html#method-i-strftime for formatting codes. Use %=B or %=b for lowercase months.
+      month_day_year: '%d. %B %Y'
     month_names:
       - 
       - Januar
@@ -6277,9 +6252,17 @@ nb:
     am: am
     formats:
       #See https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html#method-i-strftime for formatting codes. Use %=B or %=b for lowercase months.
+      default: '%d. %b. %Y %H:%M:%S %z'
+      #See https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html#method-i-strftime for formatting codes. Use %=B or %=b for lowercase months.
+      long: '%d. %B %Y %H:%M'
+      #See https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html#method-i-strftime for formatting codes. Use %=B or %=b for lowercase months.
+      short: '%d. %b %H:%M'
+      #See https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html#method-i-strftime for formatting codes. Use %=B or %=b for lowercase months.
       compact: "%H:%M"
       #See https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html#method-i-strftime for formatting codes. Use %=B or %=b for lowercase months.
       observed_at: '%H:%M %Z'
+      #See https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html#method-i-strftime for formatting codes. Use %=B or %=b for lowercase months.
+      day_month_year: "%d. %B %Y"
       #See https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html#method-i-strftime for formatting codes. Use %=B or %=b for lowercase months.
       hours: "%H:%M"
     pm: pm

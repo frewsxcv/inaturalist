@@ -232,43 +232,53 @@ class Emailer < ActionMailer::Base
     reset_locale
   end
 
-  def email_confirmation_reminder( user, options = {} )
-    return if user&.confirmed?
-
+  def year_in_review( user, options = {} )
     @user = user
-    @user.send( :generate_confirmation_token! ) if @user.confirmation_token.blank?
-    set_locale( force: options[:force_locale] )
-    @x_smtpapi_headers[:asm_group_id] = CONFIG&.sendgrid&.asm_group_ids&.account
-    # Since this email is sent en masse, we'll try to send from the alternate
-    # IP pool to preserve the reputation of other IPs
-    if CONFIG&.sendgrid&.alternate_ip_pool
-      @x_smtpapi_headers[:ip_pool] = CONFIG&.sendgrid&.alternate_ip_pool
+    return if @user&.email&.blank?
+    # We are contemplating sending this to unconfirmed users
+    # return unless @user&.confirmed?
+    return if @user.prefers_no_email?
+    return if @user.suspended?
+    return if @user.email_suppressed_in_group?( EmailSuppression::NEWS_EMAILS )
+
+    @year = Date.today.year
+    global_year_statistic = YearStatistic.
+      where( year: @year ).
+      where( "user_id IS NULL" ).
+      where( "site_id IS NULL" ).
+      first
+    unless global_year_statistic
+      raise "Cannot send YIR email if YIR for this year does not exist"
     end
-    ident_response = Identification.elastic_search(
-      size: 0,
-      filters: [
-        { term: { "user.id": @user.id } },
-        { term: { own_observation: false } },
-        { term: { current: true } }
-      ],
-      aggregate: {
-        distinct_obs_users: {
-          cardinality: { field: "observation.user_id" }
-        }
-      },
-      track_total_hits: true
-    )
-    @identifications_count = ident_response&.total_entries || 0
-    @skip_donate = true
-    mail_with_defaults( set_site_specific_opts.merge(
-      to: user.email,
-      subject: t(
-        :email_confirmation_reminder_confirm_your_site_email_address_before_date,
-        site_name: @site.name,
-        vow_or_con: @site.name[0].downcase,
-        date: l( User::EMAIL_CONFIRMATION_REQUIREMENT_DATETIME.to_date, format: :long )
-      )
-    ) )
+
+    @x_smtpapi_headers[:asm_group_id] = CONFIG&.sendgrid&.asm_group_ids&.news
+    @force_default_site_url_options = true
+    set_locale
+    @shareable_image_url = global_year_statistic.
+      shareable_image_for_locale( I18n.locale )&.
+      url
+    if options[:raise_on_missing_translations]
+      without_english_fallback do
+        # Set default options to raise errors on missing translation. I hope
+        # there's a better way to do this but I haven't figured out one
+        I18n.with_options( raise: true ) do | i18n |
+          # Assign I18n instance with custom options to an instance var so it
+          # can be accessed in views.
+          @i18n = i18n
+          mail( to: @user.email, subject: @i18n.t( :yir_email_subject, year: @year ) ) do | format |
+            format.html { render layout: "emailer_dark" }
+            format.text { render layout: "emailer_dark" }
+          end
+        end
+      end
+    else
+      @i18n = I18n
+      mail( to: user.email, subject: t( :yir_email_subject, year: @year ) ) do | format |
+        format.html { render layout: "emailer_dark" }
+        format.text { render layout: "emailer_dark" }
+      end
+    end
+  ensure
     reset_locale
   end
 

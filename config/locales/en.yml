@@ -36,6 +36,12 @@ en:
     few: '%{count} Identifications'
     many: '%{count} Identifications'
     other: '%{count} Identifications'
+  x_identifications_caps_html:
+    zero: '<span class="count">%{count}</span> IDENTIFICATIONS'
+    one: '<span class="count">%{count}</span> IDENTIFICATION'
+    few: '<span class="count">%{count}</span> IDENTIFICATIONS'
+    many: '<span class="count">%{count}</span> IDENTIFICATIONS'
+    other: '<span class="count">%{count}</span> IDENTIFICATIONS'
   # Number of people who have added identifications
   x_identifiers_html:
     # Number of people who have added identifications
@@ -104,6 +110,12 @@ en:
     few: "<span class='count'>%{count}</span> observations"
     many: "<span class='count'>%{count}</span> observations"
     other: "<span class='count'>%{count}</span> observations"
+  x_observations_caps_html:
+    zero: "<span class='count'>%{count}</span> OBSERVATIONS"
+    one: "<span class='count'>%{count}</span> OBSERVATION"
+    few: "<span class='count'>%{count}</span> OBSERVATIONS"
+    many: "<span class='count'>%{count}</span> OBSERVATIONS"
+    other: "<span class='count'>%{count}</span> OBSERVATIONS"
   x_observations_link_html:
     one: "<a href='%{url}'>%{count} observation</a>"
     other: "<a href='%{url}'>%{count} observations</a>"
@@ -125,6 +137,12 @@ en:
     few: "%{count} people"
     many: "%{count} people"
     other: "%{count} people"
+  x_people_html:
+    zero: '<span class="count">%{count}</span> people'
+    one: '<span class="count">%{count}</span> person'
+    few: '<span class="count">%{count}</span> people'
+    many: '<span class="count">%{count}</span> people'
+    other: '<span class="count">%{count}</span> people'
   x_people_helped_user_with_y_ids_html: "<strong>%{x} people</strong> helped %{user} with <strong>%{y} IDs</strong>"
   x_photos:
     one: "%{count} photo"
@@ -144,6 +162,12 @@ en:
     few: '%{count} Species'
     many: '%{count} Species'
     other: '%{count} Species'
+  x_species_caps_html:
+    zero: "<span class='count'>%{count}</span> SPECIES"
+    one: "<span class='count'>%{count}</span> SPECIES"
+    few: "<span class='count'>%{count}</span> SPECIES"
+    many: "<span class='count'>%{count}</span> SPECIES"
+    other: "<span class='count'>%{count}</span> SPECIES"
   x_species_html:
     zero: "<span class='count'>%{count}</span> species"
     one: "<span class='count'>%{count}</span> species"
@@ -476,6 +500,8 @@ en:
   added_by: Added by
   added_by_user_on_date_html: "Added by %{user} on %{date}"
   added_on_datetime: "Added on %{datetime}"
+  # Message displayed after a project user changes role, e.g. they become a manager or a curator
+  added_role: Added role
   added_to_favorites_html: |
     Added to <a href="%{url}">favorites</a>
   adding: "Adding..."
@@ -773,6 +799,7 @@ en:
   are_you_sure_you_want_to_remove_this_observation_from_project: |
     Are you sure you want to remove this observation from %{project}?
   are_you_sure_you_want_to_remove_this_taxon_from_checklist: "Are you sure you want to remove this taxon from %{place}'s checklist?"
+  are_you_sure_you_want_to_flag_as_spammer: Are you sure you want to flag this user as a spammer?
   associated_observations: Associated observations
   associated_taxa: Associated taxa
   attention: Attention
@@ -904,7 +931,6 @@ en:
   bioblitz: Bioblitz
   birds: birds
   birthday: Birthday
-  black: black
   block: Block
   blocking_description: Blocking prevents any communication between you and another user. It is for
     situations where another user may put your safety at risk, like stalking or other abusive
@@ -912,7 +938,6 @@ en:
   block_removed: Block removed
   blocked_users: Blocked Users
   blog_widget: Blog widget
-  blue: blue
   blue_butterfly_etc: "blue, butterfly, etc."
   body: Body
   # Common pattern for when we show some label and some value, e.g. "Name: Tony" or "Apr: 31 observations"
@@ -926,7 +951,6 @@ en:
   # shown
   breadcrumbs_description: "This will replace the h1 and default calls to action, so make sure to include them if they're important to this project and remember the max width allow is 950px"
   brief_caption: Brief caption
-  brown: brown
   browse: Browse
   browse_all_projects: Browse All Projects
   browse_all_species: Browse All Species
@@ -1157,9 +1181,9 @@ en:
     included in automated suggestions with the "Visually Similar" label.
   # Status of a taxon that the Computer Vision Model cannot yet recognize
   computer_vision_model_pending: Pending
-  computer_vision_model_pending_desc: |
+  computer_vision_model_pending_desc2: |
     The current Computer Vision Model does not know about this taxon, so while
-    it might be included in automated suggestions with the "Nearby" label, it
+    it might be included in automated suggestions with the "Expected Nearby" label, it
     will not have the "Visually Similar" label. While the requirements for
     model inclusion change with each model, generally inclusion is based on
     number of observations, so to increase the chance of this taxon getting
@@ -1295,10 +1319,12 @@ en:
     cannot_be_determined: Cannot be determined from the evidence provided
     dead: Organism is dead or shows signs of imminent death
     feather: One or more feathers not attached to an organism
+    female: Evidence indicates that organism can produce ova for use in sexual reproduction
     flower_budding: Flower buds are visible but not open
     flowering: Flowers visible, open, and still attached to the plant
     fruiting: Fruit visible and still attached to the plant
     gall: Deformed plant tissue outgrowth caused by a parasitic organism
+    male: Evidence indicates that organism can produce sperm for use in sexual reproduction
     molt: Discarded skin or exoskeleton
     no_evidence_of_flowering: Media provides no evidence of reproductive structures
     organism: Whole or partial organism
@@ -1896,63 +1922,15 @@ en:
   either_that_user_doesnt_exist_or: "Either that user doesn't exist or you are already following them."
   eligible_for_research_grade: Eligible for Research Grade
   email: Email
-  email_description: Your email is not shared with other users on iNaturalist
   email_address_for_comments_and_other_feedback: Email address for comments and other feedback
-  email_conf_banner_email_delivered_click_link: |
-    Confirmation email delivered. Please click the link in the email.
-  email_conf_banner_add_to_contacts_html: |
-    <strong>Add <code>%{email}</code> to your list of contacts and
-    <a href="%{url}">request another confirmation email</a>.</strong> If your email
-    provider blocked the confirmation email, this might convince them that
-    you actually want email from us.
-  email_conf_banner_check_your_spam_folder_html: <strong>Check your spam folder</strong>
-  email_conf_banner_contact_us_html: Still not working? Email us at %{email} so we can help you out.
-  email_conf_banner_please_click: |
-    Please click the link in your email to confirm your email address.
-  email_conf_banner_search_for_emails_html: <strong>Search for emails from <code>%{email}</code></strong>
-  # %{date} will be formatted with time.formats.long
-  email_conf_banner_we_delivered_todos: |
-    We delivered a confirmation email to you on %{date}. If you did not
-    receive it, here are some things you can do:
+  # Introductory form of address in an email. %{user} could be a username or a
+  # name, and the gender is unknown. @vow_or_con should work.
+  email_dear_user: Dear %{user},
+  email_description: Your email is not shared with other users on iNaturalist
   email_conf_required_after_grace_period: |
     Email confirmation is required as of %{requirement_date} and you did not
     confirm your email address before the cutoff. Please reset your password
     to access your account.
-  email_conf_faq_html: |
-    If you have questions, please refer to these <a href="%{url}">FAQs</a>.
-  email_confirmation_banner_html: |
-    <strong>%{link_start_tag}Please confirm your email address%{link_end_tag}</strong>.
-    All users must confirm their email address by %{date}. After that
-    date anyone who has not confirmed their email address will be unable to
-    sign in unless they reset their password. To confirm your email address,
-    go to your %{link_start_tag}account settings%{link_end_tag}.
-  # Subject of an email prompting people to confirm their email address before
-  # we start requiring confirmation. @vow_or_con should work for %{site_name}
-  email_confirmation_reminder_confirm_your_site_email_address_before_date:
-    Confirm your %{site_name} email address before %{date}
-  # Paragraph in an email prompting people to confirm their email address before
-  # we start requiring confirmation. @vow_or_con should work for %{site_name}
-  email_confirmation_reminder_please_confirm: |
-    Please confirm your email address today to ensure that you can continue to
-    access your account. %{site_name} and the mobile apps
-    iNaturalist and Seek by iNaturalist connect people to nature and each
-    other by sharing observations of biodiversity. Thank you for being a part
-    of the iNaturalist community!
-  # Paragraph in an email prompting people to confirm their email address before
-  # we start requiring confirmation.
-  email_confirmation_reminder_we_will_require: |
-    We will require verified email addresses for all accounts starting on
-    %{requirement_date}. Please take a moment to confirm it now.
-  # Paragraph in an email prompting people to confirm their email address before
-  # we start requiring confirmation.
-  email_confirmation_reminder_any_questions_html: |
-    If you have any questions, please refer to the
-    <a href="%{faq_url}">FAQs</a>. Thank you for taking the time to connect
-    with nature and with %{site_name}.
-  # Header in email prompting people to confirm their email address before we
-  # start requiring confirmation. This preceeds some details about the
-  # recipient's account.
-  email_confirmation_reminder_account_details: Account Details
   email_copyright2: "&copy; %{year} iNaturalist, all rights reserved"
   email_notifications: Email Notifications
   embed: 'Embed'
@@ -2014,6 +1992,7 @@ en:
   exit_full_screen: "Exit Full Screen"
   examples_of_data_use_by_network_members: Examples of Data Use by Network Members
   examples_of_ranking_organizations: Examples of Ranking Organizations
+  expected_nearby: Expected Nearby
   explore: Explore
   export: Export
   export_observations: Export Observations
@@ -2215,8 +2194,13 @@ en:
   generate_taxonomic_tags_for_flickr: Generate taxonomic tags for your Flickr photos.
   generate_widget: Generate Widget
   generate_your_stats: Generate Your Stats
+  # E.g GENERATE YOUR 2023 YEAR IN REVIEW
+  generate_your_year_in_review_caps: GENERATE YOUR %{year} YEAR IN REVIEW
   generating_mobile_archive: "Generating mobile archive"
   Genus: Genus
+  geomodel_expected_nearby_label_is_derived: |
+    The "Expected Nearby" label is derived from the Geomodel.
+    <a href="%{url}">Learn more about the Geomodel here</a>.
   geoprivacy: Geoprivacy
   geoprivacy_is_obscured: Geoprivacy is obscured
   geoprivacy_is_obscured_desc: Observer has chosen to obscure the coordinates.
@@ -2245,7 +2229,6 @@ en:
   graft: Graft
   graft_taxon: Graft %{taxon}
   grafting_attemps_to_insert_this_taxon: Grafting attempts to insert this taxon into our taxonomic tree, finding an existing parent taxon or creating all the necessary in-between taxa in order to attach it to an existing higher level taxon.
-  grant_role: "%{grant} %{role} role"
   grid: Grid
   grid_layout: Grid Layout
   grid_tooltip: Show grid view
@@ -2403,6 +2386,9 @@ en:
   identification_withdrawn: Identification withdrawn.
   identifications: Identifications
   inaturalist_global_year_in_review: "iNaturalist's Global %{year} Year in Review"
+  inaturalist_is_an_independent_nonprofit: |
+    iNaturalist is an independent 501(c)(3), tax-exempt, not-for-profit
+    organization based in the United States of America (Tax ID: 92-1296468).
   computer_vision_suggestion: Computer Vision Suggestion
   computer_vision_suggestion_desc: |
     Computer vision is the process of teaching computers to recognize patterns
@@ -2470,6 +2456,7 @@ en:
   include_places: Include Places
   include_projects: Include Projects
   include_suggestions_not_seen_nearby: Include suggestions not seen nearby
+  include_suggestions_not_expected_nearby: Include suggestions not expected nearby
   include_taxa: Include Taxa
   include_users: Include Users
   including: including
@@ -2544,6 +2531,7 @@ en:
   journal: Journal
   journal_archives_for: Journal archives for
   journal_post: Journal post
+  journal_post_: journal post
   journal_post_deleted: Journal post deleted.
   journal_posts: Journal Posts
   jpg_png_or_gif: "JPG, PNG, or GIF"
@@ -3169,7 +3157,6 @@ en:
   needs_id_: Needs ID
   needs_id_expandable_html: "<span class='full'>Needs </span>ID"
   needs_id_tooltip_html: '"Needs ID" observations have media, location, and a date, but still require community consensus on a precise identification. <a href="https://www.inaturalist.org/pages/help#quality">Learn more about quality grades</a>'
-  needs_to_be_identified: Needs to be identified
   # @vow_or_con can be used here for the first letter of %{place}
   network_affiliation_prompt_from_inat_html: |
     <strong>%{site_name}</strong>, part of the international iNaturalist
@@ -3523,6 +3510,7 @@ en:
   observations_widget: Observations Widget
   observations_with_this_field: Observations with this field
   observations_with_this_field_and_value: Observations with this field and value
+  observations_without_this_field: Observations without this field
   observations_without_media: Observations w/o Media
   observationcounts_refreshed: Observation counts refreshed
   observed: Observed
@@ -3636,7 +3624,6 @@ en:
   # sign in with Apple OR Google
   or_all_caps: OR
   or_choose_high_level_taxa: "... or choose from some high-level taxa"
-  orange: orange
   order: Order
   order_by: Order by
   organism_is_wild: Organism is wild
@@ -3818,7 +3805,6 @@ en:
     I consent to allow my child's personal information to be transferred to the
     United States of America
   pin_verb: Pin
-  pink: pink
   pinned_locations_desc: |
     Pin this combination of coordinates, accuracy, geoprivacy, and locality notes for later use.
   place: Place
@@ -4421,7 +4407,6 @@ en:
     in via Google.
   public_domain: Public Domain
   publish: Publish
-  purple: purple
   quality_grade: Quality grade
   quality_grade_: Quality Grade
   quality_grade_colon: "Quality grade:"
@@ -4604,7 +4589,6 @@ en:
   recently_resolved: Recently Resolved
   # Record as a noun, as in "According to our records, you love whales"
   record_noun: Record
-  red: red
   redo_search_in_map: Redo search in map
   redo_search_in_map_area: Redo search in map area
   refresh: Refresh
@@ -4659,6 +4643,8 @@ en:
   remove_tags: Remove tags
   removed: Removed
   removed_project_user: Removed project user
+  # Message displayed after a project user loses a role, e.g. they are no longer a manager or a curator
+  removed_role: Removed role
   removing: "Removing..."
   reorder_by_taxonomy: Reorder by taxonomy
   repair_broken_urls: Repair broken URLs
@@ -6103,7 +6089,6 @@ en:
   where_were_they?: Where were they?
   where_were_you?: Where were you?
   which_projects_can_add_your_observations?: Which traditional projects can add your observations?
-  white: white
   # Prompt to explain why a user is changing a record, e.g. changing a taxon name or updating a taxon
   why_are_you_making_this_change_optional: Why are you making this change? (optional)
   why_are_you_making_this_change_cite_source_required: Why are you making this change? Please explain, and cite a source if possible. (Required)
@@ -6184,9 +6169,9 @@ en:
   year: Year
   year_in_review: "Year In Review %{year}"
   year_in_review2: "Year in Review %{year}"
+  year_in_review_caps: "YEAR IN REVIEW %{year}"
   year_month: year/month
   year_on_site: "Year On %{site} %{year}"
-  yellow: yellow
   'yes': "Yes"
   # Used when trusting a project and the user is agreeing to trust the project
   # with access to their hidden coordinates but only for observations of
@@ -6218,6 +6203,58 @@ en:
   yir_donate_banner_you_helped_inaturalist_thrive: You helped iNaturalist thrive this year. Thank you!
   # "Your" is singular
   yir_donate_inaturalist_needs_your_support: iNaturalist Needs Your Support
+  yir_email_because_of_you: |
+    Because of you, there is more data about biodiversity this year than last
+    year. The Year in Review is our gift to you for everything that you have
+    done for biodiversity through iNaturalist.
+  yir_email_log_in_to_generate: |
+    Log in to generate your personal year in review to find out!
+  yir_email_of_your_observations:
+    one: Of your %{count} observation, do you know how many were made in %{year}?
+    other: Of your %{count} observations, do you know how many were made in %{year}?
+  # Feel free to adjust this if %{year} or "Your" don't translate well
+  yir_email_subject: |
+    Your %{year} iNaturalist Year in Review — celebrate your year with biodiversity
+  # This is used in the signature of an email, e.g. "With thanks, The iNaturalist Team"
+  yir_email_the_inaturalist_team: The iNaturalist Team
+  yir_email_the_year_isnt_over: |
+    The year isn’t over yet, and it’s never too late to post older
+    observations. After you share more observations, be sure to
+    select “Regenerate Stats” at the bottom of your Year in Review to see the
+    updates.
+  yir_email_what_else_will_you_observe_caps: WHAT ELSE WILL YOU OBSERVE?
+  yir_email_what_new_to_you: |
+    What new-to-you species did you record this year? How many people helped
+    you with identifications (and how many did you help)?
+  yir_email_with_gratitude: With gratitude,
+  yir_email_year_on_inaturalist_globally_caps: "%{year} ON INATURALIST GLOBALLY"
+  yir_email_you_are_part_of_something: |
+    You are part of something big! Every person who posts observations, adds
+    identifications, and spreads the word about iNaturalist makes a
+    difference for biodiversity. Through our collective efforts, we are
+    making biodiversity data and insights available at an unprecedented
+    scale. Thank you for being part of the iNaturalist community!
+  yir_email_you_make_a_difference: |
+    You make a difference for biodiversity through iNaturalist. Thank you for
+    everything that you do!
+  # @vow_or_con works on %{username}. %{created_date} will use the date.long
+  # format (see https://crowdin.com/translate/inaturalistweb/38/en#71285)
+  you_received_this_email_notice: |
+    You received this email because %{email} is associated with
+    https://www.inaturalist.org/people/%{username}, an iNaturalist account
+    created on %{created_date}.
+  # @vow_or_con works on %{username}. %{created_date} will use the date.long
+  # format (see https://crowdin.com/translate/inaturalistweb/38/en#71285)
+  you_received_this_email_notice_html: |
+    You received this email because %{email} is associated with
+    <a href="https://www.inaturalist.org/people/%{username}">https://www.inaturalist.org/people/%{username}</a>,
+    an iNaturalist account created on %{created_date}.
+  # @vow_or_con works on %{site_name}
+  your_account_is_affiliated: |
+    Your account is affiliated with %{site_name} (%{site_url}).
+  # @vow_or_con works on %{site_name}
+  your_account_is_affiliated_html: |
+    Your account is affiliated with <a href="%{site_url}">%{site_name}</a>.
   yir_generating_and_sharing: |
     Generating and sharing high-impact biodiversity data at this unprecedented
     scale and speed has increasing costs
@@ -6393,6 +6430,9 @@ en:
         you chose en it will not appear for people who have chosen en-US. If you
         want to target both, choose both. If you want to show an announcement
         for all members of a site, just leave this blank.
+      clients_desc: |
+        CMD- or SHIFT-click to select multiple. Not selecting any will show the
+        announcement to all users regardless of client.
     content_freeze:
       content_freeze: Content Freeze
       during_this_time: |
@@ -6420,6 +6460,34 @@ en:
             tips on using %{site_name} with students.
     donate:
       donate_short_desc: "Donate now to show your support!"
+      donate_desc_moore_html: |
+        <p class="lead">
+          <strong>You can <u>double</u> or <u>triple</u> your gift! Thanks to the
+          Gordon and Betty Moore Foundation, all monthly, quarterly, and
+          annual recurring donations are tripled and one-time donations are
+          doubled through December 31, 2023.</strong>
+        </p>
+        <p class="lead">
+          iNaturalist is one of the world's largest communities dedicated to
+          biodiversity. Thank you for being part of it!
+        </p>
+        <p class="lead">
+          If you believe in the power of this global community of nature
+          lovers to share knowledge and generate irreplaceable biodiversity
+          data, please consider a one-time or recurring gift online, or
+          explore <a href="https://www.inaturalist.org/pages/giving">other
+          ways to give</a>.
+        </p>
+        <p class="lead">
+          Your donation is vital to iNaturalist as our community grows, from
+          improving our technology to accurately identify species and
+          implementing new features to supporting our servers and staff.
+        </p>
+        <p class="text-muted">
+          iNaturalist is an independent 501(c)(3), tax-exempt, not-for-profit
+          organization based in the United States of America (Tax ID:
+          92-1296468).
+        </p>
       donate_desc3_html: |
         <p class="lead">
           <strong>iNaturalist is one of the world's largest communities dedicated to
@@ -6446,6 +6514,37 @@ en:
       monthly_supporters:
         become_a_monthly_supporter_of_inaturalist: Become a Monthly Supporter of iNaturalist
         become_a_monthly_supporter_of_inaturalist_caps: BECOME A MONTHLY SUPPORTER OF INATURALIST
+        desc_moore_html: |
+          <p class="lead">
+            <strong>You can <u>triple</u> your gift! Thanks to the Gordon and Betty
+            Moore Foundation, all Monthly Supporter donations are
+            tripled through December 31, 2023.</strong>
+          </p>
+          <p class="lead">
+            iNaturalist is one of the world's largest communities dedicated to
+            exploring biodiversity. Thank you for being part of it!
+          </p>
+          <p class="lead">
+            If you love iNaturalist, please consider becoming a Monthly
+            Supporter. Recurring gifts help ensure that iNaturalist can
+            continue to scale our infrastructure and staff by providing
+            predictable revenue. And your monthly gift has triple the impact!
+            You can also opt to show your Monthly Supporter status on your
+            user profile.
+          </p>
+          <p class="lead">
+            Your charitable donations help support iNaturalist as the
+            community grows, from advancing computer vision and implementing
+            new features to supporting our servers and staff. You can also
+            give a <a href="%{donate_url}">one-time donation</a> and explore
+            <a href="https://www.inaturalist.org/pages/giving">other ways to
+            give</a>.
+          </p>
+          <p class="text-muted">
+            iNaturalist is an independent 501(c)(3), tax-exempt,
+            not-for-profit organization based in the United States of
+            America (Tax ID: 92-1296468).
+          </p>
         desc3_html: |
           <p class="lead">
             <strong>iNaturalist is one of the world's largest communities dedicated to
@@ -6486,6 +6585,108 @@ en:
           Please resolve <code>spam</code> and <code>copyright
           infringement</code> flags only if the content is not spam or not an
           infringement of copyright, respectively.
+    geo_model:
+      explain:
+        geomodel_predictions_of_taxon: |
+          Geomodel Predictions of %{taxon}
+        the_geo_model_makes_predictions: |
+          The Geomodel makes predictions about where species occur and where they are absent.
+          We use the Geomodel to apply the "Expected Nearby" label alongside suggestions and
+          to weight these suggestions based on the location of the observation.
+        the_geo_model_is_trained: |
+          Like the Computer Vision Model, the Geomodel is trained on iNaturalist observations
+          for the same set of species with roughly more than 100 photos. The Geomodel does not
+          make perfect predictions. You can read more about how the Geomodel is made
+          <a href="%{url}">here</a>.
+        nearby_map:
+          expected_nearby_map: Expected Nearby Map
+          we_use_this_map: |
+            We use this map to apply the Expected Nearby label to suggestions based on the
+            location of the observation.
+          for_example: |
+            For example, an observation of a lizard in the center of the United States might
+            have the Expected Nearby label applied to a suggestion of <i>Sceloporus consobrinus</i>
+            but not <i>Sceloporus occidentalis</i> based on their respective Expected Nearby Maps.
+          you_can_think: |
+            You can think of the Expected Nearby Map as an estimate of whether the species
+            is present somewhere inside the grid cell or entirely absent.
+          figure_alt_text: The Geomodel applies the Expected Nearby label
+        unthresholded_map:
+          unthresholded_map: Unthresholded Map
+          we_use_the_unthresholded_map: |
+            We use the Unthresholded Map to weight computer vision scores by location when
+            offering suggestions.
+          for_example: |
+            For example, an observation of a lizard in the center of the United States might
+            have the suggestions of <i>Sceloporus consobrinus</i> weighted more than suggestions
+            of <i>Sceloporus occidentalis</i> based on comparing the Unthresholded Maps, despite
+            being visually similar.
+          you_can_think: |
+            You can think of the Unthresholded Map as the relative probability that a species
+            occurs within a grid cell.
+          figure_alt_text: The Geomodel weights Computer Vision results
+        range_comparison:
+          expected_nearby_vs_taxon_range: Expected Nearby vs Taxon Range
+          this_map_shows: |
+            This map shows the Taxon Range for this species overlapping the Expected Nearby Map
+            that we use to evaluate the Geomodel.
+          this_gridded_version: |
+            This gridded version of the Taxon Range is a snapshot taken when the model was
+            trained and gridded at the same resolution as the Expected Nearby Map. We only
+            use the Taxon Ranges where at least 90% of the training data for that species
+            falls within the Taxon Range to control for errors in the Taxon Ranges.
+          by_combining: |
+            By combining the Expected Nearby Map to the Taxon Range, we calculate statistics
+            to estimate how well the Geomodel performs.
+          figure_alt_text: The Expected Nearby map and Taxon Range are compared
+          combining_these_maps_produces: |
+            Combining these maps produces 3 types of cells:
+          # Areas where both of the Expected Nearby Map and Taxon Range predict that the taxon exists
+          true_presences_colon: |
+            True Presences:
+          true_presences_definition: Areas where both of the Expected Nearby Map and Taxon Range predict that the taxon exists
+          # Areas where only the Expected Nearby Map predicts the taxon exists
+          false_presences_colon: |
+            False Presences:
+          false_presences_definition: Areas where only the Expected Nearby Map predicts the taxon exists
+          # Areas where only the Taxon Range is present
+          false_absences_colon: |
+            False Absences:
+          false_absences_definition: Areas where only the Taxon Range is present
+          evaluation_statistics_for_taxon: Evaluation statistics for %{taxon}
+          # The fraction of the Expected Nearby Map that are True Presences
+          precision_colon: |
+            Precision:
+          precision_description: The fraction of the Expected Nearby Map that are True Presences
+          # Equation showing how we calculate precision of the Expected Nearby Map
+          # True Presences: areas where both the Expected Nearby Map and the Taxon Range predict that the taxon exists
+          # False Presences: areas where only the Expected Nearby Map predicts the taxon exists
+          precision_equation: |
+            True Presences / (True Presences + False Presences) = %{precision}
+          # The fraction of the Taxon Range that are True Presences
+          recall_colon: |
+            Recall:
+          recall_description: The fraction of the Taxon Range that are True Presences
+          # Equation showing how we calculate recall of the Expected Nearby Map
+          # True Presences: areas where both the Expected Nearby Map and the Taxon Range predict that the taxon exists
+          # False Absences: areas where only the Taxon Range is present
+          recall_equation: |
+            True Presences / (True Presences + False Absences) = %{recall}
+          # The average (harmonic mean) of Precision (fraction of the Expected
+          # Nearby Map that are True Presences) and Recall (fraction of the
+          # Taxon Range that are True Presences)
+          f1_colon: |
+            F1:
+          f1_description: The average (harmonic mean) of Precision and Recall
+          # Equation showing how we calculate the F1 statstitic of the Expected Nearby Map
+          # True Presences: areas where both the Expected Nearby Map and the Taxon Range predict that the taxon exists
+          # False Presences: areas where only the Expected Nearby Map predicts the taxon exists
+          # False Absences: areas where only the Taxon Range is present
+          f1_equation: |
+            2 × True Presences / (2 × True Presences + False Presences + False Absences) = %{f1}
+          perfect_overlap: |
+            Perfect overlap would evaluate with a Precision, Recall and F1 of 1. No overlap
+            would evaluate with a Precision , Recall, and F1 of 0.
     guides:
       index:
         deprecated_banner: |
@@ -7496,6 +7697,8 @@ en:
           If the only reason you're leaving is to stop project curators from viewing your hidden coordinates.
       edit:
         admins_must_be_existing_members: Admins must be existing members of the project.
+        admins_can_only_be_added_after_creation: |
+          Admins can only be added after the project has been created.
         aggregation_pending: Aggregation pending
         new_place_desc_html: |
           Try looking through
@@ -7663,6 +7866,9 @@ en:
           Do you need features from traditional projects, such as access to true coordinates,
           custom observation fields, or adding individual observations that can’t be automatically
           filtered?
+        do_you_need_features_from_traditional2: |
+          Do you need features from traditional projects, such as custom observation fields,
+          or adding individual observations that can’t be automatically filtered?
         duplicate_project: Duplicate Project
         include_annotated_observations: |
           Include only observations annotated with a particular attribute (e.g. life stage),
@@ -7912,6 +8118,18 @@ en:
           Created via <a href="https://www.inaturalist.org">iNaturalist</a>
           or <a href="%{url}">iNaturalist Network</a> websites
       year:
+        # label used for a chart component that shows the count of users that
+        # added both identifications and observations
+        added_both: Added Both
+        added_only_identifications: Added Only Identifications
+        added_only_observations: Added Only Observations
+        # heading for a section displaying use of iNaturalist data by other organizations
+        broader_impacts: Broader Impacts
+        broader_impacts_desc: |
+          Several external partners regularly import iNaturalist observations to
+          support science and conservation. Your observations, identifications,
+          and open license choices allow these organizations to provide useful
+          biodiversity information to people that need it around the world.
         compare_desc: |
           How did this year compare to your previous years? With three years of
           usage or more we can start comparing yearly activity metrics. The
@@ -8031,7 +8249,7 @@ en:
           Observed taxa arranged as a hierarchical "sunburst" diagram. The base
           of the hierarchy is at the center, starting with "Life" and ending
           with species at the outer edges. The size of each arc is proportional
-          to the number of observations of that taxon, and colors rougly
+          to the number of observations of that taxon, and colors roughly
           correspond to our usual "iconic" taxon colors (green for plants,
           orange for insects, blue for most other animals, etc.), so if you're
           seeing a lot of green, that means you observed a lot of plants.
@@ -8067,6 +8285,12 @@ en:
           %{view_all_mobile_link_tag}mobile%{link_tag_end} code repositories.
         translators_prompt: |
           If you want to help translate, %{link_tag}learn how%{link_tag_end}.
+        view_all_publications_count_caps2:
+          zero: "VIEW ALL %{count} PUBLICATIONS"
+          one: "VIEW %{count} PUBLICATION"
+          few: "VIEW ALL %{count} PUBLICATIONS"
+          many: "VIEW ALL %{count} PUBLICATIONS"
+          other: "VIEW ALL %{count} PUBLICATIONS"
     taxa:
       edit:
         high_status_conservation_status_notice_html: |
@@ -8416,6 +8640,7 @@ en:
             other behavior we deem inappropriate for our site, we will
             investigate.
           </p>
+        common_scientific_name_display_order: Common / Scientific Name Display Order
         if_you_change_your_mind_you_can_always_edit_your_settings_html: |
           If you change your mind you can always
           <a href='/users/edit'>edit your settings</a>.
@@ -8579,6 +8804,36 @@ en:
           ambiguous (e.g. a split), you will receive an update about the
           change linking to a tool you can use to manually update your content
           if you choose.
+        taxon_name_priorities:
+          # A common name lexicon is a categorization of the vocabulary used. For example the
+          # lexicon could be a language, or a regional use of language (locale), or a lexicon
+          # could be a set of codes (bird codes, plant codes, etc) used to represent taxa
+          add_a_common_name_lexicon: Add a common name lexicon
+          # optionally add a place configuration for a common name lexicon setting
+          add_a_place_optional: Add a place (optional)
+          common_name_lexicon_display_order: Common Name Lexicon Display Order
+          common_name_lexicons: Common Name Lexicons
+          common_name_lexicons_description:
+            By default, common names are displayed in your account language/locale. To see names in
+            other lexicons, or to prioritize names used in specific places (such as English
+            (Australia) or Spanish (Costa Rica)), add common name lexicons. A maximum of 3
+            common names can be displayed at a time. If no common name exists for a lexicon
+            you have chosen, it will be omitted from display.
+          for_multiple_common_name_lexicons_drag_and_drop:
+            For multiple common name lexicons, drag and drop the settings below to customize
+            the order in which they are displayed.
+          # declaring the common name lexicon will be dynamically chosen based
+          # on the user's langauge/locale setting
+          same_as_locale: Same as locale
+          # used as a form select dropdown option that users can choose instead of a choosing
+          # a fixed locale. Choosing this setting will allow the user to see common names in
+          # a lexicon matching their account language/locale setting dynamically
+          same_as_language_locale_preference: Same as user language/locale preference
+          select_a_lexicon: Select a lexicon
+          # a warning message given when users have added the maximum number of common name
+          # lexicon settings that we currently allow
+          the_maximum_number_of_lexicons_have_been_added:
+            The maximum of 3 common name lexicons have already been added
         this_only_applies_to_traditional_projects: |
           This only applies to traditional projects. You can't exclude observations
           from collection or umbrella projects, which are essentially saved searches.
@@ -8973,6 +9228,7 @@ en:
       # iNaturalist Android app or an app made by a third party
       OauthApplication: Application
       Photo: Photo
+      Post: Journal Post
       TaxonLink: Taxon Link
     attributes:
       announcement:
@@ -8986,6 +9242,7 @@ en:
         # Preference for an announcement that is only shown to users who have
         # not confirmed their email address
         prefers_target_unconfirmed_users: Target unconfirmed users
+        clients: Clients
       assessment:
         description: Description
       assessment_section:
@@ -9220,6 +9477,16 @@ en:
           one: "%{count} error prohibited this %{model} from being saved"
           other: '%{count} errors prohibited this %{model} from being saved'
       models:
+        announcement:
+          attributes:
+            clients:
+              # Error message shown when an Announcement has a value in the
+              # clients attribute that is not a valid client for the
+              # annoumcement's placement attribute. This might be used in a
+              # sentence like "clients must be valid for specified
+              # placement". Only site admins will see this texxt, so it's ok
+              # if it's not translated perfectly.
+              must_be_valid_for_specified_placement: must be valid for specified placement
         application:
           attributes:
             redirect_uri:
@@ -9593,6 +9860,20 @@ en:
         variety: "@n"
         # Default gender for nouns that aren't listed here
         default: "@n"
+      "@iconic_taxon":
+        Animalia: Animalia
+        Actinopterygii: Actinopterygii
+        Aves: Aves
+        Reptilia: Reptilia
+        Amphibia: Amphibia
+        Mammalia: Mammalia
+        Arachnida: Arachnida
+        Insecta: Insecta
+        Plantae: Plantae
+        Fungi: Fungi
+        Protozoa: Protozoa
+        Mollusca: Mollusca
+        Chromista: Chromista
   # Title of a section warning the user about something
   warning_title: Warning
   wikimedia: Wikimedia

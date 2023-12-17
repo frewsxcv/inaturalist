@@ -156,7 +156,8 @@ class Taxon < ApplicationRecord
     observations: { notification: "new_observations", include_owner: false }
   }
 
-  NUM_OBSERVATIONS_REQUIRING_CURATOR_TO_EDIT = 200_000
+  NUM_OBSERVATIONS_REQUIRING_ADMIN_TO_EDIT_TAXON = 200_000
+  NUM_OBSERVATIONS_REQUIRING_ADMIN_TO_COMMIT_TAXON_CHANGES = 75_000
   NUM_OBSERVATIONS_TRIGGERING_WARNING = 1000
 
   NAME_PROVIDER_TITLES = {
@@ -391,7 +392,7 @@ class Taxon < ApplicationRecord
 
   # Names we don't use when trying to extract a taxon from text because they
   # usually map to the wrong thing. Also including all place names for
-  # state-level places and above that are also taoxn names, since they often get
+  # state-level places and above that are also taxon names, since they often get
   # used in photo tags
   months_to_days = I18N_SUPPORTED_LOCALES.map do | locale |
     [
@@ -615,8 +616,7 @@ class Taxon < ApplicationRecord
   def handle_after_activate
     return true unless saved_change_to_is_active?
 
-    Observation.delay( priority: INTEGRITY_PRIORITY, queue: "slow",
-      unique_hash: { "Observation::update_stats_for_observations_of": id } ).
+    Observation.delay( priority: INTEGRITY_PRIORITY, queue: "slow" ).
       update_stats_for_observations_of( id )
     true
   end
@@ -1343,7 +1343,7 @@ class Taxon < ApplicationRecord
   def observose_branch?
     return false unless observations_count
 
-    observations_count > NUM_OBSERVATIONS_REQUIRING_CURATOR_TO_EDIT
+    observations_count > NUM_OBSERVATIONS_REQUIRING_ADMIN_TO_EDIT_TAXON
   end
 
   def observose_warning_branch?

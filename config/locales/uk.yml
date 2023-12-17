@@ -857,11 +857,9 @@ uk:
   bioblitz: Біобліц
   birds: птахи
   birthday: День народження
-  black: чорний
   block_removed: Блокування знято
   blocked_users: Заблоковані користувачі
   blog_widget: Віджет у блозі
-  blue: синій
   blue_butterfly_etc: "синій, метелик, тощо"
   body: Текст
   #Common pattern for when we show some label and some value, e.g. "Name: Tony" or "Apr: 31 observations"
@@ -875,7 +873,6 @@ uk:
   #shown
   breadcrumbs_description: "Це замінить присутні за замовчуванням h1 та заклики до дії. Якщо вони важливі для цього проекту, упевніться, що ви їх включили і пам'ятайте, що максимально дозволена ширина складає 950 пікселів"
   brief_caption: Короткий заголовок
-  brown: коричневий
   browse: Переглянути
   browse_all_projects: Переглянути всі проєкти
   browse_all_species: Переглянути всі види
@@ -1067,8 +1064,6 @@ uk:
     доданий до автоматичних пропозицій з міткою "Візуально схожі на "...
   #Status of a taxon that the Computer Vision Model cannot yet recognize
   computer_vision_model_pending: Очікує на підтвердження
-  computer_vision_model_pending_desc: |
-    Поточна модель комп'ютерного бачення не знає про цей таксон, тож пори те, що його може бути додано до автоматичних пропозицій з позначкою "Неподалік", він не матиме позначки "Візуально подібні". Хоча вимоги щодо включення змінюються від моделі до моделі, включення опирається на кількість спостережень, тож шанс, що цей таксон буде включено, зростатиме з додаванням нових спостережені та визначень та подальшому тренуванні моделей.
   concept_status: Статус концепції
   configure: Налаштувати
   configure_a_widget_to_show: Налаштуйте віджет, щоб показати %{site_name} спостережень на вашому сайті або блозі. Можливо, вам доведеться включити вбудований CSS у <code>&lt;head&gt;</code> вашого HTML. Ви можете вільно переписувати CSS.
@@ -1648,8 +1643,8 @@ uk:
   either_that_user_doesnt_exist_or: "Таких користувачів не існує, або ви вже слідкуєте за ними."
   eligible_for_research_grade: Придатне для дослідницького рівня
   email: Ел. пошта
-  email_description: Ваша електронна пошта не доступна іншим користувачам iNaturalist
   email_address_for_comments_and_other_feedback: Адреси ел. пошти для коментарів та інших відгуків
+  email_description: Ваша електронна пошта не доступна іншим користувачам iNaturalist
   email_notifications: Сповіщення ел. поштою
   embed: 'Вставити'
   embed_place_widget: Вставити віджет місця
@@ -1918,7 +1913,6 @@ uk:
   graft: Прищеплення
   graft_taxon: Прищепити %{taxon}
   grafting_attemps_to_insert_this_taxon: Прищеплення — це спроба приєднати цей таксон до нашого систематичного дерева, знайти існуючий батьківський таксон або створити всі необхідні проміжні таксони, щоби приєднати його до існуючого таксону вищого рівня.
-  grant_role: "%{grant} %{role} роль"
   grid: Сітка
   grid_layout: Сітка розмітки
   grid_tooltip: Показати сітку
@@ -2610,7 +2604,6 @@ uk:
   needs_id_: Потребує визначення
   needs_id_expandable_html: "<span class='full'>Потребує </span>визначення"
   needs_id_tooltip_html: 'Спостереження, позначені як такі, що "Потребують визначення" мають медіафайли, дату, але потребують консенсусу спільноти щодо їхнього точного визначення. <a href="https://www.inaturalist.org/pages/help#quality">Дізнатися більше про рівні якості</a>'
-  needs_to_be_identified: Має бути визначене
   #@vow_or_con can be used here for the first letter of %{place}
   network_affiliation_prompt_from_inat_html: |
     <strong>%{site_name}</strong>, частина міжнародної Мережі iNaturalist, зосереджений на біорізноманітті та людях регіону %{place}. Чи бажаєте ви змінити приналежність вашого облікового запису з <strong>%{inat_site_name}</strong> на <strong>%{site_name}</strong> і ділитися даними з локальними інститутами?
@@ -3004,7 +2997,6 @@ uk:
   #sign in with Apple OR Google
   or_all_caps: АБО
   or_choose_high_level_taxa: "... або оберіть з таксонів вищого рангу"
-  orange: помаранчевий
   order: Сортувати
   order_by: Сортувати за
   organism_is_wild: Організм є диким
@@ -3141,7 +3133,6 @@ uk:
   data_transfer_consent_child_label: |
     Я згоден, що особисту інформацію моєї дитини буде передано до Сполучених Штатів Америки
   pin_verb: Закріпити
-  pink: рожевий
   pinned_locations_desc: |
     Закріпити це поєднання координат, точності, налаштувань приватності місцеперебування та заміток щодо місцеперебування для подальшого використання.
   place: Місце
@@ -3698,7 +3689,6 @@ uk:
   provider_authorizations: Авторизація провайдера
   public_domain: Публічний домен
   publish: Опублікувати
-  purple: фіолетовий
   quality_grade: Рівень якості
   quality_grade_: Рівень якості
   quality_grade_colon: "Рівень якості"
@@ -3890,7 +3880,6 @@ uk:
   recently_finished: Нещодавно завершені
   recently_observed: Нещодавно спостережені
   recently_resolved: Нещодавно вирішені
-  red: червоний
   redo_search_in_map: Повторити пошук на мапі
   redo_search_in_map_area: Повторити пошук в області на мапі
   refresh: Оновити
@@ -4977,7 +4966,6 @@ uk:
   where_were_they?: Де вони були?
   where_were_you?: Де ви були?
   which_projects_can_add_your_observations?: Які традиційні проєкти можуть додавати ваші спостереження?
-  white: білий
   why_you_can_see_the_coordinates: Чому ви можете бачити координати
   who_can_add_observation_fields_to_my_obs: Хто може додавати поля спостереження до моїх спостережень?
   who_can_add_observations_to_this_project?: Хто може додавати спостереження до цього проєкту?
@@ -5049,7 +5037,6 @@ uk:
   year_in_review: "Рік огляду %{year}"
   year_month: рік/місяць
   year_on_site: "Рік на %{site} %{year}"
-  yellow: жовтий
   'yes': "Так"
   #Used when trusting a project and the user is agreeing to trust the project
   #with access to their hidden coordinates but only for observations of
@@ -6765,9 +6752,17 @@ uk:
       #See https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html#method-i-strftime for formatting codes. Use %=B or %=b for lowercase months.
       default: '%Y-%m-%d'
       #See https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html#method-i-strftime for formatting codes. Use %=B or %=b for lowercase months.
+      long: '%d %B %Y'
+      #See https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html#method-i-strftime for formatting codes. Use %=B or %=b for lowercase months.
+      short: '%d %b'
+      #See https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html#method-i-strftime for formatting codes. Use %=B or %=b for lowercase months.
       compact: "%e %b"
       #See https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html#method-i-strftime for formatting codes. Use %=B or %=b for lowercase months.
+      short_with_year: '%d %b %Y'
+      #See https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html#method-i-strftime for formatting codes. Use %=B or %=b for lowercase months.
       month_year: '%B %Y'
+      #See https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html#method-i-strftime for formatting codes. Use %=B or %=b for lowercase months.
+      month_day_year: '%d %B %Y'
     month_names:
       - 
       - січня
@@ -6932,9 +6927,17 @@ uk:
     am: дп
     formats:
       #See https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html#method-i-strftime for formatting codes. Use %=B or %=b for lowercase months.
+      default: '%d %b %Y %H:%M:%S %z'
+      #See https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html#method-i-strftime for formatting codes. Use %=B or %=b for lowercase months.
+      long: '%d %B %Y %H:%M'
+      #See https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html#method-i-strftime for formatting codes. Use %=B or %=b for lowercase months.
+      short: '%d %b %H:%M'
+      #See https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html#method-i-strftime for formatting codes. Use %=B or %=b for lowercase months.
       compact: "%H:%M"
       #See https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html#method-i-strftime for formatting codes. Use %=B or %=b for lowercase months.
       observed_at: '%H:%M %Z'
+      #See https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html#method-i-strftime for formatting codes. Use %=B or %=b for lowercase months.
+      day_month_year: "%d %B %Y"
       #See https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html#method-i-strftime for formatting codes. Use %=B or %=b for lowercase months.
       hours: "%H:%M"
     pm: пп

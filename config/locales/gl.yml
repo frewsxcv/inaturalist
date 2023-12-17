@@ -741,11 +741,9 @@ gl:
   bioblitz: Bioblitz
   birds: Aves
   birthday: Data de nacemento
-  black: negro
   block_removed: Bloqueo eliminado
   blocked_users: Usuarios Bloqueados
   blog_widget: Widget do blog
-  blue: azul
   blue_butterfly_etc: "azul, bolboreta, etc."
   body: Corpo
   #Common pattern for when we show some label and some value, e.g. "Name: Tony" or "Apr: 31 observations"
@@ -759,7 +757,6 @@ gl:
   #shown
   breadcrumbs_description: "Isto substituirá o h1 e os axustes por defecto da acción; asegúrate de incluír os que sexan importantes para este proxecto."
   brief_caption: Lenda breve
-  brown: marrón
   browse: Navega pola taxonomía
   browse_all_projects: Procurar todos os proxectos
   browse_all_species: Examinar todas as especies
@@ -956,8 +953,6 @@ gl:
     O Modelo de Visión Computerizada actual recoñece este taxon, así que poderá ser incluído en suxestións automatizadas cá etiqueta "Visualmente Semellante".
   #Status of a taxon that the Computer Vision Model cannot yet recognize
   computer_vision_model_pending: Pendente
-  computer_vision_model_pending_desc: |
-    O Modelo de Visión Computerizada actual non recoñece este taxon, así que mesmo que poida ser incluído en suxestións automáticas cá etiqueta "Á Volta", pode que non teña a etiqueta "Visualmente Semellante". Aínda que os requisitos para a inclusión no modelo cambian con cada actualización do modelo, xeralmente a inserción está baseada no número de observacións. Para que este taxon sexa incluído durante o adestramento do seguinte modelo, engade ou identifica máis observacións deste taxon.
   concept_status: Concepto da situación
   configure: Configurar
   configure_a_widget_to_show: Configura o widget para mostrar as observacións de %{site_name} no teu sitio web ou blog. Tamén podes incluír o estilo CSS na <code><head></code> do teu código HTML. Podes modificar o CSS libremente.
@@ -1534,8 +1529,8 @@ gl:
   either_that_user_doesnt_exist_or: "Ese usuario non existe ou xa o estás seguindo."
   eligible_for_research_grade: Candidato ao Grao de Investigación
   email: Correo
-  email_description: O teu enderezo de email non é compartido con outros usuarios en iNaturalist
   email_address_for_comments_and_other_feedback: Enderezo de correo electrónico para comentarios e outras notificacións
+  email_description: O teu enderezo de email non é compartido con outros usuarios en iNaturalist
   email_notifications: Notificacións por Email
   embed: 'Introducir:'
   embed_place_widget: Introducir un widget de lugar
@@ -1796,7 +1791,6 @@ gl:
   graft: Introducir
   graft_taxon: Enxertar %{taxon}
   grafting_attemps_to_insert_this_taxon: Por engadir referímonos a introducir este taxón na nosa árbore taxonómica, atopar un taxón pai existente ou crear todos os taxóns necesarios no medio co fin de incorporalo a un taxón do máis alto nivel existente.
-  grant_role: "Se %{grant} o permiso de %{role}"
   grid: Cuadrícula
   grid_layout: Deseño en Cuadrícula
   grid_tooltip: Mostrar a vista de cuadrícula
@@ -2473,7 +2467,6 @@ gl:
   needs_id_: Precisa identificación
   needs_id_expandable_html: "<span class='full'>Precisa </span>identificación"
   needs_id_tooltip_html: 'As observacións "Necesita ID" teñen medios, localización e data, pero aínda lles falta o consenso da comunidade nunha identificación.<a href="https://www.inaturalist.org/pages/help#quality"> Sabe máis sobre os graos de calidade</a>'
-  needs_to_be_identified: Necesita ser identificado
   #@vow_or_con can be used here for the first letter of %{place}
   network_affiliation_prompt_from_inat_html: |
     <strong>%{site_name}</strong>, parte da Rede internacional iNaturalist, enfócase na biodiversidade e na xente de %{place}. ¿Gustaríache cambiar a afiliación da túa conta de <strong>%{inat_site_name}</strong> a <strong>%{site_name}</strong> e compartir dados con institucións locais?
@@ -2862,7 +2855,6 @@ gl:
   #sign in with Apple OR Google
   or_all_caps: OU
   or_choose_high_level_taxa: "... Ou selecciona dalgúns taxóns de alto nivel"
-  orange: Laranxa
   order: Orde
   order_by: Ordenar por
   organism_is_wild: O organismo é silvestre
@@ -2971,7 +2963,6 @@ gl:
   pi_consent_child_label: |
     Consinto permitir que iNaturalist almacene e procese tipos de información persoal limitados sobre meu fillo ou miña filla para xestionar a súa conta
   pin_verb: Fixar
-  pink: Rosa
   pinned_locations_desc: |
     Fixar esta combinación de coordenadas, precisión, xeoprivacidade e notas de localidade para empregalas máis tarde.
   place: Lugar
@@ -3520,7 +3511,6 @@ gl:
   provider_authorizations: Autorizacións de provedores
   public_domain: Dominio Público
   publish: Publicar
-  purple: Púrpura
   quality_grade: Grao de calidade
   quality_grade_: Grao de Calidade
   quality_grade_colon: "Grao de calidade:"
@@ -3698,7 +3688,6 @@ gl:
   recently_finished: Rematados Recentemente
   recently_observed: Observados recentemente
   recently_resolved: Resoltos recentemente
-  red: vermello
   redo_search_in_map: Refacer busca no mapa
   redo_search_in_map_area: Volve realizar a procura na área do mapa
   refresh: Refrescar
@@ -4723,7 +4712,6 @@ gl:
   where_were_they?: <em>Onde se atopaban?
   where_were_you?: <em>Onde</em> estabas ti?
   which_projects_can_add_your_observations?: '¿Que proxectos tradicionais poden engadir as túas observacións?'
-  white: Branco
   why_you_can_see_the_coordinates: Porqué Podes Ver As Coordenadas
   who_can_add_observation_fields_to_my_obs: '¿Quen pode engadir campos de observación ás miñas observacións?'
   who_can_add_observations_to_this_project?: '¿Quen pode engadir observacións a este proxecto?'
@@ -4790,7 +4778,6 @@ gl:
   year_in_review: "Resumo do Ano %{year}"
   year_month: ano/mes
   year_on_site: "O Ano %{year} de %{site}"
-  yellow: Amarelo
   'yes': "Si"
   #Used when trusting a project and the user is agreeing to trust the project
   #with access to their hidden coordinates but only for observations of
@@ -6290,9 +6277,17 @@ gl:
       #See https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html#method-i-strftime for formatting codes. Use %=B or %=b for lowercase months.
       default: '%d/%m/%Y'
       #See https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html#method-i-strftime for formatting codes. Use %=B or %=b for lowercase months.
+      long: '%d de %B de %Y'
+      #See https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html#method-i-strftime for formatting codes. Use %=B or %=b for lowercase months.
+      short: '%d de %b'
+      #See https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html#method-i-strftime for formatting codes. Use %=B or %=b for lowercase months.
       compact: "%b %e"
       #See https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html#method-i-strftime for formatting codes. Use %=B or %=b for lowercase months.
+      short_with_year: '%d %b,%Y'
+      #See https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html#method-i-strftime for formatting codes. Use %=B or %=b for lowercase months.
       month_year: '%B %Y'
+      #See https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html#method-i-strftime for formatting codes. Use %=B or %=b for lowercase months.
+      month_day_year: '%d de %B, %Y'
     month_names:
       - 
       - xaneiro
@@ -6425,9 +6420,13 @@ gl:
     am: Mañá
     formats:
       #See https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html#method-i-strftime for formatting codes. Use %=B or %=b for lowercase months.
+      default: '%d %b %Y %H:%M:%S %Z'
+      #See https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html#method-i-strftime for formatting codes. Use %=B or %=b for lowercase months.
       compact: "%I:%M %p"
       #See https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html#method-i-strftime for formatting codes. Use %=B or %=b for lowercase months.
       observed_at: 'ás %I:%M %p %Z'
+      #See https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html#method-i-strftime for formatting codes. Use %=B or %=b for lowercase months.
+      day_month_year: "%d %b. %Y"
       #See https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html#method-i-strftime for formatting codes. Use %=B or %=b for lowercase months.
       hours: "%l:%M %p"
     pm: Tarde

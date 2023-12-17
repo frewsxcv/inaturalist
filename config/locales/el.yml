@@ -20,6 +20,9 @@ el:
   x_identifications_:
     one: '%{count} Ταυτοποίηση'
     other: '%{count} Ταυτοποιήσεις'
+  x_identifications_caps_html:
+    one: '<span class="count">%{count}</span>ΤΑΥΤΟΠΟΙΗΣΗ'
+    other: '<span class="count">%{count}</span>ΤΑΥΤΟΠΟΙΗΣΕΙΣ'
   #Number of people who have added identifications
   x_identifiers_html:
     #Number of people who have added identifications
@@ -61,6 +64,9 @@ el:
   x_observations_html:
     one: "<span class='count'>1</span> παρατήρηση"
     other: "<span class='count'>%{count}</span> παρατηρήσεις"
+  x_observations_caps_html:
+    one: "<span class='count'>%{count}</span>ΠΑΡΑΤΗΡΗΣΗ"
+    other: "<span class='count'>%{count}</span>ΠΑΡΑΤΗΡΗΣΕΙΣ"
   x_observations_link_html:
     one: "<a href='%{url}'>1 παρατήρηση</a>"
     other: "<a href='%{url}'>%{count} παρατηρήσεις</a>"
@@ -89,6 +95,9 @@ el:
   x_species:
     one: '1 Είδος'
     other: '%{count} Είδη'
+  x_species_caps_html:
+    one: "<span class='count'>%{count}</span>ΕΙΔΟΣ"
+    other: "<span class='count'>%{count}</span>ΕΙΔΗ"
   x_species_html:
     one: "<span class='count'>1</span> είδος"
     other: "<span class='count'>%{count}</span> είδη"
@@ -680,11 +689,9 @@ el:
   bioblitz: Bioblitz
   birds: πτηνά
   birthday: Γενέθλια
-  black: Μαύρο
   block_removed: Η φραγή αφαιρέθηκε
   blocked_users: Αποκλεισμένοι χρήστες
   blog_widget: Widget ιστολογίου
-  blue: μπλε
   blue_butterfly_etc: "μπλε, πεταλούδα, κτλ."
   body: Κυρίως σώμα
   #Common pattern for when we show some label and some value, e.g. "Name: Tony" or "Apr: 31 observations"
@@ -698,7 +705,6 @@ el:
   #shown
   breadcrumbs_description: "Αυτό θα αντικαταστήσει το h1 και τις προεπιλεγμένες αιτήσεις για δράση, επομένως σιγουρευτείτε ότι τις συμπεριλάβατε σε περίπτωση που είναι σημαντικές γι αυτή την εργασία και να θυμάστε ότι το μέγιστο επιτρεπόμενο πλάτος είναι 950px"
   brief_caption: Σύντομη λεζάντα
-  brown: καφέ
   browse: Πλοήγηση
   browse_all_projects: Περιήγηση σε όλα τα πρότζεκτ
   browse_all_species: Περιήγηση σε Όλα τα Είδη
@@ -1412,8 +1418,11 @@ el:
   either_that_user_doesnt_exist_or: "Είτε αυτός ο χρήστης δεν υπάρχει ή ήδη τον ακολουθείτε."
   eligible_for_research_grade: Επιλέξιμο για Ερευνητικό Επίπεδο
   email: Διεύθυνση ηλ. ταχυδρομείου
-  email_description: Το email σας δεν κοινοποιείται στους άλλους χρήστες στο iNaturalist
   email_address_for_comments_and_other_feedback: Διευθύνσεις email για σχόλια και άλλη ανατροφοδότηση.
+  #Introductory form of address in an email. %{user} could be a username or a
+  #name, and the gender is unknown. @vow_or_con should work.
+  email_dear_user: Αγαπητέ%{user},
+  email_description: Το email σας δεν κοινοποιείται στους άλλους χρήστες στο iNaturalist
   email_notifications: Ειδοποιήσεις Email
   embed: 'Ενσωμάτωση'
   embed_place_widget: Ενσωματωμένο widget τόπου
@@ -1644,6 +1653,8 @@ el:
   generate_taxonomic_tags_for_flickr: Παραγωγή ταξινομικών ετικετών για τις φωτογραφίες στο Flickr.
   generate_widget: Παράγωγή Widget
   generate_your_stats: Παραγωγή των στατιστικών σας
+  #E.g GENERATE YOUR 2023 YEAR IN REVIEW
+  generate_your_year_in_review_caps: ΔΗΜΙΟΥΡΓΗΣΕ ΤΟ ΔΙΚΟ ΣΟΥ YEAR IN REVIEW ΓΙΑ ΤΟ %{year}
   generating_mobile_archive: "Παραγωγή αρχείου κινητού τηλεφώνου"
   Genus: Γένος
   geoprivacy: Γεωαπόρρητο
@@ -1669,7 +1680,6 @@ el:
   got_your_data_somewhere_else?: Πήρατε τα δεδομένα σας κάπου αλλού; Μπορούμε να βοηθήσουμε.
   graft: Μόσχευμα
   grafting_attemps_to_insert_this_taxon: Η διαδικασία της μεταμόσχευσης προσπαθεί να εισάγει αυτή την ταξινομική βαθμίδα στο δικό μας ταξινομικό δένδρο, βρίσκοντας μια ήδη υπάρχουσα γονεϊκή ταξινομική βαθμίδα ή δημιουργώντας όλες τις απαραίτητες ενδιάμεσες ταξινομικές ομάδες ώστε να τη συνδέσουν με μια υπάρχουσα, μεγαλύτερου επιπέδου ταξινομική βαθμίδα.
-  grant_role: "%{grant} %{role} ρόλος"
   grid: Πλέγμα
   grid_layout: Διάταξη Πλέγματος
   grid_tooltip: Εμφάνιση διάταξης πλέγματος
@@ -1758,6 +1768,9 @@ el:
   #Notification when an identification has been withdrawn
   identification_withdrawn: Η ταυτοποίηση αποσύρθηκε.
   identifications: Ταυτοποιήσεις
+  inaturalist_is_an_independent_nonprofit: |
+    Το iNaturalist είναι μια ανεξάρτητη 501(c)(3), μη κερδοσκοπική
+    οργάνωση με έδρα τις Ηνωμένες Πολιτείες της Αμερικής (Tax ID: 92-1296468).
   computer_vision_suggestion: Πρόταση Όρασης Υπολογιστή
   computer_vision_suggestion_desc: |
     Η Όραση Υπολογιστή είναι μια διαδικασία στην οποία ο υπολογιστής μαθαίνει να αναγνωρίζει μοτίβα σε εικόνες. Εμείς δίνουμε εργαλεία τα οποία χρησιμοποιούν μοντέλα όρασης υπολογιστή τα οποία είναι εκπαιδευμένα από τις εικόνες της κοινότητας ώστε να δίνουν προτάσεις ταυτοποίησης, όπως αυτόματη συμπλήρωση και σύγκριση. Αυτή η δείχνει πότε κάποιος προσθέτει μια ταυτοποίηση χρησιμοποιώντας κάποιο από αυτά τα εργαλεία.
@@ -2301,7 +2314,6 @@ el:
   needs_id: χρειάζεται ταυτοποίηση
   needs_id_: Χρειάζεται Ταυτοποίηση
   needs_id_expandable_html: "<span class='full'>Χρειάζεται </span>ταυτοποίηση"
-  needs_to_be_identified: Πρέπει να αναγνωριστεί
   #@vow_or_con can be used here for the first letter of %{place}
   network_affiliation_prompt_from_inat_html: |
     <strong>%{site_name}</strong>, μέρος του διεθνούς δικτύου του iNaturalist, επικεντρώνεται στη βιοποικιλότητα και στους ανθρώπους σε %{place}. Θα θέλατε να αλλάξετε την προσχώρηση του λογαριασμού σας από<strong>%{inat_site_name}</strong> σε <strong>%{site_name}</strong> και να κοινοποιείτε τα δεδομένα στα τοπικά ακαδημαϊκά/εκπαιδευτικά ιδρύματα?
@@ -2667,7 +2679,6 @@ el:
   #sign in with Apple OR Google
   or_all_caps: Ή
   or_choose_high_level_taxa: "... ή επιλέξτε από κάποιο υψηλού επιπέδου taxa"
-  orange: Πορτοκαλί
   order: Σειρά
   order_by: Ταξινόμηση κατά
   organism_is_wild: Ο οργανισμός είναι άγριος
@@ -2775,7 +2786,6 @@ el:
   pi_consent_child_label: |
     Δίνω τη συγκατάθεση μου και επιτρέπω στην iNaturalist να αποθηκεύει και να επεξεργάζεται συγκεκριμένες προσωπικές πληροφορίες για το παιδί μου με σκοπό να διαχειρίζεται τον λογαριασμό του/της
   pin_verb: Καρφιτσώστε
-  pink: Ροζ
   pinned_locations_desc: |
     Καρφιτσώστε αυτό τον συνδυασμό συντεταγμένων,ακρίβεια, γεωαπόρρητο και σημειώσεις τοποθεσίας για μεταγενέστερη χρήση.
   place: Τόπος
@@ -3316,7 +3326,6 @@ el:
   provider_authorizations: Εξουσιοδοτήσεις Παρόχου
   public_domain: Κοινό Κτήμα
   publish: Δημοσίευση
-  purple: Μωβ
   quality_grade: Βαθμός ποιότητας
   quality_grade_: Βαθμός Ποιότητας
   quality_grade_colon: "Βαθμός ποιότητας:"
@@ -3422,7 +3431,6 @@ el:
   recently_finished: Πρόσφατα τελειωμένα
   recently_observed: Έχει Παρατηρηθεί Πρόσφατα
   recently_resolved: Πρόσφατα επιλυμένο
-  red: κόκκινο
   redo_search_in_map: Επανάληψη αναζήτησης στον χάρτη
   redo_search_in_map_area: Επανάληψη αναζήτησης σε περιοχή του χάρτη
   refresh: Ανανέωση
@@ -4347,6 +4355,7 @@ el:
   view_flags_for_x_html: "Προβολή αναφορών για %{x}"
   view_full_observation: Προβολή πλήρους παρατήρησης
   view_full_size_photo: Προβολή εικόνας πλήρους μεγέθους
+  view_inaturalist_global_year_in_review_caps: ΔΕΙΤΕ ΤΗΝ ΕΠΙΣΚΟΠΗΣΗ ΤΗΣ ΠΑΓΚΟΣΜΙΑΣ ΚΟΙΤΟΤΗΤΑΣ INATURALIST ΓΙΑ ΤΟ %{year}
   view_journal: Προβολή Ημερολογίου
   view_leaderboard_from_last_month: Δείτε λίστες κατάταξης από τον περασμένο μήνα
   view_leaderboard_from_last_year: Δείτε λίστες κατάταξης από την περασμένη χρονιά
@@ -4440,7 +4449,6 @@ el:
   where_were_they?: Πού βρίσκονταν;
   where_were_you?: Πού βρισκόσασταν;
   which_projects_can_add_your_observations?: Ποιά παραδοσιακά πρότζεκτ μπορούν να προσθέσουν τις παρατηρήσεις σας;
-  white: λευκό
   why_you_can_see_the_coordinates: Γιατί Μπορείτε να Δείτε τις Συντεταγμένες
   who_can_add_observation_fields_to_my_obs: Ποιος μπορεί να προσθέσει πεδία παρατήρησης στις παρατηρήσεις μου;
   who_can_add_observations_to_this_project?: Ποιος μπορεί να προσθέσει παρατηρήσεις σε αυτό πρότζεκτ;
@@ -4505,9 +4513,9 @@ el:
   x_wrote_y_new_posts_html: "Ο χρήστης %{x} έκανε %{y} νέες αναρτήσεις"
   year: Έτος
   year_in_review: "Ανασκόπηση έτους %{year}"
+  year_in_review_caps: "Η ΕΠΙΣΚΟΠΗΣΗ ΤΟΥ %{year}"
   year_month: έτος/μήνας
   year_on_site: "Έτος στο %{site} %{year}"
-  yellow: κίτρινο
   'yes': "Ναι"
   #Used when trusting a project and the user is agreeing to trust the project
   #with access to their hidden coordinates but only for observations of
@@ -4524,6 +4532,49 @@ el:
   yes_reject_it: Ναι, απορρίψτε το
   yes_show_this_in_the_box: Ναι, να προβάλλεται αυτό στο μεγάλο κουτί στην κορυφή /taxa
   yesterday: Εχθές
+  yir_email_because_of_you: |
+    Εξαιτίας σας, φέτος τα δεδομένα βιοποικιλότητας εμπλουτίστηκαν σε σχέση με το περσυνό έτος. Η Επισκόπηση του έτους σας είναι το δώρο μας σε εσάς για όλα όσα έχετε προσφέρει για τη βιοποικιλότητα μέσω του iNaturalist.
+  yir_email_log_in_to_generate: |
+    Συνδεθείτε για να δημιουργήσετε την προσωπική σας επισκόπηση!
+  yir_email_of_your_observations:
+    one: Από την %{count} παρατήρησή σoυ, γνωρίζεις πόσες δημιουργήθηκαν το %{year};
+    other: Από τις %{count} παρατηρήσεις σου, γνωρίζεις πόσες δημιουργήθηκαν το %{year};
+  #Feel free to adjust this if %{year} or "Your" don't translate well
+  yir_email_subject: |
+    Η επισκόπηση του %{year} iNaturalist έτους σας— γιορτάστε τη χρονιά σας με βιοποικιλότητα
+  #This is used in the signature of an email, e.g. "With thanks, The iNaturalist Team"
+  yir_email_the_inaturalist_team: Η ομάδα του iNaturalist
+  yir_email_the_year_isnt_over: |
+    Η χρονιά δεν έχει τελειώσει ακόμη και ποτέ δεν είναι αργά για να δημοσιεύσεις παλαιότερες παρατηρήσεις σου. Αφού μοιραστείς περισσότερες παρατηρήσεις, φρόντισε να επιλέξεις «Ανανέωση στατιστικών στοιχείων» στο κάτω μέρος του Year in Review για να δεις τα ενημερωμένα στοιχεία σου.
+  yir_email_what_else_will_you_observe_caps: ΤΙ ΑΛΛΟ ΘΑ ΠΑΡΑΤΗΡΗΣΕΙΣ;
+  yir_email_what_new_to_you: |
+    Ποιο νέο είδος κατέγραψες φέτος; Πόσοι άνθρωποι σε βοήθησαν
+    με τις ταυτοποιήσεις (και σε πόσες βοήθησες εσύ);
+  yir_email_with_gratitude: Με εκτίμηση,
+  yir_email_year_on_inaturalist_globally_caps: "ΤΟ %{year} ΣΤΟ ΠΑΓΚΟΣΜΙΟ INATURALIST"
+  yir_email_you_are_part_of_something: |
+    Είσαι κομμάτι από κάτι μεγάλο! Κάθε άτομο που δημοσιεύει παρατηρήσεις, προσθέτει
+    ταυτοποιήσεις, και διαδίδει το iNaturalist κάνει τη διαφορά για τη βιοποικιλότητα. Μέσω των συλλογικών μας προσπαθειών, δημιουργούμε διαθέσιμα δεδομένα και γνώση για τη βιοποικιλότητα σε πρωτοφανή κλίμακα. Σ' ευχαριστούμε που είσαι μέλος της κοινότητας του iNaturalist!
+  yir_email_you_make_a_difference: |
+    Μέσω του iNaturalist κάνεις τη διαφορά για τη βιοποικιλότητα. Ευχαριστούμε για την προσφορά σου!
+  #@vow_or_con works on %{username}. %{created_date} will use the date.long
+  #format (see https://crowdin.com/translate/inaturalistweb/38/en#71285)
+  you_received_this_email_notice: |
+    Λάβατε αυτό το μήνυμα ηλεκτρονικού ταχυδρομείου επειδή το %{email} σχετίζεται με 
+    https://www.inaturalist.org/people/%{username}, ένα λογαριασμό στο iNaturalist που
+    δημιουργήθηκε στις %{created_date}.
+  #@vow_or_con works on %{username}. %{created_date} will use the date.long
+  #format (see https://crowdin.com/translate/inaturalistweb/38/en#71285)
+  you_received_this_email_notice_html: |
+    Λάβατε αυτό το μήνυμα ηλεκτρονικού ταχυδρομείου επειδή το %{email} σχετίζεται με 
+    <a href="https://www.inaturalist.org/people/%{username}">https://www.inaturalist.org/people/%{username}</a>, ένα λογαριασμό στο iNaturalist που
+    δημιουργήθηκε στις %{created_date}.
+  #@vow_or_con works on %{site_name}
+  your_account_is_affiliated: |
+    Ο λογαριασμός σας είναι συνδεδεμένος με το %{site_name} (%{site_url}).
+  #@vow_or_con works on %{site_name}
+  your_account_is_affiliated_html: |
+    Ο λογαριασμός σας είναι συνδεδεμένος με το <a href="%{site_url}">%{site_name}</a>.
   you: εσύ
   you_: Εσείς
   you_appear_offline_try_again: |
@@ -6134,9 +6185,17 @@ el:
       #See https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html#method-i-strftime for formatting codes. Use %=B or %=b for lowercase months.
       default: '%d-%m-%Y'
       #See https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html#method-i-strftime for formatting codes. Use %=B or %=b for lowercase months.
+      long: '%B %d, %Y'
+      #See https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html#method-i-strftime for formatting codes. Use %=B or %=b for lowercase months.
+      short: '%b %d'
+      #See https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html#method-i-strftime for formatting codes. Use %=B or %=b for lowercase months.
       compact: "%b %e"
       #See https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html#method-i-strftime for formatting codes. Use %=B or %=b for lowercase months.
+      short_with_year: '%b %d, %Y'
+      #See https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html#method-i-strftime for formatting codes. Use %=B or %=b for lowercase months.
       month_year: '%B %Y'
+      #See https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html#method-i-strftime for formatting codes. Use %=B or %=b for lowercase months.
+      month_day_year: '%B %d, %Y'
     month_names:
       - 
       - Ιανουάριος
@@ -6269,9 +6328,17 @@ el:
     am: πμ
     formats:
       #See https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html#method-i-strftime for formatting codes. Use %=B or %=b for lowercase months.
+      default: '%b. %d, %Y %H:%M:%S %z'
+      #See https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html#method-i-strftime for formatting codes. Use %=B or %=b for lowercase months.
+      long: '%B %d, %Y %I%M %p'
+      #See https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html#method-i-strftime for formatting codes. Use %=B or %=b for lowercase months.
+      short: '%d %b %H:%M'
+      #See https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html#method-i-strftime for formatting codes. Use %=B or %=b for lowercase months.
       compact: "%I:%M %p"
       #See https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html#method-i-strftime for formatting codes. Use %=B or %=b for lowercase months.
       observed_at: '%I:%M %p %Z'
+      #See https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html#method-i-strftime for formatting codes. Use %=B or %=b for lowercase months.
+      day_month_year: "%B %d, %Y"
       #See https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html#method-i-strftime for formatting codes. Use %=B or %=b for lowercase months.
       hours: "%l: %M %p"
     pm: μμ

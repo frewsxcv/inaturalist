@@ -9,6 +9,9 @@ lb:
   x_comments_html:
     one: '<span class="count">%{count}</span> Kommentar'
     other: '<span class="count">%{count}</span> Kommentarer'
+  x_faves:
+    one: '%{count} Favoriséierung'
+    other: '%{count} Favoriséierungen'
   x_identifications:
     one: '%{count} Identifikatioun'
     other: '%{count} Identifikatiounen'
@@ -18,6 +21,9 @@ lb:
   x_identifications_:
     one: '1 Identifikatioun'
     other: '%{count} Identifikatiounen'
+  x_identifications_caps_html:
+    one: '<span class="count">%{count}</span> BESTËMMUNG'
+    other: '<span class="count">%{count}</span> BESTËMMUNGEN'
   #Number of people who have added identifications
   x_identifiers_html:
     #Number of people who have added identifications
@@ -59,6 +65,9 @@ lb:
   x_observations_html:
     one: "<span class='count'>1</span> Observatioun"
     other: "<span class='count'>%{count}</span> Observatiounen"
+  x_observations_caps_html:
+    one: "<span class='count'>%{count}</span> OBSERVATIOUN"
+    other: "<span class='count'>%{count}</span> OBSERVATIOUNEN"
   x_observations_link_html:
     one: "<a href='%{url}'>1 Observatioun</a>"
     other: "<a href='%{url}'>%{count} Observatiounen</a>"
@@ -87,6 +96,9 @@ lb:
   x_species:
     one: '1 Aart'
     other: '%{count} Aarten'
+  x_species_caps_html:
+    one: "<span class='count'>%{count}</span> AART"
+    other: "<span class='count'>%{count}</span> AARTEN"
   x_species_html:
     one: "<span class='count'>%{count}</span> Aart"
     other: "<span class='count'>%{count}</span> Aarten"
@@ -112,8 +124,11 @@ lb:
     one: "<span class='count'>%{count}</span> Taxon Changement bäigesat"
     other: "<span class='count'>%{count}</span> Taxon Changementer bäigesat"
   _100_day_trends: Tendenz iwwer 100 Deeg
-  _percent_ID_d: "% ID bestëmmt"
+  _percent_ID_d: "% bestëmmt"
   a_community_for_naturalist: Eng Communautéit fir Naturalisten
+  a_default_taxon_name_will_automatically_created: |
+    E Standardtaxonnumm gëtt automatesch aus dem wëssenschaftlechen Numm Attribut vun dësem Taxon erstallt.
+    Wann Dir dësen neien Taxon gespäichert hutt, kënnt Dir aner Nimm bäisetzen (vernacular Nimm, al wëssenschaftlech Nimm, etc.).
   a_flag_for_x: "en Markéierung fir %{x}"
   a_member_of_taxon_html: "e Member vu(n) %{taxon}"
   #Ascending alphabetical sort option. Could be alternatively be translated as
@@ -480,19 +495,17 @@ lb:
   before_importing_photos: virum Import vu Fotoen
   bg_color: Hannergrondfaarf
   bio: Bio
+  bioblitz: Bioblitz
   birds: Vigel
   birthday: Gebuertsdag
-  black: schwaarz
   block_removed: Spär ewechgeholl
   blocked_users: Gespaart Benotzer
   blog_widget: Blog Widget
-  blue: blo
   blue_butterfly_etc: "blo, Päiperlek, asw."
   body: Kierper
   #Text inserted into a textarea when the bold button is clicked but no text was selected
   bold_text: fetten Text
   breadcrumbs: Broutgrimmelen
-  brown: brong
   browse: Duerchsichen
   browse_all_projects: All Projeten duerchsichen
   browse_all_species: All Aarten duersichen
@@ -598,9 +611,21 @@ lb:
   connect: Connectéieren
   connected_accounts_titlecase: Connectéiert Kontoen
   conservation_status: Erhalungszoustand
+  #Noun, e.g. a header in a table showing flags for a column containing the content that was flagged.
+  content: Inhalt
   continue: Virufueren
   continue_to_site: Virun op %{site_name}
   controlled_term_labels:
+    #Value displayed when a filter is not filtering by a specific value for this attribute
+    any_sex: Belibeg
+    #Value displayed when a filter is not filtering by a specific value for this attribute
+    any_plant_phenology: Belibeg
+    #Value displayed when a filter is not filtering by a specific value for this attribute
+    any_life_stage: Belibeg
+    #Value displayed when a filter is not filtering by a specific value for this attribute
+    any_alive_or_dead: Belibeg
+    #Value displayed when a filter is not filtering by a specific value for this attribute
+    any_evidence_of_presence: Belibeg
     sex: Geschlecht
     male: Männlech
     female: Weiblech
@@ -619,6 +644,8 @@ lb:
     evidence_of_presence: Evidenz vum Virkommen
     #As in the feather on a bird
     feather: Fieder
+    #Abnormal growth
+    gall: Gal
     #Refers to an observation that depicts the actual organism and not some
     #kind of secondary evidence like a footprint
     organism: Organismus
@@ -781,6 +808,7 @@ lb:
   donate_to_inaturalist: En Don un iNaturalist maachen
   done: Fäerdeg
   download: Eroflueden
+  download_caps: EROFLUEDEN
   download_csv: CSV eroflueden
   download_csv_template: CSV-Schabloun eroflueden
   download_kml: KML eroflueden
@@ -822,29 +850,11 @@ lb:
   editing_taxon_range_for_taxon_html: Verbreedungsgebiett fir %{taxon} beaarbechten
   editors: Auteuren
   email: E-Mail
-  email_description: Är E-Mail-Adress gëtt net mat anere Benotzer op iNaturalist gedeelt
   email_address_for_comments_and_other_feedback: E-Mail-Adress fir Kommentarer oder anere Feedback
-  email_conf_banner_check_your_spam_folder_html: <strong>Kuckt an Ärem Spam-Ordner no</strong>
-  email_conf_banner_contact_us_html: Et funktionéiert nach ëmmer net? Schéckt eis eng E-Mail op %{email}, fir datt mir Iech weiderhëllefe kënnen.
-  email_conf_banner_please_click: |
-    Klickt wgl. op de Link an Ärer E-Mail fir Är E-Mail-Adress ze bestätegen.
-  #Subject of an email prompting people to confirm their email address before
-  #we start requiring confirmation. @vow_or_con should work for %{site_name}
-  email_confirmation_reminder_confirm_your_site_email_address_before_date: Confirméiert Är E-Mail-Adress %{site_name} virum %{date} #Paragraph in an email prompting people to confirm their email address before # we start requiring confirmation. @vow_or_con should work for %{site_name}
-  email_confirmation_reminder_please_confirm: |
-    Wgl. confirméiert haut Är E-Mail-Adress, fir datt Dir nach weider op Äre Benotzerkont zougräife kënnt. %{site_name} an d'Appen iNaturalist a Seek vun iNaturalist verbannen d'Leit mat der Natur an ënnerteneen, andeems Observatioune vun der Biodiversitéit gedeelt ginn. Merci, datt Dir Deel vun der iNaturalist-Communautéit sidd!
-  #Paragraph in an email prompting people to confirm their email address before
-  #we start requiring confirmation.
-  email_confirmation_reminder_we_will_require: |
-    Mir verlaangen ab dem %{requirement_date} fir all Benotzerkonte verifizéiert E-Mail-Adressen. Wgl. huelt Iech ee Moment Zäit fir se elo ze bestätegen.
-  #Paragraph in an email prompting people to confirm their email address before
-  #we start requiring confirmation.
-  email_confirmation_reminder_any_questions_html: |
-    Falls Dir iergendwellech Froen hutt, kuckt wgl. d'<a href="%{faq_url}">FAQen</a>. Merci, datt Dir Iech d'Zäit huelt Iech mat der Natur a mat %{site_name} ze connectéieren.
-  #Header in email prompting people to confirm their email address before we
-  #start requiring confirmation. This preceeds some details about the
-  #recipient's account.
-  email_confirmation_reminder_account_details: Detailer vum Benotzerkont
+  #Introductory form of address in an email. %{user} could be a username or a
+  #name, and the gender is unknown. @vow_or_con should work.
+  email_dear_user: Léif/Léiw %{user}.
+  email_description: Är E-Mail-Adress gëtt net mat anere Benotzer op iNaturalist gedeelt
   embed: 'Abannen'
   end: Schluss
   endangered: Bedréit
@@ -878,8 +888,11 @@ lb:
   facebook: Facebook
   failed_to_find_your_location: Är Positioun gouf net fonnt.
   'false': 'Falsch'
+  #Plural noun for instances when someone has marked something as a favorite, e.g. "Order by: Faves"
+  faves: Favoriséierungen
   Family: Famill
   favorites: "Favoriten"
+  feedback: Feedback
   #Button to show fewer places
   fewer__context_places: Manner
   failed: Huet net funktionéiert
@@ -890,6 +903,7 @@ lb:
   fill_out_your_profile: completéiert Äre Profil
   #The name of a computer file
   filename: Fichiersnumm
+  filter: Filteren
   filter_by_curator_identification: Filtren no Kurator Bestëmmungen
   filter_by_place: No der Plaz filteren
   filtering: Filteren
@@ -951,8 +965,14 @@ lb:
   from_photos: Vu Fotoen
   from_soundcloud: Vun Soundcloud
   full_screen: Ganzen Ecran
+  fungi:
+    one: Pilz
+    other: Pilzen
   gbif: GBIF
   generate_your_stats: Generéiert Är Statistiken
+  #E.g GENERATE YOUR 2023 YEAR IN REVIEW
+  generate_your_year_in_review_caps: GENERÉIERT ÄR IWWERSIICHT FIR D'JOER %{year}
+  Genus: Gattung
   get_started: Fir unzefänken
   getting_started_guide: Guide fir unzefänken
   global_names: Global Nimm
@@ -968,6 +988,7 @@ lb:
   guides: Guiden
   guidelines: Richtlinnen
   has_already_been_flagged_by: gouf scho markéiert vum
+  has_one_or_more_faves: Huet eng oder méi Favoriséierungen
   has_photo: Huet eng Foto
   has_photos: Huet Fotoen
   has_photos_or_sounds: Huet Fotoen oder Sound
@@ -1013,6 +1034,8 @@ lb:
   #Notification when an identification has been withdrawn
   identification_withdrawn: Identifikatioun zréckgezunn.
   identifications: Bestemmungen
+  inaturalist_is_an_independent_nonprofit: |
+    iNaturalist ass eng onofhängege 501 (c) (3), steierfräi, not-for-profit Organisatioun baséiert an den USA (Steier ID: 92-1296468).
   identifiers: Bestëmmer
   ids: "IDen"
   ids_made_for_others: IDs fir een aneren gemaach
@@ -1045,6 +1068,7 @@ lb:
   inaturalist_places: "%{site_name} Plazen"
   info: Informatioun
   insects: Insekten
+  instagram: Instagram
   #Tool tip for a button that inserts quoted text into a text area
   insert_a_quote: Zitat afügen
   interactions: Interaktiounen
@@ -1086,6 +1110,7 @@ lb:
   last_seen: Fir d'lescht gesinn
   last_year: Lescht Joer
   lat: Lat
+  layout: Layout
   leaderboard: Féierungstabel
   leaderboard_most:
     species_in_month_year: Déi meescht Aarten an %{month_year}
@@ -1146,10 +1171,12 @@ lb:
     korean: Koreanesch
     latvian: Lettesch
     lithuanian: Litauesch
+    lozi: Lozi
     luxembourgish: Lëtzebuergesch
     malay: Malayesch
     malayalam: Malayalam
     maltese: Maltesesch
+    maori: Maori
     marathi: Marathi
     maya: Maya
     mongolian: Mongolesch
@@ -1158,16 +1185,19 @@ lb:
     occitan: Okzitanesch
     ojibwe: Ojibwe
     palauan: Palauesch
+    persian: Persesch
     polish: Polnesch
     portuguese: Portugisesch
     romanian: Rumänesch
     russian: Russesch
     scientific_names: Wëssenschaftlech Nimm
+    serbian: Serbesch
     sinhala: Sinhala
     slovak: Slokwakesch
     slovenian: Slowenesch
     spanish: Spuenesch
     swedish: Schwedesch
+    tagalog: Tagalog
     tahitian: Tahitesch
     thai: Thailännesch
     turkish: Tierkesch
@@ -1180,6 +1210,7 @@ lb:
   less__context_text: Manner
   license: Lizenz
   life: Liewen
+  linear_scale_label: Linear
   link: Link
   link_your_google_account: Verbannt Äre Google Benotzerkont
   linked_flickr: "Äre(n) %{site_name}-Berotzerkont ass elo mat Ärem Benotzerkont verbonn."
@@ -1239,6 +1270,7 @@ lb:
     lb: Lëtzebuergesch
     lt: Litauesch
     lv: Lettesch
+    mi: Maori
     mk: Mazedonesch
     mr: Marathi
     nl: Hollännesch
@@ -1270,14 +1302,19 @@ lb:
     transparent_png: transparente PNG
     none: keen
   long: Lon
+  look_up_name: "Numm nosichen"
   lookup: Noschloen
   low: Niddreg
   lowest_rank: Ënneschte
   make_admin: Administrateur maachen
+  #Header for main content section of the project detail page when editing custom project data.
+  main_content: Haaptinhalt
   make_this_your_default_license: "Maacht heirauser Är Standard-%{type}-Lizenz"
   mammals: Mamendéieren
   manage_names: Nimm geréieren
   manage_your_projects: Geréiert Är Projeten
+  manager: Manager
+  managers: Manageren
   map: Kaart
   map_of_observations: Kaart vun den Observatiounen
   maps:
@@ -1296,6 +1333,7 @@ lb:
   #If a single word won't work, a symbol like "+" would be fine.
   media_and: a(n)
   media_type: Medientyp
+  medium: mëttel
   meet: Treffen
   member_of_the_inaturalist_network_html: |
     Member vum <a href="%{url}">iNaturalist Reseau</a>
@@ -1320,6 +1358,9 @@ lb:
     Gitt keng perséinlech Informatioun iwwer Iech selwer weider u Leit deenen Dir net vertraut.
   misidentifications: Falschbestëmmungen
   mobile: Mobil
+  #Action a moderator can take to hide content; verb
+  moderator_actions_hide: Verstoppen
+  mollusks: Mollusken
   momentjs:
     shortRelativeTime:
       future: "an %s"
@@ -1410,7 +1451,6 @@ lb:
   native_to_place: "Einheimesch an %{place}"
   needs_id: brauch ID
   needs_id_: Brauch eng ID
-  needs_to_be_identified: Muss identifizéiet ginn
   #@vow_or_con can be used here for the first letter of %{place}
   network_affiliation_prompt_from_inat_html: |
     <strong>%{site_name}</strong>, ass Deel vum internationalen iNaturalist Netzwierk, a fokusséiert sech ob d'Notzer zu %{place}. Wëllt Dir Äer Konto-Zougehéieregkeet änneren vun <strong>%{inat_site_name}</strong> ob <strong>%{site_name}</strong> an Är Donnéeën esou mat de Lokalen Institutiounen deelen?
@@ -1559,6 +1599,7 @@ lb:
   observation_date: Datum
   observation_date?: Datum?
   observation_field_type_text: Text
+  observation_field_type_numeric: Numeresch
   observation_field_type_date: Datum
   observation_field_type_time: Zäit
   observation_field_type_dna: DNA
@@ -1584,12 +1625,18 @@ lb:
   observations_per_month: Observatiounen / Mount
   observations_total: Observatiounen Total
   observations_w: Observatiounen w/
-  observations_with_this_field: Observatiounen mat desem Feld
+  observations_with_this_field: Observatioune mat dësem Feld
+  observations_with_this_field_and_value: Observatioune mat dësem Feld a Wäert
+  observations_without_this_field: Observatiounen ouni dëst Feld
   observed: Observéiert
   observed_by: Observéiert vum
   observer: Observateur
   observers: Observateuren
+  observer_short: Observateur
   occurrence_status_levels:
+    common: heefeg
+    uncommon: seelen
+    irregular: onreegelméisseg
     doubtful: zweiwelhaft
     absent: net do
   of_places: Plazen
@@ -1628,6 +1675,7 @@ lb:
   #sign in with Apple OR Google
   or_all_caps: ODER
   order: Uerdnung
+  order_by: Sortéieren no
   organism_is_wild: Organismus ass wëll
   organisms: Organismen
   original: Original
@@ -1679,7 +1727,6 @@ lb:
   pi_consent_desc_title: Iwwer Perséinlech Informatiounen
   pi_consent_label: |
     Ech stemmen zou datt iNaturalist limitéiert perséinlech Donnéeën iwwert mech ka späicheren a veraarbechte fir mäin Kont kennen ze managen.
-  pink: rosa
   place: Plaz
   place_create_quota_exceeded: |
     Dir hutt d'Zuel vun Plazen iwwerschratt déi Dir an enger 24-Stonne-Period kreéiere kënnt
@@ -1760,6 +1807,7 @@ lb:
     belgium: Belsch
     belize: Belize
     benin: Benin
+    bermuda: Bermuda
     bhutan: Bhutan
     bolivia: Bolivien
     bosnia_and_herzegovina: Bosnien-Herzegowina
@@ -1811,6 +1859,8 @@ lb:
     greece: Griicheland
     greenland: Grönland
     guam: Guam
+    guatemala: Guatemala
+    guinea_bissau: Guinea-Bissau
     guyana: Guyana
     haiti: Haiti
     honduras: Honduras
@@ -1822,9 +1872,11 @@ lb:
     iran: Iran
     iraq: Irak
     ireland: Irland
+    israel: Israel
     italy: Italien
     jamaica: Jamaika
     japan: Japan
+    jersey: Jersey
     jordan: Jordanien
     kazakhstan: Kasachstan
     kenya: Kenia
@@ -2002,6 +2054,7 @@ lb:
     x_phyla:
       one: Stamm
       other: Stämm
+    class: Klass
     x_classes:
       one: Klass
       other: Klassen
@@ -2117,7 +2170,6 @@ lb:
   recent_observations_: Rezent Observatiounen
   recently_active: Rezent aktiv
   recently_finished: Rezent fäerdeg gemaach
-  red: rout
   redo_search_in_map: Nach eng Kéier op der Kaart sichen
   refresh: Aktualiséieren
   regenerate_stats: Statistiken nei generéieren
@@ -2234,6 +2286,7 @@ lb:
   sort: Zortéieren
   sort_by: Zortéieren no
   sounds:
+    add_media: Medien derbäisetzen
     add_sounds: Sound bäisetzen
     before_importing_sounds: virum Import vun Sounds
     import_sounds: Sounds importeiren
@@ -2286,6 +2339,8 @@ lb:
   synonyms: Synonymmen
   table: Tabell
   taxa: Taxa
+  taxa_info: Informatiounen iwwer Taxa
+  taxon: Taxon
   taxon_geoprivacy: Taxon Geoprivatsphäre
   taxonomy: Taxonomie
   taxon_id: Taxon ID
@@ -2341,6 +2396,8 @@ lb:
   threatened: Bedrot
   time_: Zäit
   time_ago: "viru(n) %{time}"
+  #TZ / IANA time zone name. See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone_etc_utc: UTC
   #As in the title of a book or a blog post
   title: Titel
   title_and_description: "Titel & Beschreiwung"
@@ -2378,6 +2435,7 @@ lb:
   unmute: Stomm schalten ausmaachen
   updating: Aktualiséierung...
   unsubscribe: Desabonéiren
+  unsubscribe_from_emails_like_this: Desabonnéiert Iech vun E-Maile wéi dëser
   unsuspend_user: Suspendéierung vum Benotzer ophiewen
   update: Aktualiséieren
   update_observations: Observatiounen aktualiséieren
@@ -2403,6 +2461,8 @@ lb:
     one: 1 Mol benotzt
     other: '%{count} Mol benotzt'
   user: Benotzer
+  user1_and_user2_faved_this_observation: "D'Benotzer %{user1} a(n) %{user2} hunn dës Observatioun favoriséiert"
+  user1_user2_and_x_others_faved_this_observation: "D'Benotzer %{user1}, %{user2} an %{x_others} hunn dës Observatioun favoriséiert"
   user_added_a_comment_html: "%{user} huet ee Kommentar bäigefüügt"
   #@gender operates on %{x}
   user_added_a_x: "%{user} huet e(n) %{x} derbäigesat"
@@ -2448,6 +2508,7 @@ lb:
   view_all_observations: All Observatioune weisen
   view_details: Detailer weisen
   view_dynamic_lifelist_: DYNAMESCH LIFE-LESCHT KUCKEN
+  view_inaturalist_global_year_in_review_caps: GLOBAL JOER %{year} AM RÉCKBLÉCK KUCKEN
   view_license: Lizenz weisen
   view_lists: Lëschte weisen
   view_more: Méi weisen
@@ -2501,7 +2562,6 @@ lb:
   where_were_they?: Wou waren se?
   where_were_you?: Wou war Dir?
   which_projects_can_add_your_observations?: Wat fir traditionell Projete kënnen Är Observatiounen derbäisetzen?
-  white: wäiss
   #Prompt to explain why a user is changing a record, e.g. changing a taxon name or updating a taxon
   why_are_you_making_this_change_optional: Firwat wëllt Dir dës Ännerung maachen? (fakultativ)
   why_are_you_making_this_change_cite_source_required: Firwat wëllt Dir dës Ännerung maachen? Gitt wgl. Är Grënn an – wa méiglech – eng Quell un. (Obligatoresch)
@@ -2535,9 +2595,9 @@ lb:
   x_sent_you_a_new_message_on_y_html: "%{x} huet Iech op %{y} en neie Message geschéckt:"
   year: Joer
   year_in_review: "Joer %{year} am Réckbléck"
+  year_in_review_caps: "JOER AM RÉCKBLÉCK %{year}"
   year_month: Joer/Mount
   year_on_site: "Joer %{year}op %{site}"
-  yellow: giel
   'yes': "Jo"
   #Used when trusting a project and the user is agreeing to trust the project
   #with access to their hidden coordinates
@@ -2557,6 +2617,44 @@ lb:
   yir_donate_banner_you_helped_inaturalist_thrive: Dir hutt dëst Joer gehollef dass den iNaturalist floréiert. Merci!
   #"Your" is singular
   yir_donate_inaturalist_needs_your_support: iNaturalist brauch Är Ënnerstëtzung
+  yir_email_because_of_you: |
+    Wéinst Iech ginn et dëst Joer méi Daten iwwer d'Biodiversitéit wéi d'lescht Joer. D'Joer am Réckblèck ass eise Kaddo un Iech fir alles wat Dir
+    fir Biodiversitéit duerch iNaturalist gemaach hutt.
+  yir_email_log_in_to_generate: |
+    Iech aloggen fir Äert perséinlecht Joer am Réckbléck ze generéieren!
+  yir_email_of_your_observations:
+    one: Vun Ärer %{count} Observatioun, wësst Dir, wéi vill der am Joer %{year} gemaach goufen?
+    other: Vun Äre(n) %{count} Observatiounen, wësst Dir, wéi vill der am Joer %{year} gemaach goufen?
+  #Feel free to adjust this if %{year} or "Your" don't translate well
+  yir_email_subject: |
+    Äert iNaturalist Joer %{year} am Réckblèck - feiert Äert Joer mat der Biodiversitéit
+  #This is used in the signature of an email, e.g. "With thanks, The iNaturalist Team"
+  yir_email_the_inaturalist_team: D'iNaturalist-Team
+  yir_email_the_year_isnt_over: |
+    D'Joer ass nach net eriwwer, an et ass ni ze spéit fir al Observatiounen ze posten. Nodeems Dir weider Observatioune gedeelt hutt, stellt sécher "Statistiken  Regeneréieren" um Enn vun Ärem Joer am Réckbléck ze drécken fir d'Resultater ze aktualiséieren.
+  yir_email_what_else_will_you_observe_caps: WAT ANESCHTERS WÄERT DIR OBSERVÉIEREN?
+  yir_email_what_new_to_you: |
+    Wat fir eng nei-fir-Iech Aarte hutt Dir dëst Joer gesinn? Wéi vill Leit hunn Iech mat Bestëmmung gehollef (a wéi vill hutt Dir gehollef)?
+  yir_email_with_gratitude: Mat Dankbarkeet,
+  yir_email_year_on_inaturalist_globally_caps: "%{year} OP INATURALIST GLOBALT"
+  yir_email_you_are_part_of_something: |
+    Dir sidd Deel vun eppes Grousses! All Persoun déi Observatioune post, Bestëmmunge bäidréit an d'Wuert iwwer iNaturalist verbreet mécht en Ënnerscheed fir d'Biodiversitéit. Duerch eis kollektiv Efforte maache mir Biodiversitéitsdonnéeën an engem eemolegen Ausmooss verfügbar. Merci dass Dir Deel vun der iNaturalist Gemeinschaft sidd!
+  yir_email_you_make_a_difference: |
+    Dir maacht en Ënnerscheed fir d'Biodiversitéit duerch iNaturalist. Merci fir alles wat Dir maacht!
+  #@vow_or_con works on %{username}. %{created_date} will use the date.long
+  #format (see https://crowdin.com/translate/inaturalistweb/38/en#71285)
+  you_received_this_email_notice: |
+    Dir hutt dës E-Mail kritt well %{email} mat https://www.inaturalist.org/people %{username} assoziéiert ass, engem iNaturalist Kont deen den %{created_date} erstallt gouf.
+  #@vow_or_con works on %{username}. %{created_date} will use the date.long
+  #format (see https://crowdin.com/translate/inaturalistweb/38/en#71285)
+  you_received_this_email_notice_html: |
+    Dir hutt dës E-Mail kritt well %{email} mat <a href="https://www.inaturalist.org/people/%{username}">https://www.inaturalist.org/people/%{username}</a> assoziéiert ass, engem iNaturalist Kont erstallt de %{created_date} assortéiert ass.
+  #@vow_or_con works on %{site_name}
+  your_account_is_affiliated: |
+    Äre Kont ass mat %{site_name} (%{site_url}) verbonnen.
+  #@vow_or_con works on %{site_name}
+  your_account_is_affiliated_html: |
+    Äre Kont ass mat <a href="%{site_url}">%{site_name}</a> verbonnen.
   yir_generating_and_sharing: |
     Generéiere an Deele vun esou ville Biodiversitéitsdonnéeë verursaacht ëmmer méi Käschten.
   yir_millions_of_people_used_inaturalist: |
@@ -2571,6 +2669,7 @@ lb:
   you_can_only_block_three_users: Dir kënnt nëmmen dräi Benotzer spären
   you_cant_delete_observation_fields_that_people_are_using: "Dir kennt keng Observatiounsfelder läschen déi vun aneren Notzer genotzt ginn."
   you_dont_have_permission_to_do_that: Dir hutt net d'Recht fir dat ze maachen.
+  you_faved_this: Dir hutt dat favoriséiert!
   you_have_left_x_project: "Dir hutt %{project} verlooss"
   you_joined_this_project: Dir sidd dësem Projet bäigetrueden!
   you_must_be_a_member_of_this_project_to_do_that: Dir musst e Member vun dësem Projet si fir dat ze maachen
@@ -2730,6 +2829,9 @@ lb:
         species_per_year: Aarten / Joer
         species_per_year_by_date_observed: No Datum observeiert
         translators_title: Iwwersetzer
+        view_all_publications_count_caps2:
+          one: "%{count} PUBLIKATIOUN WEISEN"
+          other: "ALL %{count} PUBLIKATIOUNE WEISEN"
     taxa:
       show:
         about_conservation_status_desc: |
@@ -2953,6 +3055,9 @@ lb:
     pm: pm
   activerecord:
     models:
+      #Information authored by site admins shown to users at various places
+      #on the web site, mostly on the dashboard
+      Announcement: Ukënnegung
       Atlas: Atlas
       Comment: Kommentar
       Identification: Bestëmmung
@@ -3012,6 +3117,7 @@ lb:
         wikipedia_summary: Wikipedia-Zesummefaassung
         wikipedia_title: Wikipedia-Titel
       taxon_name:
+        lexicon: Lexikon
         name: Numm
       taxon_link:
         url: URL
@@ -3054,6 +3160,10 @@ lb:
           attributes:
             user_id:
               must_be_a_curator: muss een Kurator sinn
+        moderator_note:
+          attributes:
+            user:
+              must_be_a_curator: muss ee Kurator sinn
         place:
           attributes:
             place_geometry:

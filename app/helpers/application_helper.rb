@@ -1652,4 +1652,9 @@ module ApplicationHelper
     I18n.t( "#{key}_", **options )
   end
 
+  def plaintext_t( key, options = {} )
+    i18n = @i18n || options[:i18n] || I18n
+    i18n.t( key, **options ).gsub( /\s+/, " " ).strip
+    i18n.t( key, **options ).strip
+  end
 end

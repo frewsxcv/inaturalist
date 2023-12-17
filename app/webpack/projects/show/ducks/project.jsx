@@ -17,6 +17,7 @@ const TAXON_FIELDS = {
   rank_level: true,
   iconic_taxon_name: true,
   preferred_common_name: true,
+  preferred_common_names: true,
   is_active: true,
   extinct: true,
   ancestor_ids: true,
@@ -53,7 +54,8 @@ const OBSERVATION_FIELDS = {
     id: true,
     uuid: true,
     url: true,
-    license_code: true
+    license_code: true,
+    original_dimensions: "all"
   },
   taxon: {
     id: true,
@@ -62,6 +64,7 @@ const OBSERVATION_FIELDS = {
     iconic_taxon_name: true,
     is_active: true,
     preferred_common_name: true,
+    preferred_common_names: true,
     rank: true,
     rank_level: true
   },
@@ -235,7 +238,7 @@ export function infiniteScrollObservations( previousScrollIndex, nextScrollIndex
     const { testingApiV2 } = config;
     const total = project.filtered_observations.total_results;
     const loaded = project.filtered_observations.results.length;
-    if ( previousScrollIndex >= total || nextScrollIndex <= loaded || nextScrollIndex > 500 ) {
+    if ( previousScrollIndex >= total || nextScrollIndex <= loaded || previousScrollIndex > 500 ) {
       dispatch( setConfig( { observationsScrollIndex: nextScrollIndex } ) );
       return null;
     }
@@ -263,14 +266,14 @@ export function infiniteScrollObservations( previousScrollIndex, nextScrollIndex
   };
 }
 
-export function infiniteScrollSpecies( nextScrollIndex ) {
+export function infiniteScrollSpecies( previousScrollIndex, nextScrollIndex ) {
   return ( dispatch, getState ) => {
     const { project, config } = getState( );
     if ( !project || !project.species_loaded ) { return null; }
     const { testingApiV2 } = config;
     const total = project.species.total_results;
     const loaded = project.species.results.length;
-    if ( nextScrollIndex > total || nextScrollIndex <= loaded || nextScrollIndex > 500 ) {
+    if ( previousScrollIndex >= total || nextScrollIndex <= loaded || previousScrollIndex > 500 ) {
       dispatch( setConfig( { speciesScrollIndex: nextScrollIndex } ) );
       return null;
     }

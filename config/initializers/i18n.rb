@@ -26,34 +26,17 @@ I18n::Backend::Simple.include I18nCustomBackend
 
 I18n::JS.export_i18n_js_dir_path = "app/assets/javascripts"
 
-def normalize_locale( locale )
-  return if locale.blank?
-
-  locale = locale.split( /[;,]/ ).grep( /^[a-z-]+$/i ).first
-  return if locale.blank?
-
-  lang, region = locale.split( "-" ).map( &:downcase )
-  return lang if region.blank?
-
-  # These re-mappings will cause problem if these regions ever get
-  # translated, so be warned. Showing zh-TW for people in Hong Kong is
-  # *probably* fine, but Brazilian Portuguese for people in Portugal might
-  # be a bigger problem.
-  if lang == "es" && region == "xl"
-    region = "mx"
-  elsif lang == "zh"
-    if region == "hk" || region.downcase == "hant"
-      region = "tw"
-    elsif region.downcase == "hans"
-      region = "cn"
+def without_english_fallback
+  old_fallbacks = I18n.fallbacks.clone
+  new_fallbacks = old_fallbacks.each_with_object( {} ) do | pair, memo |
+    locale, fallbacks = pair
+    memo[locale] = if fallbacks.include?( :en ) && locale.to_s !~ /^en/
+      fallbacks.without( :en )
+    else
+      fallbacks
     end
   end
-  return "pt" if lang == "pt" && region == "pt"
-
-  locale = "#{lang.downcase}-#{region.upcase}"
-  if I18N_SUPPORTED_LOCALES.include?( locale )
-    locale
-  elsif I18N_SUPPORTED_LOCALES.include?( lang )
-    lang
-  end
+  I18n.fallbacks = I18n::Locale::Fallbacks.new( new_fallbacks )
+  yield
+  I18n.fallbacks = I18n::Locale::Fallbacks.new( old_fallbacks )
 end
