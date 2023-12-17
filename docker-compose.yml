@@ -41,7 +41,8 @@ services:
       - pg_data:/var/lib/postgresql/data
   
   rails:
-    image: mcr.microsoft.com/devcontainers/universal:linux
+    # image: mcr.microsoft.com/devcontainers/universal:linux
+    iamge: inaturalisttest/rails
     command: rails server
 
 volumes:

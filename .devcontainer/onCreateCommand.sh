@@ -4,9 +4,9 @@
 # -x Print commands
 set -ex
 
-sudo apt-get update
+# sudo apt-get update
 
-sudo apt-get install -y proj-bin postgresql-client
+# sudo apt-get install -y proj-bin postgresql-client
 
 # docker-compose pull
 
