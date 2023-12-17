@@ -39,6 +39,10 @@ services:
       - 5432:5432
     volumes:
       - pg_data:/var/lib/postgresql/data
+  
+  rails:
+    image: mcr.microsoft.com/devcontainers/universal:linux
+    command: rails server
 
 volumes:
   redis_data:

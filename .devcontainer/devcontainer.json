@@ -4,6 +4,7 @@
     // "postStartCommand": "docker-compose up -d",
     "forwardPorts": [3000],
     "dockerComposeFile": "../docker-compose.yml",
+    "service": "rails",
     "portsAttributes": {
         "3000": {
           "label": "Rails server",
