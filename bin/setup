@@ -5,7 +5,8 @@ include FileUtils
 # path to your application root.
 APP_ROOT = File.expand_path('..', __dir__)
 
-USING_DOCKER = File.exist?( "./docker-compose.override.yml" )
+# USING_DOCKER = File.exist?( "./docker-compose.override.yml" )
+USING_DOCKER = true
 
 chdir APP_ROOT do
   # This script is a starting point to setup your application.

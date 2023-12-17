@@ -3,7 +3,7 @@
     "onCreateCommand": ["bash", ".devcontainer/onCreateCommand.sh"],
     // "postStartCommand": "docker-compose up -d",
     "forwardPorts": [3000],
-    "dockerComposeFile": "../docker-compose.yml",
+    "dockerComposeFile": "../docker/docker-compose.local.yml",
     "service": "rails",
     "portsAttributes": {
         "3000": {
