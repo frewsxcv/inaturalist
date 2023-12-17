@@ -42,7 +42,7 @@ services:
   
   rails:
     # image: mcr.microsoft.com/devcontainers/universal:linux
-    iamge: inaturalisttest/rails
+    image: inaturalisttest/rails
     command: rails server
 
 volumes:
