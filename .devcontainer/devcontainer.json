@@ -1,7 +1,5 @@
 {
-    // "image": "mcr.microsoft.com/devcontainers/universal:linux",
     "onCreateCommand": ["bash", ".devcontainer/onCreateCommand.sh"],
-    // "postStartCommand": "docker-compose up -d",
     "forwardPorts": [3000],
     "dockerComposeFile": "../docker/docker-compose.local.yml",
     "service": "rails",
@@ -18,9 +16,6 @@
         // "memached": "docker-compose logs -f memcached",
         // "redis": "docker-compose logs -f redis",
         // "elasticsearch": "docker-compose logs -f es"
-    // },
-    // "features": {
-        // "ghcr.io/devcontainers/features/docker-in-docker:2": {}
     // },
     "containerEnv": {
         // "ROOT_URL": "${containerEnv:CODESPACE_NAME}-3000.${containerEnv:GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN}"

@@ -22,4 +22,4 @@ set -ex
 # `bin/setup ruby` requires services to be started
 # docker-compose up -d
 
-bin/setup ruby
+# bin/setup ruby
