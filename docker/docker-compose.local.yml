@@ -43,7 +43,8 @@ services:
 
   rails:
     container_name: rails
-    image: rails:1.0
+    build: ../
+    # image: rails:1.0
     environment:
       RAILS_ENV: development
       INAT_DB_HOST: pg
