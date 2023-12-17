@@ -42,7 +42,7 @@ services:
   
   rails:
     # image: mcr.microsoft.com/devcontainers/universal:linux
-    dockerfile: ./Dockerfile
+    build: .
     command: rails server
 
 volumes:
