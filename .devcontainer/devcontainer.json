@@ -1,8 +1,9 @@
 {
-    "image": "mcr.microsoft.com/devcontainers/universal:linux",
+    // "image": "mcr.microsoft.com/devcontainers/universal:linux",
     "onCreateCommand": ["bash", ".devcontainer/onCreateCommand.sh"],
-    "postStartCommand": "docker-compose up -d",
+    // "postStartCommand": "docker-compose up -d",
     "forwardPorts": [3000],
+    "dockerComposeFile": "../docker-compose.yml",
     "portsAttributes": {
         "3000": {
           "label": "Rails server",
@@ -10,16 +11,16 @@
           "protocol": "http"
         }
     },
-    "postAttachCommand": {
-        "rails server": "rails server",
-        "postgis": "docker-compose logs -f pg",
-        "memached": "docker-compose logs -f memcached",
-        "redis": "docker-compose logs -f redis",
-        "elasticsearch": "docker-compose logs -f es"
-    },
-    "features": {
-        "ghcr.io/devcontainers/features/docker-in-docker:2": {}
-    },
+    // "postAttachCommand": {
+        // "rails server": "rails server",
+        // "postgis": "docker-compose logs -f pg",
+        // "memached": "docker-compose logs -f memcached",
+        // "redis": "docker-compose logs -f redis",
+        // "elasticsearch": "docker-compose logs -f es"
+    // },
+    // "features": {
+        // "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+    // },
     "containerEnv": {
         "ROOT_URL": "${containerEnv:CODESPACE_NAME}-3000.${containerEnv:GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN}"
     },
