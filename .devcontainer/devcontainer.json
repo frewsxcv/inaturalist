@@ -23,7 +23,7 @@
         // "ghcr.io/devcontainers/features/docker-in-docker:2": {}
     // },
     "containerEnv": {
-        "ROOT_URL": "${containerEnv:CODESPACE_NAME}-3000.${containerEnv:GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN}"
+        // "ROOT_URL": "${containerEnv:CODESPACE_NAME}-3000.${containerEnv:GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN}"
     },
     "hostRequirements": {
         "memory": "8gb"
