@@ -220,6 +220,7 @@ hu:
   active_taxon_status: Aktív
   active_users: Aktív felhasználó
   activity: Aktivitás
+  activity_on_a_flag_for_x: '%{x}: bejelentések aktivitása'
   adapted_by_name_from_a_work_by_original: "%{original} munkája alapján adaptálta %{name}"
   add: Hozzáadás
   add_a_batch_of_observations: Megfigyelések tömeges hozzáadása
@@ -900,11 +901,11 @@ hu:
   #Status of a taxon that the Computer Vision Model can recognize
   computer_vision_model_included: Szerepel
   computer_vision_model_included_desc: |
-    A jelenlegi Gépi látás model ismeri ezt a taxont, ezért az megjelenhet az automatikus javaslatok között "Kinézetre hasonló" megjelöléssel.
+    A jelenlegi Gépi látás modell ismeri ezt a taxont, ezért az megjelenhet az automatikus javaslatok között "Kinézetre hasonló" megjelöléssel.
   #Status of a taxon that the Computer Vision Model cannot yet recognize
   computer_vision_model_pending: Függőben
   computer_vision_model_pending_desc2: |
-    A jelenlegi Gépi látás model nem ismeri ezt a taxont, ezért bár az megjelenhet az automatikus javaslatok között "A közelben előfordulhat" megjelöléssel, nem fog mellette szerepelni a "Kinézetre hasonló" címke. A modellek változóak képfelismeréshez támasztott követelményeik terén, viszont az általánosságban elmondható, hogy a megfigyelések és az azonosítások száma növeli annak az esélyét, hogy a taxon bekerül a következő modelltanításba.
+    A jelenlegi Gépi látás modell nem ismeri ezt a taxont, ezért bár az megjelenhet az automatikus javaslatok között "A közelben előfordulhat" megjelöléssel, nem fog mellette szerepelni a "Kinézetre hasonló" címke. A modellek változóak képfelismeréshez támasztott követelményeik terén, viszont az általánosságban elmondható, hogy a megfigyelések és az azonosítások száma növeli annak az esélyét, hogy a taxon bekerül a következő modelltanításba.
   confidential: Bizalmas
   configure: Konfigurálás
   configure_a_widget_to_show: A modul konfigurálásával az %{site_name} megfigyeléseit közzéteheted a weboldaladon vagy blogodon. Ehhez szükség lehet a CSS-kódrészlet beillesztésére a HTML <code>&lt;head&gt;</code> részébe. A CSS tetszőlegesen módosítható.
@@ -1492,6 +1493,7 @@ hu:
   everywhere: mindenhol
   exact: Pontos
   exact_date: Pontos dátum
+  #Taxonomic rank, e.g. "genus," "subfamily", "kingdom", etc.
   exact_rank: Pontos rang
   except: kivéve
   exclude_places: Helyek kizárása
@@ -1607,6 +1609,7 @@ hu:
     Felhasználó bejelentése: %{title}
   flag_it!: Bejelentés
   flag_marked_as_resolved_html: '<span class="meta">Bejelentés</span> <strong>megoldva.</strong>'
+  flag_marked_as_unresolved_html: '<span class="meta">A bejelentés</span><strong>megoldatlanként</strong> megjelölve.'
   #Label for the object that was flagged, e.g. a table header
   flag_object: Objektum
   flag_reason: "&ldquo;Bejelentem ezt a %{record}t, mert"
@@ -1638,7 +1641,10 @@ hu:
   #Adjective, as in a fluid layout of images
   fluid: folyékony
   follow: Követés
+  #Text for a button to follow updates on an observation
+  follow_observation: Megfigyelés követése
   follow_receive_updates_about_new_observations: Kövesd (kapj értesítést új megfigyelésekről)
+  #Text for a button to follow updates from a specific user
   follow_user: "%{user} követése"
   followers: Követők
   following: Követve
@@ -1752,6 +1758,8 @@ hu:
   hide_running_total: Kumulatív elrejtése
   hide_uncountable_species: Megszámlálhatatlan fajok elrejtése
   high: Felső
+  #Highest taxonomic rank to filter by, where the "highest" possible rank is
+  #kingdom
   highest_rank: Legmagasabb rang
   history: Idővonal
   home: Kezdőlap
@@ -2213,6 +2221,8 @@ hu:
   looks_like_no_species_in_guide: Úgy néz ki még nincs egy faj sem az útmutatódban.
   lookup: Keresés
   low: Alsó
+  #Lowest taxonomic rank to filter by, where the "lowest" possible rank is
+  #subspecies or variety
   lowest_rank: Legalacsonyabb rang
   #Name of a website showing geologic maps around the world: https://macrostrat.org
   Macrostrat: Macrostrat
@@ -2452,7 +2462,7 @@ hu:
   new_assessment: Új értékelés
   new_check_list: Új lista
   new_check_list_for: "%{place}: új lista létrehozása &raquo;"
-  new_comment_on_a_parent_by_user_link: 'Új hozzászólás: %{user_link} %{parent}'
+  new_comment_on_a_parent_by_user_link: Új hozzászólás %{user_link} %{parent}éhez
   new_conservation_status: Új természetvédelmi státusz
   new_flag_for: 'Új bejelentés ehhez:'
   new_guide: Új útmutató
@@ -2600,6 +2610,43 @@ hu:
     A nyílvános koordinátákat egy véletlenszerű pontként mutatjuk egy 0.2 fokos szél/hossz területen belül ami tartalmazza a valódi koordinátákat.
   observation: Megfigyelés
   observation_: megfigyelés
+  observation_accuracy_experiment_the_sample_for: "A minta erre a kísérletre még nem készült el"
+  observation_accuracy_experiment_our_accuracy_estimate: "A pontosság becslése erről a kísérletről %{percent} helyes."
+  observation_accuracy_experiment_taxon_rank_level: "Taxon rangjának a szintje"
+  observation_accuracy_experiment_iconic_taxon_name: "Ikonnal rendelkező taxon neve"
+  observation_accuracy_experiment_continent: "Földrész"
+  observation_accuracy_experiment_year: "Év"
+  observation_accuracy_experiment_quality_grade: "Minőségi szint"
+  observation_accuracy_experiment_show_frequency: "gyakoriság megjelenítése"
+  observation_accuracy_experiment_click_on_bars: "Kattints az oszlopokra a részhalmazokért."
+  observation_accuracy_experiment_observation_accuracy_experiment: "Kísérlet a megfigyelések pontosságáról"
+  observation_accuracy_experiment_abstract: "Összefoglalás: Egy mintát generáltunk megfigyelésekből a %{sample_generation_date} dátumon, és egy validáló csapat segítségével kiértékeljük azok pontosságát %{deadline_date} határidőig. Az alábbi eredmények a minta megfigyeléseinek jellemzőit mutatják azok generálásának idején (például tudományos szintű-e vagy sem). A minta megfigyeléseinek pontosságát %{assessment_date} dátumon értékeltük. További részletekért lásd a módszertani fület."
+  observation_accuracy_experiment_research_grade_results: "Tudományos szintű eredmények"
+  observation_accuracy_experiment_verifiable_results: "Hiteles eredmények"
+  observation_accuracy_experiment_all_results: "Összes eredmény"
+  observation_accuracy_experiment_methods: "Módszerek"
+  observation_accuracy_experiment_sample_generated: "A mintavétel ideje: %{date}"
+  observation_accuracy_experiment_sample_size: "Mintaméret: %{number}"
+  observation_accuracy_experiment_step_2: "2. lépés: a minták validálása"
+  observation_accuracy_experiment_percent_of: "Hitelesített minták százaléka: %{percent}"
+  observation_accuracy_experiment_step_3: "3. lépés: A minta megfigyeléseinek pontozása"
+  observation_accuracy_experiment_correct: "Helyes"
+  observation_accuracy_experiment_uncertain: "Bizonytalan"
+  observation_accuracy_experiment_accuracy: "Pontosság"
+  observation_accuracy_experiment_precision: "Pontosság"
+  observation_accuracy_validator_email_subject: "Segítesz nekünk megmérni az iNaturalist-megfigyelések pontosságát?"
+  observation_accuracy_validator_email_will_you_help_us: |
+    Segítesz nekünk egy kísérletben, amelynek célja az iNaturalist-megfigyelések pontosságának mérése?
+  observation_accuracy_validator_email_we_will_calculate: |
+    A pontosságot az azonosításod és a megfigyelési taxon összehasonlításával állapítjuk meg. Ha a saját korábbi azonosításod az adott megfigyelésen pontos, kihagyhatod azt. Alább további részleteket olvashatsz arról, hogy miként vesszük figyelembe az egyetértéseket és a konfliktusokat.
+  observation_accuracy_validator_email_ids_equal_to: |
+    A megfigyelési taxonnal megegyező (A) vagy annál szűkebb (B) meghatározásokat egyetértésként regisztráljuk.
+  observation_accuracy_validator_email_ids_coarser_than: |
+    A megfigyelési taxonnál magasabb szintű meghatározást, amelynél a "Lehetséges konfliktus" (E) panelen a "Nem tudom, de..." opciót választod, bizonytalanként regisztráljuk.
+  observation_accuracy_validator_email_we_are_so_grateful_html: |
+    Nagyon hálásak vagyunk az azonosításaidért és köszönjük, hogy részt veszel ebben a kísérletben. <a href="%{url}">Ebből a blogbejegyzésből</a> többet is megtudhatsz erről a kísérletről.
+  observation_accuracy_validator_email_with_gratitude: Köszönettel,
+  observation_accuracy_validator_email_the_inaturalist_team: Az iNaturalist csapata
   observation_added_to_the_project: "A megfigyelést hozzáadták a \"%{project}\" projekthez"
   observation_aggregation: Megfigyelés összevonás
   #Attributes an observation to a user. %{user} can be a username or a full
@@ -2797,7 +2844,9 @@ hu:
   only_staff_can_edit_standard_places: Csak a honlap személyzete módosíthat helyeket a standard rangsorból.
   only_view_nearby_suggestions: Csak közeli javaslatok megjelenítése
   only_you: Csak te
+  #Geoprivacy status in which no privacy has been applied
   open: nyilvános
+  #Geoprivacy status in which no privacy has been applied
   open_: Nyilvános
   open_description: "Mindenki láthatja a koordinátákat, kivéve ha a taxon veszélyeztetett."
   open_street_map: OpenStreetMap
@@ -2812,6 +2861,7 @@ hu:
   organism_is_wild: Vadon élő
   organisms: Élőlények
   original: Eredeti
+  original_flag: Eredeti bejelentés
   original_page_url_for_this_photo: "E fotó eredeti oldal URL-je"
   organism_appears_captive_cultivated: Az élőlény fogságban lévő vagy kultivált
   other: Egyéb
@@ -3263,6 +3313,7 @@ hu:
     north_korea: Észak-Korea
     northern_cyprus: Észak-Ciprus
     norway: Norvégia
+    oceania: Óceánia
     oman: Omán
     pakistan: Pakisztán
     palau: Palau
@@ -3454,7 +3505,11 @@ hu:
   radius_km: Sugár (km)
   random: Véletlenszerű
   range: Tartomány
+  #Taxonomic rank, e.g. "genus," "subfamily", "kingdom", etc.
   rank: Besorolás
+  #A person's rank on an ordinal scale (e.g. "first place," "second place,"
+  #etc.). Generally used as a column header in lists of observers and
+  #identifiers
   rank_position: Besorolás
   #When a scientific name is displayed with its rank, e.g. Family Noctuidae or
   #Genus Noctua (but generally not Species Noctua pronuba)
@@ -4084,6 +4139,7 @@ hu:
   taxon_range_guidelines_taxon_is_not_in_the_iucn_red_list: Ez a taxon nincs rajta az IUCN Vörös Listán
   taxon_range_guidelines_learn_more_about_taxon_ranges: További információk a taxonintervallumokról
   taxon_range_updated_notice: A taxonintervallum sikeresen frissítve. Kérünk várj pár percet ameddig a vátoztatások megjelennek a térképeken.
+  #Taxonomic ranks, e.g. "genus," "subfamily", "kingdom", etc.
   taxon_ranks: Rendszertani besorolás
   taxon_removed_from_list: Taxon eltávolítva a listáról.
   taxon_scheme: Taxonrendszer
@@ -4349,7 +4405,10 @@ hu:
   unknown: Ismeretlen
   unknown_error: Ismeretlen hiba
   unknown_rank: '(Ismeretlen besorolás)'
-  unfollow: Leiratkozás
+  #Text for a button to stop following updates on an observation
+  unfollow_observation: Megfigyelés követésének leállítása
+  #Text for a button to stop following updates from a user
+  unfollow_user: A felhasználó követésének leállítása
   unlink_your_google_account: Google-fiók leválasztása
   unlink_your_flickr_account: "Flickr-fiók leválasztása"
   unmute: Némítás feloldása
@@ -4891,7 +4950,7 @@ hu:
           figure_alt_text: A Geomodell a gépi látás javaslatait súlyozza
         range_comparison:
           expected_nearby_vs_taxon_range: Valószínűsíthető előfordulás vs. taxonrégió
-          #Areas where both of the Expected Nearby Map and Taxon Range predict that the taxon exists
+          #Areas where both the Expected Nearby Map and Taxon Range predict that the taxon exists
           true_presences_colon: |
             Valós előfordulás
           #Areas where only the Expected Nearby Map predicts the taxon exists

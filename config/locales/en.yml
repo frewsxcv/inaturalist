@@ -356,6 +356,7 @@ en:
   active_taxon_status: Active
   active_users: Active Users
   activity: Activity
+  activity_on_a_flag_for_x: Activity on a flag for %{x}
   adapted_by_name_from_a_work_by_original: "Adapted by %{name} from a work by %{original}"
   add: Add
   add_a_batch_of_observations: Add a Batch of Observations
@@ -1981,6 +1982,7 @@ en:
   everywhere: everywhere
   exact: Exact
   exact_date: Exact Date
+  # Taxonomic rank, e.g. "genus," "subfamily", "kingdom", etc.
   exact_rank: Exact Rank
   except: except
   exclude_places: Exclude Places
@@ -2118,6 +2120,7 @@ en:
     Flag for User: %{title}
   flag_it!: Flag it!
   flag_marked_as_resolved_html: '<span class="meta">Flag marked as</span> <strong>resolved.</strong>'
+  flag_marked_as_unresolved_html: '<span class="meta">Flag marked as</span> <strong>unresolved.</strong>'
   # Label for the object that was flagged, e.g. a table header
   flag_object: Object
   flag_reason: "&ldquo;I'm flagging this %{record} because"
@@ -2155,7 +2158,10 @@ en:
   # Adjective, as in a fluid layout of images
   fluid: fluid
   follow: Follow
+  # Text for a button to follow updates on an observation
+  follow_observation: Follow observation
   follow_receive_updates_about_new_observations: Follow (receive updates about new observations)
+  # Text for a button to follow updates from a specific user
   follow_user: "Follow %{user}"
   followers: Followers
   following: Following
@@ -2320,6 +2326,8 @@ en:
   hide_running_total: Hide Running Total
   hide_uncountable_species: Hide Uncountable Species
   high: High
+  # Highest taxonomic rank to filter by, where the "highest" possible rank is
+  # kingdom
   highest_rank: Highest Rank
   highlights_and_stats_from_year_on_site: "Highlights and stats from %{year} on %{site}"
   history: History
@@ -2876,6 +2884,8 @@ en:
   looks_like_no_species_in_guide: Looks like you don't have an species in your guide yet.
   lookup: Lookup
   low: Low
+  # Lowest taxonomic rank to filter by, where the "lowest" possible rank is
+  # subspecies or variety
   lowest_rank: Lowest Rank
   # Name of a website showing geologic maps around the world: https://macrostrat.org
   Macrostrat: Macrostrat
@@ -3359,6 +3369,92 @@ en:
     cell that contains the true coordinates.
   observation: Observation
   observation_: observation
+  observation_accuracy_experiment_the_sample_for: "The sample for this experiment has not yet been generated"
+  observation_accuracy_experiment_our_accuracy_estimate: "Our accuracy estimate resulting from this experiment is %{percent} correct."
+  observation_accuracy_experiment_our_goak: "Our goal for the estimated Accuracy (Correct) and Precision of the Research Grade subset is greater than 95% (dashed line)"
+  observation_accuracy_experiment_precision_results: "Precision results by subset"
+  observation_accuracy_experiment_taxon_rank_level: "Taxon Rank Level"
+  observation_accuracy_experiment_taxon_observations_count: "Taxon Observations Count"
+  observation_accuracy_experiment_iconic_taxon_name: "Iconic Taxon Name"
+  observation_accuracy_experiment_continent: "Continent"
+  observation_accuracy_experiment_year: "Year"
+  observation_accuracy_experiment_quality_grade: "Quality Grade"
+  observation_accuracy_experiment_show_frequency: "show frequency"
+  observation_accuracy_experiment_click_on_bars: "Click on bars to explore subsets."
+  observation_accuracy_experiment_accuracy_results: "Accuracy results by subset"
+  observation_accuracy_experiment_as_observations: "As observations from this sample are validated, the uncertain percentage will decrease and the percentage correct and incorrect will increase."
+  observation_accuracy_experiment_experiment_still: "Experiment still in progress. Stats will update daily until deadline for validating samples on %{date}"
+  observation_accuracy_experiment_observation_accuracy_experiment: "Observation Accuracy Experiment"
+  observation_accuracy_experiment_validators: "Validators:"
+  observation_accuracy_experiment_show_additional_validators: "(show additional validators)"
+  observation_accuracy_experiment_hide_additional_validators: "(hide additional validators)"
+  observation_accuracy_experiment_additional_validators: "(%{number} additional validators)"
+  observation_accuracy_experiment_abstract: "Abstract: We generated a sample of observations on %{sample_generation_date} and coordinated a team of validators to assess their accuracy by %{deadline_date}. All results shown below show characteristics of the sample observations at the time the sample was generated (for example Research Grade or not). The accuracy of the sample observations was assessed on %{assessment_date}. See the methods tab for more details."
+  observation_accuracy_experiment_research_grade_results: "Research Grade Results"
+  observation_accuracy_experiment_verifiable_results: "Verifiable Results"
+  observation_accuracy_experiment_all_results: "All Results"
+  observation_accuracy_experiment_methods: "Methods"
+  observation_accuracy_experiment_step_1: "Step 1: Sample Generation and Assignment"
+  observation_accuracy_experiment_from_the: "From the iNaturalist database of observations (A), we generated a random sample (B). Subsamples were assigned to candidate validators based on the criteria described below. We aimed to assign each sample observation to multiple candidate validators ( \"Target validator redundancy\" )."
+  observation_accuracy_experiment_sample_generated: "Sample generated: %{date}"
+  observation_accuracy_experiment_sample_size: "Sample size: %{number}"
+  observation_accuracy_experiment_target_validator: "Target validator redundancy: %{number}"
+  observation_accuracy_experiment_number_of: "Number of candidate validators: %{number}"
+  observation_accuracy_experiment_mean_subsample: "Mean subsample size per candidate validator: %{number}"
+  observation_accuracy_experiment_mean_number: "Mean number of candidate validators per sample observation: %{number}"
+  observation_accuracy_experiment_validator_candidate: "Validator candidate criteria"
+  observation_accuracy_experiment_if_an_identifier: "If an identifier had made at least 3 improving identifications on a taxon, we considered them qualified to validate that taxon. Improving identifications are the first suggestion of a taxon that the community subsequently agrees with."
+  observation_accuracy_experiment_for_example: "For example, Identifier 1 adds an ID of A to an observation. If Identifier 2 later adds a leading ID of B, Identifier 1's ID on A becomes an improving ID. If Identifier 3 later adds a supporting ID to B, Identifier 2's ID on B becomes an improving ID."
+  observation_accuracy_experiment_step_2: "Step 2: Validating samples"
+  observation_accuracy_experiment_we_contacted: "We contacted candidate validators and asked them to add identifications to their subsamples. The graph to the right groups sample observation by the number of validators."
+  observation_accuracy_experiment_mean_number: "Mean number of validators per sample observation: %{number}"
+  observation_accuracy_experiment_number_percent_of: "Number of participating validators: %{number} (%{percentage})"
+  observation_accuracy_experiment_percent_of: "Percent of sample validated: %{percent}"
+  observation_accuracy_experiment_step_3: "Step 3: Scoring sample observations from validations"
+  observation_accuracy_experiment_we_scored: "We scored observations in the sample as Correct, Uncertain, or Incorrect by comparing the validator identifications to the each sample observation’s taxon. Identifications matching or finer thant the sample’s observation taxon were scored as Correct. Non-disagreeing coarser identifications were scored as Uncertain as were scenarios where multiple validators disagreed. Disagreeing coarser identifications or identifications on different branches were scored as Incorrect."
+  observation_accuracy_experiment_correct: "Correct"
+  observation_accuracy_experiment_uncertain: "Uncertain"
+  observation_accuracy_experiment_incorrect2: "Incorrect"
+  observation_accuracy_experiment_step_4: "Step 4: Accuracy and Precision calculation"
+  observation_accuracy_experiment_accuracy: "Accuracy"
+  observation_accuracy_experiment_we_calculated: "We calculated Accuracy as the percent correct for the entire sample as well as subsets such as the Research Grade subset. We also calculated the percent Uncertain and the percent Incorrect. In the example figure to the right, the percentage correct would be 83, the percentage uncertain would be 6 and the percentage incorrect would be 11."
+  observation_accuracy_experiment_precision: "Precision"
+  observation_accuracy_experiment_if_every_sample: "If every sample observation was at a coarse taxon such as kingdom, the accuracy of the iNaturalist dataset might be very high, but the precision might be too low to make the dataset very useful. To estimate precision, we counted the number of leaf descendants in the iNaturalist taxonomy for each taxon associated with each sample observation. We calculated precision as 1 divided by the number of leaf descendants. If the taxon was a leaf taxon the precision is 100%. We ignored ranks below species in the precision calculation."
+  observation_accuracy_experiment_in_the_example: "In the example figure to the right the average precision of three sample observations would be 51%."
+  observation_accuracy_validator_email_subject: "Will you help us estimate the accuracy of iNaturalist observations?"
+  observation_accuracy_validator_email_will_you_help_us: |
+    Will you help us with an experiment to estimate the accuracy of iNaturalist observations?
+  observation_accuracy_validator_email_if_so2_html: |
+    <ol>
+    <li>Identify all observations in the link below as finely as you can, even if they are Research Grade, and even if your finest ID is at a higher taxonomic level (even kingdom). </li>
+    <li>If you see the “Potential Disagreement” popup…
+      <ul>
+        <li>and you are confident it’s mis-ID’d click the orange button,</li>
+        <li>or if you’re uncertain beyond your ID, click the green button</li>
+      </ul>
+     </li>
+     <li>Do this by <b>%{validator_deadline_date}</b></li>
+    </ol>
+    Here is the <a href="%{sample_url}">subset of %{num_obs} observations</a>
+    that we think you can identify based on your activity on iNat. <b>Please add
+    the finest ID you can to each of the observations by %{validator_deadline_date}</b>.
+  observation_accuracy_validator_email_we_will_calculate: |
+    We’ll calculate accuracy by comparing your ID to the Observation Taxon. You can skip observations where
+    you’ve previously added an ID if that ID is still relevant. For more on how we will count agreements and disagreements, keep reading.
+  observation_accuracy_validator_email_ids_equal_to: |
+    IDs equal to (A) or finer than (B) the Observation Taxon will be counted as Agreements.
+  observation_accuracy_validator_email_ids_sibling_to: |
+    IDs on different branches (C) or coarser than the Observation Taxon where you choose 'No,
+    but…' to the 'Potential Disagreement' dialog (D) will be counted as Disagreements.
+  observation_accuracy_validator_email_ids_coarser_than: |
+    IDs coarser than the Observation Taxon where you choose 'I don’t know but…' to
+    the 'Potential Disagreement' dialog (E) will be counted as Uncertain.
+  observation_accuracy_validator_email_we_are_so_grateful_html: |
+    We're so grateful for your help as an identifier on iNaturalist, and thank you
+    very much for participating in this study. Please read <a href="%{url}">this
+    blog post</a> to answer frequently asked questions about this experiment.
+  observation_accuracy_validator_email_with_gratitude: With gratitude,
+  observation_accuracy_validator_email_the_inaturalist_team: The iNaturalist Team
   observation_added_to_the_project: "Observation added to the project \"%{project}\""
   observation_aggregation: Observation aggregation
   # Attributes an observation to a user. %{user} can be a username or a full
@@ -3613,7 +3709,9 @@ en:
   only_the_project_admin_can_delete_this_project: Only the project admin can delete this project.
   only_view_nearby_suggestions: Only view nearby suggestions
   only_you: Only you
+  # Geoprivacy status in which no privacy has been applied
   open: open
+  # Geoprivacy status in which no privacy has been applied
   open_: Open
   open_description: "Everyone can see the coordinates unless the taxon is threatened."
   open_street_map: OpenStreetMap
@@ -3629,6 +3727,7 @@ en:
   organism_is_wild: Organism is wild
   organisms: Organisms
   original: Original
+  original_flag: Original flag
   originally_flagged_by: Originally flagged by
   originally_imported_from_url_html: "Originally imported from <a href='%{url}'>%{url}</a>"
   original_page_url_for_this_photo: "Original page URL for this photo."
@@ -4137,6 +4236,7 @@ en:
     north_korea: North Korea
     northern_cyprus: Northern Cyprus
     norway: Norway
+    oceania: Oceania
     oman: Oman
     pakistan: Pakistan
     palau: Palau
@@ -4417,7 +4517,11 @@ en:
   radius_value: "Radius (m): %{radius}"
   random: Random
   range: Range
+  # Taxonomic rank, e.g. "genus," "subfamily", "kingdom", etc.
   rank: Rank
+  # A person's rank on an ordinal scale (e.g. "first place," "second place,"
+  # etc.). Generally used as a column header in lists of observers and
+  # identifiers
   rank_position: Rank
   # When a scientific name is displayed with its rank, e.g. Family Noctuidae or
   # Genus Noctua (but generally not Species Noctua pronuba)
@@ -4702,6 +4806,15 @@ en:
   rotate_left: Rotate Left
   rotate_right: Rotate Right
   row_singular_or_plural: Row(s)
+  # Prompt to join a test of right-to-left layouts, e.g. for languages like
+  # Arabic and Hebrew
+  rtl_test_prompt: |
+    Test right-to-left layout? You can also use the test=rtl URL param. Note
+    that not all pages have been converted to right-to-left layout
+  # Message displayed when you have joined a test of right-to-left layouts,
+  # e.g. for languages like Arabic and Hebrew. Could also be translated
+  # as "You have joined..."
+  rtl_test_joined_status: Joined right-to-left layout test
   rules_and_formatting: "Rules & Formatting"
   rules_for_adding_observations: Rules for Adding Observations
   rules_for_becoming_a_member: Rules for Becoming a Member
@@ -5328,6 +5441,7 @@ en:
     of why the published IUCN Red List range required alteration.
   taxon_range_guidelines_learn_more_about_taxon_ranges: Learn more about taxon ranges
   taxon_range_updated_notice: Taxon range was successfully updated. Please allow a few minutes for changes to appear on the maps.
+  # Taxonomic ranks, e.g. "genus," "subfamily", "kingdom", etc.
   taxon_ranks: Taxon Ranks
   taxon_removed_from_list: Taxon removed from list.
   taxon_scheme: Taxon scheme
@@ -5711,7 +5825,10 @@ en:
   unknown: Unknown
   unknown_error: Unknown error
   unknown_rank: '(Unknown Rank)'
-  unfollow: Unfollow
+  # Text for a button to stop following updates on an observation
+  unfollow_observation: Unfollow observation
+  # Text for a button to stop following updates from a user
+  unfollow_user: Unfollow user
   unlink_your_google_account: Unlink Your Google Account
   unlink_your_flickr_account: "Unlink your Flickr Account"
   unmute: Unmute
@@ -6641,10 +6758,10 @@ en:
           figure_alt_text: The Expected Nearby map and Taxon Range are compared
           combining_these_maps_produces: |
             Combining these maps produces 3 types of cells:
-          # Areas where both of the Expected Nearby Map and Taxon Range predict that the taxon exists
+          # Areas where both the Expected Nearby Map and Taxon Range predict that the taxon exists
           true_presences_colon: |
             True Presences:
-          true_presences_definition: Areas where both of the Expected Nearby Map and Taxon Range predict that the taxon exists
+          true_presences_definition2: Areas where both the Expected Nearby Map and the Taxon Range predict that the taxon exists
           # Areas where only the Expected Nearby Map predicts the taxon exists
           false_presences_colon: |
             False Presences:

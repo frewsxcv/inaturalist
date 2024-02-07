@@ -517,6 +517,7 @@ mi:
   flags_with_count: Kara (%{count})
   flags_for_x_html: Ngā kara mō %{x}
   follow: Aru
+  #Text for a button to follow updates from a specific user
   follow_user: "Aruhia a %{user}"
   followers: Kiriaru
   forgot_your_password: Kua warewarehia tō kupuhipa?
@@ -1014,7 +1015,11 @@ mi:
   radius_value: "Pūtoro (m): %{radius}"
   random: Matapōkere
   range: Ine whānui
+  #Taxonomic rank, e.g. "genus," "subfamily", "kingdom", etc.
   rank: Kapa
+  #A person's rank on an ordinal scale (e.g. "first place," "second place,"
+  #etc.). Generally used as a column header in lists of observers and
+  #identifiers
   rank_position: Kapa
   #When a scientific name is displayed with its rank, e.g. Family Noctuidae or
   #Genus Noctua (but generally not Species Noctua pronuba)

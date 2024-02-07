@@ -1714,6 +1714,7 @@ ca:
   everywhere: a tot arreu
   exact: Exacte
   exact_date: Data exacta
+  #Taxonomic rank, e.g. "genus," "subfamily", "kingdom", etc.
   exact_rank: Rang exacte
   except: excepte
   exclude_places: Excloure Llocs
@@ -1883,6 +1884,7 @@ ca:
   fluid: fluida
   follow: Seguiu
   follow_receive_updates_about_new_observations: Seguiu (rebeu actualitzacions de les noves observacions)
+  #Text for a button to follow updates from a specific user
   follow_user: "Segueix a %{user}"
   followers: seguidors
   following: Seguint
@@ -2022,6 +2024,8 @@ ca:
   hide_running_total: Amagar el total acumulat
   hide_uncountable_species: Amaga les espècies incomptables
   high: Alta
+  #Highest taxonomic rank to filter by, where the "highest" possible rank is
+  #kingdom
   highest_rank: Tàxon superior
   highlights_and_stats_from_year_on_site: "Destacats i estadístiques des de%{year} a %{site}"
   history: Historial
@@ -2528,6 +2532,8 @@ ca:
   looks_like_no_species_in_guide: Sembla que encara no teniu cap espècie a la vostra guia.
   lookup: Cerca
   low: Baixa
+  #Lowest taxonomic rank to filter by, where the "lowest" possible rank is
+  #subspecies or variety
   lowest_rank: Tàxon inferior
   #Name of a website showing geologic maps around the world: https://macrostrat.org
   Macrostrat: Macrostrat
@@ -3213,7 +3219,9 @@ ca:
   only_the_project_admin_can_delete_this_project: Només l'administrador del projecte pot eliminar aquest projecte.
   only_view_nearby_suggestions: Veure només suggeriments propers
   only_you: Només tu
+  #Geoprivacy status in which no privacy has been applied
   open: Transparent
+  #Geoprivacy status in which no privacy has been applied
   open_: Obre
   open_description: "Tots els usuaris poden veure les coordenades tret que el tàxon estigui en perill."
   open_street_map: OpenStreetMap
@@ -3938,7 +3946,11 @@ ca:
   radius_value: "Radi (m): %{radius}"
   random: A l’atzar
   range: Interval
+  #Taxonomic rank, e.g. "genus," "subfamily", "kingdom", etc.
   rank: Rang
+  #A person's rank on an ordinal scale (e.g. "first place," "second place,"
+  #etc.). Generally used as a column header in lists of observers and
+  #identifiers
   rank_position: Classificació
   #When a scientific name is displayed with its rank, e.g. Family Noctuidae or
   #Genus Noctua (but generally not Species Noctua pronuba)
@@ -4747,6 +4759,7 @@ ca:
     Utilitzeu la descripció per explicar com es va modificar el mapa i enllaçar-hi qualsevol indicador rellevant, fraccionaments taxonòmics o altres discussions sobre el motiu pel qual el rang publicat a la Llista Vermella de la UICN requeria una modificació.
   taxon_range_guidelines_learn_more_about_taxon_ranges: Coneix més sobre la distribució dels tàxons
   taxon_range_updated_notice: El rang del tàxon a estat actualitzat correctament. Espereu uns minut perquè els canvis apareguin als mapes.
+  #Taxonomic ranks, e.g. "genus," "subfamily", "kingdom", etc.
   taxon_ranks: Categories del Taxon
   taxon_removed_from_list: Tàxon eliminat de la llista.
   taxon_scheme: Esquema de taxonomia
@@ -5097,7 +5110,6 @@ ca:
   unknown: Desconegut
   unknown_error: Error desconegut
   unknown_rank: '(Classificació desconeguda)'
-  unfollow: Deixeu de seguir
   unlink_your_google_account: Desvinculeu el vostre compte de Google
   unlink_your_flickr_account: "Desenllaçar el compte de Flickr"
   unmute: No silenciar
@@ -6721,8 +6733,6 @@ ca:
         stats_generation_schedule: Les estadístiques es generaran cada diumenge de desembre i l'1 de gener
         store_prompt: |
           Vols mostrar amb orgull la teva pertinença a iNat allà on vagis? Fes-li una ullada a la Botiga d'iNat!
-        sunburst_desc_html: |
-          Els tàxons observats es disposen en un diagrama radial (Sunburst) jeràrquic. La base de la jerarquia és al centre, començant per "Vida" i acaba amb les espècies als extrems exteriors. La mida de cada arc és proporcional al nombre d’observacions d’aquest tàxon i els colors corresponen als colors habituals amb els quals representem els tàxons (verd per a plantes, taronja per a insectes, blau per a la majoria d’altres animals, etc.), així que si veieu molt de verd, això significa que heu observat moltes plantes. <strong> Feu clic a un arc per col·locar aquest tàxon al centre </strong> i els seus fills al seu voltant o <strong> feu clic al centre per tornar a la jerarquia </strong>.
         translators_title: Traductors
         translators_desc: |
           Sabies que iNaturalist ha estat traduït a %{x_languages}, gairebé en la seva totalitat per %{x_people}, algunes de les qual, fins i tot, no han utilitzat mai iNat? Aquí tens tots els extraordinaris traductors que han afegit traduccions enguany, juntament amb el número de mots han traduït per al %{website_link_tag}lloc web%{link_tag_end}, les nostres Apps a %{iphone_link_tag}iPhone%{link_tag_end} i %{android_link_tag}Android%{link_tag_end}, i a %{seek_link_tag}Seek%{link_tag_end}. Pots veure

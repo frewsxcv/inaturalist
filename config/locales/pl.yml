@@ -1605,6 +1605,7 @@ pl:
   everywhere: wszędzie
   exact: Dokładna
   exact_date: Dokładna data
+  #Taxonomic rank, e.g. "genus," "subfamily", "kingdom", etc.
   exact_rank: Dokładna kategoria
   except: poza
   exclude_places: Wyklucz lokalizacje
@@ -1614,6 +1615,7 @@ pl:
   exclusion_filters: Filtry wykluczające
   existing_flags: Istniejące zgłoszenia
   exit_full_screen: "Wyjdź z trybu pełnoekranowego"
+  expected_nearby: Spodziewany w pobliżu
   explore: Przeglądaj
   export: Eksport
   export_observations: Eksport obserwacji
@@ -1759,7 +1761,10 @@ pl:
   flickr_tagger: Tagger Flickr
   flickr_tags: Tagi z Flickra
   follow: Obserwuj
+  #Text for a button to follow updates on an observation
+  follow_observation: Obserwuj obserwację
   follow_receive_updates_about_new_observations: Obserwuj (otrzymuj powiadomienia o nowych obserwacjach)
+  #Text for a button to follow updates from a specific user
   follow_user: "Obserwuj %{user}"
   followers: Obserwujący
   following: Obserwowany
@@ -1864,6 +1869,8 @@ pl:
   #Option to hide data series that show "No Annotation" data, i.e. records that
   #have no annotation
   hide_no_annotation: Ukryj "Brak adnotacji"
+  #Highest taxonomic rank to filter by, where the "highest" possible rank is
+  #kingdom
   highest_rank: Najwyższa ranga
   highlights_and_stats_from_year_on_site: "Statystyki i wyróżnienia od %{year} na %{site}"
   history: Historia
@@ -1935,6 +1942,8 @@ pl:
   inaturalist_network: Sieć iNaturalist
   #Label for messages you've received
   inbox: skrzynka odbiorcza
+  include_suggestions_not_seen_nearby: Uwzględnij sugestie organizmów niewidzianych w pobliżu
+  include_suggestions_not_expected_nearby: Uwzględnij sugestie organizmów niespodziewanych w pobliżu
   increase_brightness: Zwiększ jasność
   in_progress: w trakcie
   in_the_past: w przeszłości
@@ -2292,6 +2301,8 @@ pl:
   look_up_name: "Wyszukaj nazwę"
   looks_like_no_species_in_guide: Wygląda na to, że jeszcze nie masz żadnych gatunków w przewodniku.
   lookup: Wyszukaj
+  #Lowest taxonomic rank to filter by, where the "lowest" possible rank is
+  #subspecies or variety
   lowest_rank: Najniższa ranga
   #Name of a website showing geologic maps around the world: https://macrostrat.org
   Macrostrat: Macrostrat
@@ -2790,7 +2801,9 @@ pl:
   only_show_active_taxa: Pokaż tylko aktywne taksony
   only_the_project_admin_can_delete_this_project: Tylko administrator projektu może usunąć ten projekt.
   only_you: Tylko Ty
+  #Geoprivacy status in which no privacy has been applied
   open: otwarta
+  #Geoprivacy status in which no privacy has been applied
   open_: Otwarta
   open_description: "Każdy może zobaczyć współrzędne, chyba że takson jest zagrożony."
   open_street_map: OpenStreetMap
@@ -2936,6 +2949,8 @@ pl:
       municipality: gmina
       Nationality: Narodowość
       nationality: narodowość
+      Nearby_Building: Pobliski budynek
+      nearby_building: pobliski budynek
       Nearby_Intersection: Pobliskie skrzyżowanie
       nearby_intersection: pobliskie skrzyżowanie
       Open_Space: Otwarta przestrzeń
@@ -3317,6 +3332,9 @@ pl:
   query: Zapytanie
   radius: Promień (m)
   radius_value: "Promień (m): %{radius}"
+  #A person's rank on an ordinal scale (e.g. "first place," "second place,"
+  #etc.). Generally used as a column header in lists of observers and
+  #identifiers
   rank_position: Ranga
   #When a scientific name is displayed with its rank, e.g. Family Noctuidae or
   #Genus Noctua (but generally not Species Noctua pronuba)
@@ -3829,6 +3847,7 @@ pl:
   taxon_range: Zasięg taksonu
   taxon_range_for_taxon_html: Zasięg taksonu dla %{taxon}
   taxon_range_guidelines_learn_more_about_taxon_ranges: Dowiedz się więcej o zasięgach taksonów
+  #Taxonomic ranks, e.g. "genus," "subfamily", "kingdom", etc.
   taxon_ranks: Kategorie taksonomiczne
   taxon_removed_from_list: Takson usunięty z listy.
   taxon_search: Wyszukiwanie taksonów
@@ -4005,7 +4024,10 @@ pl:
   unknown: Nieznany
   unknown_error: Nieznany błąd
   unknown_rank: '(Nieznana ranga)'
-  unfollow: Przestań obserwować
+  #Text for a button to stop following updates on an observation
+  unfollow_observation: Przestań obserwować obserwację
+  #Text for a button to stop following updates from a user
+  unfollow_user: Przestań obserwować użytkownika
   unlink_your_google_account: Odłącz swoje konto Google
   unlink_your_flickr_account: "Odłącz swoje konto Flickr"
   unmute: Usuń wyciszenie
@@ -4360,6 +4382,14 @@ pl:
         become_a_monthly_supporter_of_inaturalist_caps: ZOSTAŃ COMIESIĘCZNYM OFIARODAWCĄ INATURALIST
         thank_you_for_being_a_monthly_supporter: Dziękujemy za bycie comiesięcznym ofiarodawcą!
         thank_you_for_being_a_monthly_supporter_caps: DZIĘKUJEMY ZA BYCIE COMIESIĘCZNYM OFIARODAWCĄ!
+    geo_model:
+      explain:
+        nearby_map:
+          expected_nearby_map: Mapa organizmów spodziewanych w pobliżu
+        range_comparison:
+          #The fraction of the Expected Nearby Map that are True Presences
+          precision_colon: |
+            Dokładność:
     guides:
       show:
         draft_desc: |

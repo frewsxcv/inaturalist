@@ -1687,6 +1687,7 @@ ja:
   everywhere: すべての場所
   exact: 完全一致
   exact_date: 正確な日付
+  #Taxonomic rank, e.g. "genus," "subfamily", "kingdom", etc.
   exact_rank: 階級指定
   except: を除いて
   exclude_places: 場所を除く
@@ -1853,7 +1854,10 @@ ja:
   #Adjective, as in a fluid layout of images
   fluid: 可変
   follow: フォロー
+  #Text for a button to follow updates on an observation
+  follow_observation: 観察記録をフォロー
   follow_receive_updates_about_new_observations: フォロー(新しい観察記録の情報を受け取る)
+  #Text for a button to follow updates from a specific user
   follow_user: "%{user}さんをフォロー"
   followers: フォロワー
   following: フォロー中
@@ -1990,6 +1994,8 @@ ja:
   hide_running_total: 現在の総計を非表示
   hide_uncountable_species: 数えられない種を非表示
   high: 高
+  #Highest taxonomic rank to filter by, where the "highest" possible rank is
+  #kingdom
   highest_rank: 最高位階級
   highlights_and_stats_from_year_on_site: "%{year} の%{site} のハイライトと統計"
   history: 履歴
@@ -2511,6 +2517,8 @@ ja:
   looks_like_no_species_in_guide: ガイドにはまだ種が入っていないようです
   lookup: 調べる
   low: 低
+  #Lowest taxonomic rank to filter by, where the "lowest" possible rank is
+  #subspecies or variety
   lowest_rank: 最下位階級
   #Name of a website showing geologic maps around the world: https://macrostrat.org
   Macrostrat: Macrostrat.org
@@ -2922,6 +2930,29 @@ ja:
     公開座標は、真の座標を含む 0.2 度の緯度・経度のセル内のランダムな点として表示されます。
   observation: 観察記録
   observation_: 観察記録
+  observation_accuracy_validator_email_subject: "iNaturalistの観察記録の精度を推定するのを手伝っていただけませんか？"
+  observation_accuracy_validator_email_will_you_help_us: |
+    iNaturalistの観察記録の精度を推定する実験に協力していただけませんか？
+  observation_accuracy_validator_email_if_so2_html: |
+    <ol>
+    <li>以下のリンクにある観察記録は、たとえそれが研究グレードであっても、またあなたの最も細かい同定がより高い分類学的レベルであっても、できる限り細かく同定してください（界レベルであっても）。</li>
+    <li>もしあなたが "Potential Disagreement "のポップアップを見て…
+    <ul>
+    <li>それが間違った同定だと確信が持てたらオレンジのボタンを、</li>
+    <li>同定以上の情報が不明な場合は緑色のボタンをクリックしてください。</li>
+    </ul>
+    </li>
+    <li><b>%{validator_deadline_date}</b>までにこれを行う</li>
+    </ol>
+    ここに、iNatでのあなたの活動に基づいて同定できると思われる<a href="%{sample_url}">%{num_obs}件の観察記録のサブセット</a>があります。<b>%{validator_deadline_date}までに、それぞれの観察記録にできるだけ細かい同定を付けてください。</b>
+  observation_accuracy_validator_email_we_will_calculate: |
+    私たちは、あなたの同定と観察記録の分類群を比較して精度を計算します。もしその同定がまだ適切であれば、以前に同定を追加した観察記録をスキップすることができます。一致と不一致をどのようにカウントするかについては、このまま読み進めてください。
+  observation_accuracy_validator_email_ids_equal_to: |
+    観察記録と同じ (A) か、それよりも細かい同定 (B) は「同意」としてカウントされます。
+  observation_accuracy_validator_email_we_are_so_grateful_html: |
+    iNaturalistの同定者としてご協力いただき、この研究にご参加いただき本当にありがとうございます。この実験に関するよくある質問については、<a href="%{url}">こちらの記事</a>をご覧ください。
+  observation_accuracy_validator_email_with_gratitude: 感謝の気持ちを込めて、
+  observation_accuracy_validator_email_the_inaturalist_team: iNaturalistチーム
   observation_added_to_the_project: "観察記録が「%{project}」というプロジェクトに追加されました"
   observation_aggregation: 観察記録の集合体
   #Attributes an observation to a user. %{user} can be a username or a full
@@ -3123,7 +3154,9 @@ ja:
   only_the_project_admin_can_delete_this_project: プロジェクト管理者以外の方は削除できません。
   only_view_nearby_suggestions: 近隣で観察された候補のみ表示
   only_you: 自分のみ
+  #Geoprivacy status in which no privacy has been applied
   open: 公開
+  #Geoprivacy status in which no privacy has been applied
   open_: オープン
   open_description: "分類群の位置情報は、絶滅の恐れがある場合を除き一般公開されます"
   open_street_map: OpenStreetMap
@@ -3811,7 +3844,11 @@ ja:
   radius_value: "半径 (m): %{radius}"
   random: ランダム
   range: 分布・生息区域
+  #Taxonomic rank, e.g. "genus," "subfamily", "kingdom", etc.
   rank: 階級
+  #A person's rank on an ordinal scale (e.g. "first place," "second place,"
+  #etc.). Generally used as a column header in lists of observers and
+  #identifiers
   rank_position: 順位
   ranks:
     stateofmatter: 物質の状態
@@ -4059,6 +4096,14 @@ ja:
   rotate_left: 左回転
   rotate_right: 右回転
   row_singular_or_plural: 行
+  #Prompt to join a test of right-to-left layouts, e.g. for languages like
+  #Arabic and Hebrew
+  rtl_test_prompt: |
+    右から左へのレイアウトをテストしますか？URLパラメータに test=rtl を使うこともできます。すべてのページが右から左のレイアウトに変換されているわけではないことに注意してください。
+  #Message displayed when you have joined a test of right-to-left layouts,
+  #e.g. for languages like Arabic and Hebrew. Could also be translated
+  #as "You have joined..."
+  rtl_test_joined_status: 右から左へのレイアウトのテストに参加しました
   rules_and_formatting: "ルールとフォーマット"
   rules_for_adding_observations: 観測記録の追加に関するルール
   rules_for_becoming_a_member: 新規メンバーに関するルール
@@ -4513,6 +4558,7 @@ ja:
   taxon_range_guidelines_taxon_is_not_in_the_iucn_red_list: この分類群はIUCNレッドリストに掲載されていません。
   taxon_range_guidelines_learn_more_about_taxon_ranges: 分類群生息域の詳細を見る
   taxon_range_updated_notice: 分類範囲が正常に更新されました。マップに反映されるまで数分お待ちください。
+  #Taxonomic ranks, e.g. "genus," "subfamily", "kingdom", etc.
   taxon_ranks: 分類群のランク
   taxon_removed_from_list: リストから分類群が削除されました
   taxon_search: 分類群検索
@@ -4838,7 +4884,10 @@ ja:
   unknown: 不明
   unknown_error: 不明なエラー
   unknown_rank: '(階級不明）'
-  unfollow: フォローを外す
+  #Text for a button to stop following updates on an observation
+  unfollow_observation: 観察記録のフォローを解除
+  #Text for a button to stop following updates from a user
+  unfollow_user: ユーザーのフォローを解除
   unlink_your_google_account: Googleアカウントとの連携を解除する
   unlink_your_flickr_account: "Flickrアカウントとの連携を解除"
   unmute: ミュート解除
@@ -5532,10 +5581,9 @@ ja:
           figure_alt_text: Expected Nearby mapとTaxon Rangeを比較します
           combining_these_maps_produces: |
             これらのマップを組み合わせると、3種類のセルができます：
-          #Areas where both of the Expected Nearby Map and Taxon Range predict that the taxon exists
+          #Areas where both the Expected Nearby Map and Taxon Range predict that the taxon exists
           true_presences_colon: |
             真の存在：
-          true_presences_definition: 予想される分布図と分類群の生息域の両方から、その分類群が存在すると予測されるエリア
           #Areas where only the Expected Nearby Map predicts the taxon exists
           false_presences_colon: |
             偽の存在：
@@ -6032,6 +6080,8 @@ ja:
         do_you_need_features_from_traditional: |
           真の座標へのアクセスなど、手動プロジェクトの機能が必要ですか？
           カスタム観測フィールドや、自動フィルタリングできない個々の観察記録の追加など、手動プロジェクトの機能が必要ですか？
+        do_you_need_features_from_traditional2: |
+          カスタムの観察フィールドや、自動フィルタリングできない個々の観察記録の追加など、手動プロジェクトの機能が必要ですか？
         duplicate_project: プロジェクトの複製
         include_annotated_observations: |
           特定の属性（例：ライフステージ）、または特定の属性と値（例：ライフステージ＝成体）で注釈がつけられた観察記録のみを含めます。1つのプロジェクトにつき、1つの注釈のフィルターに制限されます。
@@ -6211,7 +6261,7 @@ ja:
         species_per_year_by_date_observed: 観察した日付順
         stats_generation_schedule: 統計は12月の毎週日曜日と1月1日に生成されます
         sunburst_desc_html: |
-          観察された分類群を階層的な「サンバースト」図として配置したもの。階層の基点は中央にあり、「生命」から始まり、外縁にある種で終わる。各円弧の大きさはその分類群の観測数に比例し、色はいつもの「象徴的な」分類群の色（植物は緑、昆虫はオレンジ、その他のほとんどの動物は青、など）におおよそ対応しているので、緑が多いということは、多くの植物を観測したことを意味します。<strong>円弧をクリックすると、その分類群が中心に配置され</strong>、その周囲に子分類群が配置されます。また、<strong>中心をクリックすると、階層が後ろに移動します</strong>。
+          観察された分類群を階層的な「サンバースト」図として配置したもの。階層の基点は中央にあり、「生命」から始まり、外縁の種で終わります。各円弧の大きさはその分類群の観察記録の数に比例し、色は通常の「分類群を象徴する」色（植物は緑、昆虫はオレンジ、その他の動物は青など）にほぼ対応しています。<strong>円弧をクリックすると、その分類群が中心に配置され、</strong>その周りに子分類群が配置され、<strong>中心をクリックすると、階層が上に戻ります</strong>。
         translators_title: 翻訳者
         view_all_publications_count_caps2:
           other: "%{count} 件の出版物を表示"

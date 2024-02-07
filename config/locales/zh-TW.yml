@@ -1648,6 +1648,7 @@ zh-TW:
   everywhere: 任何地方
   exact: 準確
   exact_date: 精確日期
+  #Taxonomic rank, e.g. "genus," "subfamily", "kingdom", etc.
   exact_rank: 精確級別
   except: 除外
   exclude_places: 排除的地點
@@ -1816,6 +1817,7 @@ zh-TW:
   fluid: 流動
   follow: 追蹤
   follow_receive_updates_about_new_observations: 追蹤（接收有關新觀察的更新）
+  #Text for a button to follow updates from a specific user
   follow_user: "關注 %{user}"
   followers: 關注者
   following: 追蹤中
@@ -1959,6 +1961,8 @@ zh-TW:
   hide_running_total: 隱藏運行總計
   hide_uncountable_species: 隱藏無法計數的物種
   high: 高
+  #Highest taxonomic rank to filter by, where the "highest" possible rank is
+  #kingdom
   highest_rank: 最高級別
   highlights_and_stats_from_year_on_site: "精彩內容與在 %{site} 上來自於 %{year} 的統計狀態"
   history: 歷史
@@ -2405,6 +2409,8 @@ zh-TW:
   looks_like_no_species_in_guide: 看起來在您的指南裡尚未有物種。
   lookup: 查詢
   low: 低
+  #Lowest taxonomic rank to filter by, where the "lowest" possible rank is
+  #subspecies or variety
   lowest_rank: 最低級別
   make_admin: 作為管理員
   #Header for main content section of the project detail page when editing custom project data.
@@ -3041,7 +3047,9 @@ zh-TW:
   only_the_project_admin_can_delete_this_project: 僅專案管理員可刪除此專案。
   only_view_nearby_suggestions: 僅顯示附近的鑑定建議
   only_you: 僅有您
+  #Geoprivacy status in which no privacy has been applied
   open: 開啟
+  #Geoprivacy status in which no privacy has been applied
   open_: 開啟
   open_description: "任何人皆可查看座標，除非該物種分類受到瀕臨滅絕危險。"
   open_street_map: 開放街圖
@@ -3599,6 +3607,7 @@ zh-TW:
   plants: 植物
   please_add_a_citation_for_this_change: 請為此次更改添加引用。
   please_allow_a_few_weeks_for_external_sites: 請允許幾週時間讓外部網站由此筆觀察做同步更改 #Request that a known child ask their parents for permission to use this service
+  please_ask_your_parents_for_permission: 請向您的父母取得同意
   #Title to a section warning a user to exercise caution
   please_be_careful!: 請務必小心！
   please_complete_the_following_to_add_project: |
@@ -3714,6 +3723,14 @@ zh-TW:
   proposed_taxa_that_support_the_community_id: 所提出物種分類群贊同社群鑑定
   protozoans: 原生動物
   provider_authorizations: 提供方授權
+  provider_without_email_error_apple: |
+    Apple 並沒有提供該帳號的電子郵件地址（這是必需的）。 請在此網站上建立帳號，而不是透過 Apple 登入。
+  provider_without_email_error_flickr: |
+    Flickr 並沒有提供該帳號的電子郵件地址（這是必需的）。 請在此網站上建立帳號，而不是透過 Flickr 登入。
+  provider_without_email_error_generic: |
+    此服務並沒有提供該帳號的電子郵件地址（這是必需的）。 請在此網站上建立帳號，而不是透過第三方登入。
+  provider_without_email_error_google_oauth2: |
+    Google 並沒有提供該帳號的電子郵件地址（這是必需的）。 請在此網站上建立帳號，而不是透過 Google 登入。
   public_domain: 公有領域
   publish: 發佈
   quality_grade: 品質等級
@@ -3722,10 +3739,15 @@ zh-TW:
   queued: 已排程
   query: 查詢
   radius: 半徑（m）
+  radius_km: 半徑（km）
   radius_value: "半徑（m）： %{radius}"
   random: 隨機
   range: 範圍
+  #Taxonomic rank, e.g. "genus," "subfamily", "kingdom", etc.
   rank: 分類位階
+  #A person's rank on an ordinal scale (e.g. "first place," "second place,"
+  #etc.). Generally used as a column header in lists of observers and
+  #identifiers
   rank_position: 級別
   #When a scientific name is displayed with its rank, e.g. Family Noctuidae or
   #Genus Noctua (but generally not Species Noctua pronuba)
@@ -3965,6 +3987,8 @@ zh-TW:
   #you out until you do
   resend_and_sign_out: 再次傳送並登出
   resend_confirmation_email: 再次傳送確認電子郵件
+  #Label for a button to reset search parameters, as in "Reset the observation search parameters"
+  reset: 重設
   reset_filters_short: 重設
   reset_brightness: 重新設定亮度
   reset_search_filters: 重新設定搜尋篩選
@@ -4469,6 +4493,7 @@ zh-TW:
   taxon_framework_relationship_unknown_count_html: "未知關聯的數量：%{count}"
   taxon_framework_relationships: 分類群框架關聯
   taxon_framework_taxon: 分類群框架的分類單元
+  taxon_history_notice: 歷史記錄是在 2022 年 2 月引入，因此沒有在該日期之前的可用歷史紀錄。
   taxon_merge: 分類群合併
   taxon_name: 分類群名稱
   taxon_name_must_match_an_existing_taxon_in_our_database: 分類群名稱必須符合在我們資料庫裡既有的分類群
@@ -4499,6 +4524,7 @@ zh-TW:
     請使用描述來解釋地圖是如何衍生的，與連結到任何相關標誌、分類拆分，或是其它為什麼發布的紅色名錄範圍需要更改的討論。
   taxon_range_guidelines_learn_more_about_taxon_ranges: 閱覽更多有關分類群分布範圍的資訊
   taxon_range_updated_notice: 分類群範圍已更新成功。請等待幾分鐘來讓變更內容呈現在地圖上。
+  #Taxonomic ranks, e.g. "genus," "subfamily", "kingdom", etc.
   taxon_ranks: 分類群階層
   taxon_removed_from_list: 分類群已從名錄中移除。
   taxon_scheme: 分類群綱要
@@ -4660,7 +4686,59 @@ zh-TW:
   #TZ / IANA time zone name. See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   time_zone_africa_johannesburg: 南非時間(SAST)
   #TZ / IANA time zone name. See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone_africa_nairobi: 東非時間
+  #TZ / IANA time zone name. See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone_america_argentina_buenos_aires: 阿根廷時間
+  #TZ / IANA time zone name. See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone_america_bogota: 哥倫比亞時間
+  #TZ / IANA time zone name. See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone_america_chicago: 中部時間（美國與加拿大）
+  #TZ / IANA time zone name. See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone_america_chihuahua: 太平洋時間（墨西哥）
+  #TZ / IANA time zone name. See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone_america_denver: 山區時間（美國與加拿大）
+  #TZ / IANA time zone name. See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone_america_guatemala: 瓜地馬拉時間
+  #TZ / IANA time zone name. See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone_america_halifax: 大西洋時間（加拿大）
+  #TZ / IANA time zone name. See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone_america_la_paz: 玻利維亞時間
+  #TZ / IANA time zone name. See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone_america_lima: 祕魯時間
+  #TZ / IANA time zone name. See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone_america_los_angeles: 太平洋時間（美國與加拿大）
+  #TZ / IANA time zone name. See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone_america_mexico_city: 中部時間（墨西哥）
+  #TZ / IANA time zone name. See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone_america_new_york: 東部時間（美國與加拿大）
+  #TZ / IANA time zone name. See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone_america_phoenix: 亞利桑那時間
+  #TZ / IANA time zone name. See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone_america_santiago: 大陸智利時間
+  #TZ / IANA time zone name. See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone_america_sao_paulo: 巴西利亞時間
+  #TZ / IANA time zone name. See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone_america_tijuana: 太平洋時間（墨西哥）
+  #TZ / IANA time zone name. See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone_asia_baghdad: 阿拉伯標準時間
+  #TZ / IANA time zone name. See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone_asia_bangkok: 印度支那時間
+  #TZ / IANA time zone name. See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone_asia_hong_kong: 香港時間
+  #TZ / IANA time zone name. See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone_asia_taipei: 台灣時間
+  #TZ / IANA time zone name. See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone_asia_tokyo: 日本標準時間
+  #TZ / IANA time zone name. See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone_asia_yekaterinburg: 凱薩琳堡時間
+  #TZ / IANA time zone name. See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone_australia_perth: 伯斯時間
+  #TZ / IANA time zone name. See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone_australia_sydney: 雪梨時間
+  #TZ / IANA time zone name. See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   time_zone_europe_amsterdam: 歐洲中部時間(CET)
+  #TZ / IANA time zone name. See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone_europe_athens: 歐洲東部時間
   #TZ / IANA time zone name. See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   time_zone_europe_berlin: 歐洲中部時間(CET)
   #TZ / IANA time zone name. See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
@@ -4668,7 +4746,15 @@ zh-TW:
   #TZ / IANA time zone name. See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   time_zone_europe_copenhagen: 歐洲中部時間(CET)
   #TZ / IANA time zone name. See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone_europe_helsinki: 歐洲東部時間
+  #TZ / IANA time zone name. See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone_europe_istanbul: 土耳其時間
+  #TZ / IANA time zone name. See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone_europe_kiev: 歐洲東部時間
+  #TZ / IANA time zone name. See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   time_zone_europe_madrid: 歐洲中部時間(CET)
+  #TZ / IANA time zone name. See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone_europe_moscow: 莫斯科時間
   #TZ / IANA time zone name. See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   time_zone_europe_paris: 歐洲中部時間(CET)
   #TZ / IANA time zone name. See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
@@ -4683,6 +4769,12 @@ zh-TW:
   time_zone_europe_warsaw: 歐洲中部時間(CET)
   #TZ / IANA time zone name. See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   time_zone_europe_zagreb: 歐洲中部時間(CET)
+  #TZ / IANA time zone name. See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone_pacific_apia: 薩摩亞時間
+  #TZ / IANA time zone name. See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone_pacific_auckland: 紐西蘭時間
+  #TZ / IANA time zone name. See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone_pacific_honolulu: 夏威夷-阿留申時間
   #As in the title of a book or a blog post
   title: 標題
   title_and_description: "標題與描述"
@@ -4748,7 +4840,6 @@ zh-TW:
   unknown: 未知
   unknown_error: 不明錯誤
   unknown_rank: '（未知級別）'
-  unfollow: 取消追蹤
   unlink_your_google_account: 取消連結您的 Google 帳號
   unlink_your_flickr_account: "取消連結至您的 Flickr 帳號"
   unmute: 取消禁言
@@ -6392,9 +6483,6 @@ zh-TW:
         store_prompt: |
           想要在任何地方展示您對於 iNat 的自豪嗎？
           來逛逛 iNat 商店吧！
-        sunburst_desc_html: |
-          已觀察物種分類群會被整理為分層「放射」狀的圖表。以中間層作為「生命」起始，外環邊緣作為結束。圖表上任一弧線長度比例是基於物種分類的觀察數量，色彩部份會簡略對應到我們常用的「代表性」物種分類顏色（綠色用在植物上；橘色用在昆蟲上；藍色用在多數其它動物上，等等。）， 因此如果您看到許多綠色，這代表著您有觀察過許多植物。
-          <strong>點擊弧線來放置到有子項目圍繞的物種分類中心點</strong>，或是<strong>點擊中心點來移動層次結構</strong>。
         translators_title: 譯者
         translators_desc: |
           您知道 iNaturalist 已經翻譯成%{x_languages}，幾乎全部由%{x_people}所翻譯，其中有些人甚至沒有使用 iNat 嗎？以下是今年新增翻譯的所有翻譯者，還有他們翻譯我們的%{website_link_tag}網站%{link_tag_end}、%{iphone_link_tag}iPhone%{link_tag_end}和%{android_link_tag}Android%{link_tag_end}手機 app 和%{seek_link_tag}探索(Seek)%{link_tag_end}。您可以在我們的%{view_all_web_link_tag}網頁%{link_tag_end}和%{view_all_mobile_link_tag}行動裝置%{link_tag_end}程式碼倉儲庫中來查閱所有人的翻譯，包含過去幾年的翻譯者和從 Translatewiki 的翻譯夥伴。
@@ -7060,6 +7148,8 @@ zh-TW:
         blank: 不可留空
         confirmation: 密碼不符
         empty: 不能為空
+        equal_to:
+          other: 必須等於 %{count}
         even: 必須是偶數
         exclusion: 已被保留
         inclusion: 未包含在名錄中
@@ -7412,6 +7502,19 @@ zh-TW:
         variety: "@n"
         #Default gender for nouns that aren't listed here
         default: "@n"
+      "@iconic_taxon":
+        Animalia: 動物界
+        Aves: 鳥綱
+        Reptilia: 爬蟲綱
+        Amphibia: 兩棲綱
+        Mammalia: 哺乳綱
+        Arachnida: 蛛形綱
+        Insecta: 昆蟲綱
+        Plantae: 植物界
+        Fungi: 真菌界
+        Protozoa: 原生動物界
+        Mollusca: 軟體動物門
+        Chromista: 色藻界
   #Title of a section warning the user about something
   warning_title: 警告
   wikimedia: 維基百科

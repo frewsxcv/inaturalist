@@ -1572,6 +1572,7 @@ gl:
   everywhere: En todas partes
   exact: Exacta
   exact_date: Data Exacta
+  #Taxonomic rank, e.g. "genus," "subfamily", "kingdom", etc.
   exact_rank: Rango exacto
   except: Agás
   exclude_places: Excluír Lugares
@@ -1729,6 +1730,7 @@ gl:
   fluid: Fluída
   follow: Seguir
   follow_receive_updates_about_new_observations: Seguir (recebe novidades sobre novas observacións)
+  #Text for a button to follow updates from a specific user
   follow_user: "Seguir a %{user}"
   followers: Seguidores
   following: Seguindo
@@ -1845,6 +1847,8 @@ gl:
   hide_running_total: Ocultar Total Acumulado
   hide_uncountable_species: Ocultar Especies Incontables
   high: Alto
+  #Highest taxonomic rank to filter by, where the "highest" possible rank is
+  #kingdom
   highest_rank: Rango máis alto
   highlights_and_stats_from_year_on_site: "Destacados e estatísticas do %{year} en %{site}"
   history: Histórico
@@ -2246,6 +2250,8 @@ gl:
   looks_like_no_species_in_guide: Parece que aínda non tes especies na túa guía.
   lookup: Procurar
   low: Baixo
+  #Lowest taxonomic rank to filter by, where the "lowest" possible rank is
+  #subspecies or variety
   lowest_rank: Rango máis baixo
   make_admin: Tornar administrador
   #Header for main content section of the project detail page when editing custom project data.
@@ -2845,7 +2851,9 @@ gl:
   only_the_project_admin_can_delete_this_project: Só o administrador do proxecto pode eliminar este proxecto.
   only_view_nearby_suggestions: Ver só suxestións das proximidades
   only_you: Só ti
+  #Geoprivacy status in which no privacy has been applied
   open: Transparente
+  #Geoprivacy status in which no privacy has been applied
   open_: Aberto
   open_description: "Todo o mundo pode ver as coordenadas a menos que o taxón estea en perigo."
   open_street_map: OpenStreetMap
@@ -3520,7 +3528,11 @@ gl:
   radius_value: "Raio (m): %{radius}"
   random: Aleatorio
   range: Rango
+  #Taxonomic rank, e.g. "genus," "subfamily", "kingdom", etc.
   rank: Rango
+  #A person's rank on an ordinal scale (e.g. "first place," "second place,"
+  #etc.). Generally used as a column header in lists of observers and
+  #identifiers
   rank_position: Rango
   #When a scientific name is displayed with its rank, e.g. Family Noctuidae or
   #Genus Noctua (but generally not Species Noctua pronuba)
@@ -4220,6 +4232,7 @@ gl:
   taxon_range: Rango de taxón
   taxon_range_created_notice: O rango de taxon creouse correctamente. Por favor, agarde uns intres para que apareza nos mapas.
   taxon_range_updated_notice: O rango de taxon actualizouse correctamente. Por favor, agarde uns intres para que as mudanzas aparezan en los mapas.
+  #Taxonomic ranks, e.g. "genus," "subfamily", "kingdom", etc.
   taxon_ranks: Rangos Taxonómicos
   taxon_removed_from_list: Especie ou grupo eliminado da lista.
   taxon_scheme: Esquema de taxonomía
@@ -4437,7 +4450,6 @@ gl:
   unknown: Descoñecido
   unknown_error: Erro descoñecido
   unknown_rank: '(Clasificación descoñecida)'
-  unfollow: Deixar de Seguir
   unlink_your_google_account: Desvincula A Túa Conta De Google
   unlink_your_flickr_account: "Desvincula A Túa Conta De Flickr"
   unmute: Desactivar Silenciamento
@@ -5914,8 +5926,6 @@ gl:
         stats_generated_datetime: Estatísticas xeradas no %{datetime}
         store_prompt: |
           ¿Queres amosar o teu orgullo iNat onde queira que vaias? ¡Entra na Tenda iNat!
-        sunburst_desc_html: |
-          Taxons observados como un diagrama xerárquico "sunburst". A base da xerarquía está no centro, comezando con "Vida" e rematando con especies nos cantos exteriores. O tamaño de cada arco é proporcional ó número de observacións dese taxon, e as cores máis ou menos corresponden ás nosas  cores taxonómicas "icónicas" usuais (verde para plantas, laranxa para insectos, azul para a maioría do resto dos animais, etc.), así que se estás vendo moito verde, significa que observaches moitas plantas. <strong>Preme nun arco para colocar ese taxon no centro</strong> e ós seus fillos ó seu redor, ou <strong>preme o centro para subir na xerarquía</strong>.
         translators_title: Tradutores
         translators_desc: |
           ¿Sabías que iNaturalist foi traducido a %{x_languages}, case enteiramente por %{x_people}, algúns deles nen sequera empregan iNat? Aquí están tódolos incribles tradutores que engadiron traduccións este ano, xunto có número de palabras que traduciron para o %{website_link_tag}sitio web%{link_tag_end}, as nosas aplicacións para %{iphone_link_tag}iPhone%{link_tag_end} e %{android_link_tag}Android%{link_tag_end}, e %{seek_link_tag}Seek%{link_tag_end}. Podes ver toda a xente que contribuíu con traduccións, incluíndo anos pasados e amigos de Translatewiki, nos nosos repositorios de códigos da %{view_all_web_link_tag}web%{link_tag_end} e%{view_all_mobile_link_tag}mobiles%{link_tag_end}.

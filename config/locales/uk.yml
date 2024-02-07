@@ -1686,6 +1686,7 @@ uk:
   everywhere: всюди
   exact: Точна
   exact_date: Точна дата
+  #Taxonomic rank, e.g. "genus," "subfamily", "kingdom", etc.
   exact_rank: Точний ранг
   except: окрім
   exclude_places: Виключити місця
@@ -1845,6 +1846,7 @@ uk:
   fluid: адаптивний
   follow: Підписатися
   follow_receive_updates_about_new_observations: Підписатися (отримувати оновлення про нові спостереження)
+  #Text for a button to follow updates from a specific user
   follow_user: "Підписатися на користувача %{user}"
   followers: Підписники
   following: Підписки
@@ -1967,6 +1969,8 @@ uk:
   hide_running_total: Приховати поточний доробок
   hide_uncountable_species: Приховати незлічувані види
   high: Вищий
+  #Highest taxonomic rank to filter by, where the "highest" possible rank is
+  #kingdom
   highest_rank: Найвищий ранг
   highlights_and_stats_from_year_on_site: "Яскраві події та статистика року %{year} на сайті %{site}"
   history: Історія
@@ -2378,6 +2382,8 @@ uk:
   looks_like_no_species_in_guide: Схоже, у вашому посібнику ще немає жодного виду.
   lookup: Шукати
   low: Нижчий
+  #Lowest taxonomic rank to filter by, where the "lowest" possible rank is
+  #subspecies or variety
   lowest_rank: Найнижчий ранг
   make_admin: Зробити адміністратором
   #Header for main content section of the project detail page when editing custom project data.
@@ -2987,7 +2993,9 @@ uk:
   only_the_project_admin_can_delete_this_project: Цей проєкт може видалити лише адміністратор проєкту.
   only_view_nearby_suggestions: Дивитися лише пропозиції поблизу
   only_you: Лише ви
+  #Geoprivacy status in which no privacy has been applied
   open: відкриті
+  #Geoprivacy status in which no privacy has been applied
   open_: Відкриті
   open_description: "Координати може бачити будь-хто, у разі якщо таксон не знаходиться під загрозою."
   open_street_map: OpenStreetMap
@@ -3698,7 +3706,11 @@ uk:
   radius_value: "Радіус (м): %{radius}"
   random: Випадково
   range: Проміжок
+  #Taxonomic rank, e.g. "genus," "subfamily", "kingdom", etc.
   rank: Ранг
+  #A person's rank on an ordinal scale (e.g. "first place," "second place,"
+  #etc.). Generally used as a column header in lists of observers and
+  #identifiers
   rank_position: Ранг
   #When a scientific name is displayed with its rank, e.g. Family Noctuidae or
   #Genus Noctua (but generally not Species Noctua pronuba)
@@ -4450,6 +4462,7 @@ uk:
   taxon_range: Область поширення таксону
   taxon_range_created_notice: Область поширення таксону було успішно створено. За декілька хвилин він з'явиться на картах.
   taxon_range_updated_notice: Область поширення таксону було успішно оновлено. За декілька хвилин він з'явиться на картах.
+  #Taxonomic ranks, e.g. "genus," "subfamily", "kingdom", etc.
   taxon_ranks: Ранги таксону
   taxon_removed_from_list: Таксон видалено зі списку.
   taxon_scheme: Схема таксону
@@ -4680,7 +4693,6 @@ uk:
   unknown: Невідомий
   unknown_error: Невідома помилка
   unknown_rank: '(Невідомий ранг)'
-  unfollow: Не стежити
   unlink_your_google_account: Від'єднати свій обліковий запис Google
   unlink_your_flickr_account: "Від'єднати свій обліковий запис Flickr"
   unmute: Скасувати ігнорування
@@ -6311,17 +6323,6 @@ uk:
         stats_generated_datetime: Статистика розрахована %{datetime}
         store_prompt: |
           Хочете всюди демонструвати свою гордість iNat? Зазирніть у наш iNat-магазин!
-        sunburst_desc_html: |
-          Спостережені таксони розташовані у вигляді ієрархічної "сонячної" діаграми. Основа
-          ієрархії знаходиться в центрі, починаючи з "Життя" і закінчуючи
-          видами на зовнішніх краях. Розмір кожної дуги пропорційний
-          числу спостережень цього таксону, а кольори більш-менщ
-          відповідають звичним "знаковим" кольорам таксонів (зелений для рослин,
-          помаранчевий для комах, синій для більшості інших тварин тощо), таким чином, якщо ви
-          бачите багато зеленого, це означає, що ви спостерігали багато рослин.
-          <strong> Натисніть на дузі , щоб розмістити таксон в центрі, </strong> а
-          його дочірні таксони навколо нього, або <strong> натисніть на центр, аби повернутися назад
-          у ієрархії </strong>.
         translators_title: Перекладачі
         translators_desc: |
           Чи знали ви, що iNaturalist був перекладений %{x_languages},

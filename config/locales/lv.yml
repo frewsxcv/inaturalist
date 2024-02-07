@@ -1700,6 +1700,7 @@ lv:
   everywhere: visur
   exact: Konkrēts
   exact_date: Konkrēts datums
+  #Taxonomic rank, e.g. "genus," "subfamily", "kingdom", etc.
   exact_rank: Konkrēta klasifikācija
   except: izņemot
   exclude_places: Nerādīt šīs vietas
@@ -1863,6 +1864,7 @@ lv:
   fluid: plūstošs
   follow: Sekot
   follow_receive_updates_about_new_observations: Sekot (saņemt ziņojumus par jauniem novērojumiem)
+  #Text for a button to follow updates from a specific user
   follow_user: "Sekot lietotājam %{user}"
   followers: Sekotāji
   following: Abonēts saturs
@@ -1999,6 +2001,8 @@ lv:
   hide_running_total: Nerādīt kopējo skaitu
   hide_uncountable_species: Paslēpt nesaskaitāmās sugas
   high: Augsts
+  #Highest taxonomic rank to filter by, where the "highest" possible rank is
+  #kingdom
   highest_rank: Augstākā klasifikācija
   highlights_and_stats_from_year_on_site: "Būtiskākie momenti un statistika %{year}, gadā %{site} vietnē"
   history: Vēsture
@@ -2458,6 +2462,8 @@ lv:
   looks_like_no_species_in_guide: Izskatās, ka padomiem vēl neesi pievienojis nevienu sugu.
   lookup: Meklēt
   low: Zems
+  #Lowest taxonomic rank to filter by, where the "lowest" possible rank is
+  #subspecies or variety
   lowest_rank: Zemākā klasifikācija
   make_admin: Padarīt par administratoru
   #Header for main content section of the project detail page when editing custom project data.
@@ -3096,7 +3102,9 @@ lv:
   only_the_project_admin_can_delete_this_project: Tikai projekta administrators var dzēst projektu.
   only_view_nearby_suggestions: Skatīt tikai tos indivīdu minējumus, kas novēroti tuvumā
   only_you: Tikai tu
+  #Geoprivacy status in which no privacy has been applied
   open: publisks
+  #Geoprivacy status in which no privacy has been applied
   open_: Publisks
   open_description: "Koordinātas ir redzamas visiem, ja vien taksons nav apdraudēts."
   open_street_map: OpenStreetMap
@@ -3771,7 +3779,11 @@ lv:
   radius_value: "Rādiuss (m): %{radius}"
   random: Nejauši
   range: Periods
+  #Taxonomic rank, e.g. "genus," "subfamily", "kingdom", etc.
   rank: Klasifikācija
+  #A person's rank on an ordinal scale (e.g. "first place," "second place,"
+  #etc.). Generally used as a column header in lists of observers and
+  #identifiers
   rank_position: Klasifikācija
   #When a scientific name is displayed with its rank, e.g. Family Noctuidae or
   #Genus Noctua (but generally not Species Noctua pronuba)
@@ -4574,6 +4586,7 @@ lv:
     Lūdzu, aizpildi apraksta lauku, lai paskaidrotu, kā tika iegūta karte, un lai norādītu saites uz būtiskiem karodziņiem, taksonu sadalīšanu vai citu informāciju, kas paskaidro, kādēļ bija jāveic izmaiņas publicētajā IUCN Sarkanās grāmatas apgabalu kartē.
   taxon_range_guidelines_learn_more_about_taxon_ranges: Uzzināt vairāk par taksonu izplatības apgabaliem
   taxon_range_updated_notice: Taksona izplatības apgabals veiksmīgi izlabots. Paies pāris minūtes līdz tas būs redzams kartēs.
+  #Taxonomic ranks, e.g. "genus," "subfamily", "kingdom", etc.
   taxon_ranks: Taksonu klasifikācija
   taxon_removed_from_list: Taksons izdzēsts no saraksta.
   taxon_scheme: Taksonu shēma
@@ -4918,7 +4931,6 @@ lv:
   unknown: Nezināms
   unknown_error: Nezināma kļūda
   unknown_rank: '(Nezināma klasifikācija)'
-  unfollow: Beigt sekot
   unlink_your_google_account: Atvienot Google kontu
   unlink_your_flickr_account: "Atvienot Flickr kontu"
   unmute: Iespējot paziņojumus
@@ -6455,9 +6467,6 @@ lv:
         stats_generated_datetime: '%{datetime} ievākta statistika'
         store_prompt: |
           Vēlies palepoties ar to, ka esi iNat lietotājs it visur, kur dodies? Iemet aci iNat veikalā!
-        sunburst_desc_html: |
-          Novērotie taksoni ir sakārtoti hierarhiskā secībā un attēloti saulveida diagrammā. Hierarhiskā secība sākas diagrammas vidū – no sadaļas "Dzīvība" līdz sugām ārējās malās. Katras arkas izmērs ir proporcionāls taksona novērojumu skaitam. Krāsas atbilst mūsu ierastajām pamata taksonu krāsām – zaļš augiem, oranžs insektiem un zils lielākai daļai cita veida dzīvnieku. Ja redzi daudz zaļās krāsas, tas nozīmē, ka esi novērojis daudz augu.
-          <strong> Nospied uz kādas no arkām, lai novietotu taksonu vidū un tā apakšgrupas apkārt taksonam.</strong> <strong>Nospied ar peli diagrammas vidū, lai virzītos hierarhiskajā secībā uz augšu.</strong>
         translators_title: Tulkotāji
         translators_desc: |
           Vai zināji, ka iNaturalist pārtulkojuši %{x_people} cilvēki %{x_languages} valodās? Daži no viņiem pat paši nemaz nelieto iNat. Šeit redzami visi tie apbrīnojamie tulkotāji, kas šogad pievienojuši tulkojumus, un viņu pārtulkoto vārdu skaits šajās vietnēs un lietotnēs: %{website_link_tag}tīmekļa vietnē%{link_tag_end}, mūsu

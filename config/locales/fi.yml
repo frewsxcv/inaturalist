@@ -1666,6 +1666,7 @@ fi:
   everywhere: kaikkialla
   exact: Tarkka
   exact_date: Tarkka päiväys
+  #Taxonomic rank, e.g. "genus," "subfamily", "kingdom", etc.
   exact_rank: Tarkka arvo
   except: paitsi
   exclude_places: Rajaa pois paikat
@@ -1826,7 +1827,10 @@ fi:
   #Adjective, as in a fluid layout of images
   fluid: neste
   follow: Seuraa
+  #Text for a button to follow updates on an observation
+  follow_observation: Seuraa havaintoa
   follow_receive_updates_about_new_observations: Seuraa (saat päivityksiä uusista havainnoista)
+  #Text for a button to follow updates from a specific user
   follow_user: "Seuraa käyttäjää %{user}"
   followers: Seuraajat
   following: Seuraamasi
@@ -1952,6 +1956,8 @@ fi:
   hide_running_total: Piilota kumulatiivinen yhteismäärä
   hide_uncountable_species: Piilota ei-laskettavat lajit
   high: Korkea
+  #Highest taxonomic rank to filter by, where the "highest" possible rank is
+  #kingdom
   highest_rank: Korkein arvo
   highlights_and_stats_from_year_on_site: "Kohokohdat ja tilastot vuodelta %{year} %{site}issa"
   history: Historia
@@ -2407,6 +2413,8 @@ fi:
   looks_like_no_species_in_guide: Näyttää siltä, että sinulla ei ole vielä yhtään lajia oppaassasi.
   lookup: Hae
   low: Alhainen
+  #Lowest taxonomic rank to filter by, where the "lowest" possible rank is
+  #subspecies or variety
   lowest_rank: Alhaisin arvo
   #Name of a website showing geologic maps around the world: https://macrostrat.org
   Macrostrat: Macrostat
@@ -3025,7 +3033,9 @@ fi:
   only_the_project_admin_can_delete_this_project: Vain projektin ylläpitäjä voi poistaa tämän projektin.
   only_view_nearby_suggestions: Näytä vain ehdotukset lajeista, jotka on havaittu lähistöllä
   only_you: Vain sinä
+  #Geoprivacy status in which no privacy has been applied
   open: avoin
+  #Geoprivacy status in which no privacy has been applied
   open_: Avoin
   open_description: "Jokainen voi nähdä koordinaatit, ellei taksoni ole uhanalainen."
   open_street_map: OpenStreetMap
@@ -3714,7 +3724,11 @@ fi:
   radius_value: "Säde (m): %{radius}"
   random: Satunnainen
   range: Väli
+  #Taxonomic rank, e.g. "genus," "subfamily", "kingdom", etc.
   rank: Sija
+  #A person's rank on an ordinal scale (e.g. "first place," "second place,"
+  #etc.). Generally used as a column header in lists of observers and
+  #identifiers
   rank_position: Sija
   #When a scientific name is displayed with its rank, e.g. Family Noctuidae or
   #Genus Noctua (but generally not Species Noctua pronuba)
@@ -4384,6 +4398,7 @@ fi:
   taxon_range_guidelines_please_provide_details: |
     Käyttäkää kuvausta selittääksenne, miten kartta on johdettu, ja linkittäkää kaikki merkitykselliset liput, taksonomiset jaot, tai muut keskustelut, miksi julkaistu IUCN Red List alue tarvitsee muutoksen.
   taxon_range_guidelines_learn_more_about_taxon_ranges: Lue lisää taksonin alueista
+  #Taxonomic ranks, e.g. "genus," "subfamily", "kingdom", etc.
   taxon_ranks: Taksoniluokat
   taxon_removed_from_list: Taksoni poistettu luettelosta.
   taxon_scheme: Taksonirakenne
@@ -4676,7 +4691,10 @@ fi:
   unknown: Tuntematon
   unknown_error: Tuntematon virhe
   unknown_rank: '(Tuntematon arvo)'
-  unfollow: Älä seuraa
+  #Text for a button to stop following updates on an observation
+  unfollow_observation: Lopeta havainnon seuranta
+  #Text for a button to stop following updates from a user
+  unfollow_user: Lopeta käyttäjän seuraaminen
   unlink_your_google_account: Poista linkitys Google-tiliisi
   unlink_your_flickr_account: "Poista linkitys Flickr-tiliisi"
   unmute: Poista hiljennys
@@ -5264,7 +5282,6 @@ fi:
           you_can_think: |
             Voit ajatella "Odotettavissa lähistöllä" -kartan arvioksi siitä, esiintyykö laji jossakin ruudukon solussa vai ei.
         range_comparison:
-          true_presences_definition: Alueet, joilla sekä "Odotettavissa lähistöllä" -kartta että levinneisyysalue ennustavat taksonin esiintyvän
           false_presences_definition: Alueet, joilla vain "Odotettavissa lähistöllä" -kartta ennustaa taksonin esiintyvän
           false_absences_definition: Alueet, joilla vain levinneisyysalue ennustaa taksonin esiintyvän
     guides:
@@ -6049,8 +6066,6 @@ fi:
         species_per_year_by_date_observed: Havainnointipäivämäärän mukaan
         stats_generated_datetime: Tilastot luotu %{datetime}
         stats_generation_schedule: Tilastot tuotetaan joka sunnuntai joulukuussa ja 1. tammikuuta
-        sunburst_desc_html: |
-          Havaitut lajit sunburst-kaaviona. Kaavion keskellä on kaikki elämä, ja ulkokehällä lajit. Jokaisen kaaren koko on suhteessa havaintomäärään tästä taksonista. Värit vastaavat taksonien värejä (vihreä kasveille, punainen hyönteisille, sininen useimmille muille eläimille jne.). <strong>Klikkaa kaarta asettaaksesi tämä taksoni kaavion keskustaksi</strong>, tai <strong>klikkaa keskustaa siirtyäksesi hierarkiassa ylöspäin</strong>.
         translators_title: Kääntäjät
         translators_desc: |
           Tiesitkö, että iNaturalistin %{x_languages} on käännetty lähes kokonaisuudessaan sellaisten %{x_people} toimesta, jotka eivät välttämättä edes käytä palvelua. Tässä on luettelo kaikista mahtavista kääntäjistä, jotka ovat tehneet käänöksiä tänä vuonna mukaanlukien käännettyjen sanojen lukumäärä. Käännökset on tehty %{website_link_tag} verkkosivuilla %{link_tag_end}, meidän%{iphone_link_tag}iPhone%{link_tag_end} ja %{android_link_tag}Android%{link_tag_end} sovelluksissa, ja %{seek_link_tag}hakupalvelussa%{link_tag_end}. Voit myös saada tietoa kaikista kielenkääntämistä tukeneista henkilöistä aiemmiltakin vuosilta ja Transwikin henkilöistä meidän %{view_all_web_link_tag}verkkopalvelun%{link_tag_end} ja%{view_all_mobile_link_tag}mobiilipalvelun%{link_tag_end} koodi repositorioissa.

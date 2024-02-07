@@ -1717,6 +1717,7 @@ es-AR:
   everywhere: todas partes
   exact: Exacto
   exact_date: Fecha exacta
+  #Taxonomic rank, e.g. "genus," "subfamily", "kingdom", etc.
   exact_rank: Rango exacto
   except: excepto
   exclude_places: Excluir Lugares
@@ -1887,6 +1888,7 @@ es-AR:
   fluid: fluida
   follow: Seguir
   follow_receive_updates_about_new_observations: Sigue (recibe actualizaciones sobre observaciones nuevas)
+  #Text for a button to follow updates from a specific user
   follow_user: "Sigue a %{user}"
   followers: Seguidores
   following: Siguiendo
@@ -2027,6 +2029,8 @@ es-AR:
   hide_running_total: Esconder Total Acumulado
   hide_uncountable_species: Esconde especies incontables
   high: Alta
+  #Highest taxonomic rank to filter by, where the "highest" possible rank is
+  #kingdom
   highest_rank: Rango más alto
   highlights_and_stats_from_year_on_site: "Destaques y estadísticas de %{year} en %{site}"
   history: Historial
@@ -2560,6 +2564,8 @@ es-AR:
   looks_like_no_species_in_guide: Parece que no has añadido ninguna especie aún.
   lookup: Buscar
   low: Baja
+  #Lowest taxonomic rank to filter by, where the "lowest" possible rank is
+  #subspecies or variety
   lowest_rank: Rango más bajo
   #Name of a website showing geologic maps around the world: https://macrostrat.org
   Macrostrat: Macrostrat
@@ -3257,7 +3263,9 @@ es-AR:
   only_the_project_admin_can_delete_this_project: Solo el administrador del proyecto puede eliminar este proyecto.
   only_view_nearby_suggestions: Mostrar solo sugerencias que hayan sido vistas cerca de aquí
   only_you: Solo tú
+  #Geoprivacy status in which no privacy has been applied
   open: Transparente
+  #Geoprivacy status in which no privacy has been applied
   open_: Abierto
   open_description: "Todo el mundo puede ver las coordenadas a menos que el taxón esté en peligro."
   open_street_map: Mapa OpenStreetMap
@@ -3993,7 +4001,11 @@ es-AR:
   radius_value: "Radio (m): %{radius}"
   random: Al azar
   range: Área
+  #Taxonomic rank, e.g. "genus," "subfamily", "kingdom", etc.
   rank: Rango
+  #A person's rank on an ordinal scale (e.g. "first place," "second place,"
+  #etc.). Generally used as a column header in lists of observers and
+  #identifiers
   rank_position: Posición
   #When a scientific name is displayed with its rank, e.g. Family Noctuidae or
   #Genus Noctua (but generally not Species Noctua pronuba)
@@ -4800,6 +4812,7 @@ es-AR:
     Por favor, utilizá la descripción para explicar cómo se modificó el mapa y agregá link a cualquier indicación relevante, divisiones taxonómicas, u otras discusiones sobre por qué la distribución de la Lista Roja de la UICN publicada requiere ser alterada
   taxon_range_guidelines_learn_more_about_taxon_ranges: Conocé más sobre distribución de taxones
   taxon_range_updated_notice: El área de distribución del taxón se ha actualizado correctamente. Por favor, espere unos minutos para que los cambios aparezcan en los mapas.
+  #Taxonomic ranks, e.g. "genus," "subfamily", "kingdom", etc.
   taxon_ranks: Filas de taxón
   taxon_removed_from_list: Especie o grupo eliminado de la lista.
   taxon_scheme: Esquema de taxonómia
@@ -5147,7 +5160,6 @@ es-AR:
   unknown: Desconocido
   unknown_error: Error desconocido
   unknown_rank: '(Clasificación desconocida)'
-  unfollow: Dejar de seguir
   unlink_your_google_account: Desenlazar tu cuenta de Google
   unlink_your_flickr_account: "Desvincular tu cuenta de Flickr"
   unmute: Activar sonido
@@ -6656,8 +6668,6 @@ es-AR:
         observation_streaks_desc2: |
           Una racha de observaciones es un período de al menos cinco días cuando alguien se acercó a la naturaleza y registró observaciones nuevas y verificables cada día particular. Acá mostramos las rachas más largas que comenzaron este año o estaban en progreso cuando estas estadísticas se generaron (para usuarios individuales, también incluímos rachas que terminaron este año).
         stats_generated_datetime: Estadísticas generadas el %{datetime}
-        sunburst_desc_html: |
-          Taxones observados dispuestos como un diagrama jerárquico de "resplandor solar". La base de la jerarquía está en el centro, comenzando con "Vida" y terminando con especies en los bordes exteriores. El tamaño de cada arco es proporcional al número de observaciones de ese taxón, y los colores se corresponden con los colores de nuestro taxón "icónico" habitual (verde para las plantas, naranja para los insectos, azul para la mayoría de los otros animales, etc.), así que si ves mucho verde, eso significa que has observado muchas plantas. <strong>Has clic en un arco para colocar ese taxón en el centro</strong> y sus dependentes a su alrededor, o <strong>has clic en el centro para volver a subir la jerarquía.</strong>
     taxa:
       edit:
         high_status_conservation_status_notice_html: |

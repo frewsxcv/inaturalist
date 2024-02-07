@@ -1537,6 +1537,7 @@ lt:
   everywhere: visur
   exact: Tikslus
   exact_date: Tiksli data
+  #Taxonomic rank, e.g. "genus," "subfamily", "kingdom", etc.
   exact_rank: Tikslus rangas
   except: išskyrus
   exclude_places: Neįtraukti vietų
@@ -1685,6 +1686,7 @@ lt:
   flickr_tags: Flickr Žymės
   follow: Sekti
   follow_receive_updates_about_new_observations: Sekti (gauti naujienas apie naujus stebėjimus)
+  #Text for a button to follow updates from a specific user
   follow_user: "Sekti %{user}"
   followers: Sekėjai
   following: sekama
@@ -1794,6 +1796,8 @@ lt:
   hide_content: Paslėpti turinį
   hide_uncountable_species: Paslėpti nepriskaičiuojamas rūšis
   high: Aukštas
+  #Highest taxonomic rank to filter by, where the "highest" possible rank is
+  #kingdom
   highest_rank: Aukščiausias rangas
   highlights_and_stats_from_year_on_site: "Svarbiausi %{site} momentai ir statistika iš %{year} metų"
   history: Istorija
@@ -2164,6 +2168,8 @@ lt:
   looks_like_no_species_in_guide: Panašu, kad savo vadove dar neturite rūšių.
   lookup: Ieškoti
   low: Žemas
+  #Lowest taxonomic rank to filter by, where the "lowest" possible rank is
+  #subspecies or variety
   lowest_rank: Žemiausias rangas
   make_admin: Padaryti administratoriumi
   #Header for main content section of the project detail page when editing custom project data.
@@ -2610,7 +2616,9 @@ lt:
   only_show_events_that_last_less_than_2_weeks: Rodyti tik tuos įvykius, kurie trunka trumpiau nei 2 savaites
   only_show_taxa_fom_this_list: "Rodyti taksonus tik iš šio sąrašo"
   only_you: Tik jūs
+  #Geoprivacy status in which no privacy has been applied
   open: atviras
+  #Geoprivacy status in which no privacy has been applied
   open_: Atviras
   open_description: "Visi gali matyti koordinates, nebent taksonui gresia išnykimas."
   open_street_map: OpenStreetMap
@@ -3204,7 +3212,11 @@ lt:
   radius_value: "Spindulys (m): %{radius}"
   random: Atsitiktinis
   range: Ribos
+  #Taxonomic rank, e.g. "genus," "subfamily", "kingdom", etc.
   rank: Rangas
+  #A person's rank on an ordinal scale (e.g. "first place," "second place,"
+  #etc.). Generally used as a column header in lists of observers and
+  #identifiers
   rank_position: Rangas
   #When a scientific name is displayed with its rank, e.g. Family Noctuidae or
   #Genus Noctua (but generally not Species Noctua pronuba)
@@ -3994,7 +4006,6 @@ lt:
   unknown: Nežinoma
   unknown_error: Nežinoma klaida
   unknown_rank: '(Nežinomas rangas)'
-  unfollow: Nebesekti
   unlink_your_google_account: Atsieti savo Google paskyrą
   unlink_your_flickr_account: "Atsieti savo Flickr paskyrą"
   unmute: Įjungti garsą

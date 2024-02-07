@@ -223,6 +223,7 @@ id:
   active_taxon_status: Aktif
   active_users: Pengguna Aktif
   activity: Aktivitas
+  activity_on_a_flag_for_x: Aktivitas pada tanda untuk %{x}
   adapted_by_name_from_a_work_by_original: "Diadaptasi oleh %{name} dari sebuah karya oleh %{original}"
   add: Tambahkan
   add_a_batch_of_observations: Tambahkan Sejumlah Pengamatan
@@ -632,6 +633,7 @@ id:
   are_you_sure_you_want_to_remove_this_observation_from_project: |
     Apakah Anda yakin Anda ingin menghapus pengamatan ini dari %{project}?
   are_you_sure_you_want_to_remove_this_taxon_from_checklist: "Apakah Anda yakin ingin menghapus takson ini dari daftar centang %{place}?"
+  are_you_sure_you_want_to_flag_as_spammer: Apakah Anda yakin ingin menandai pengguna ini sebagai spammer?
   associated_observations: Pengamatan terkait
   associated_taxa: Taksa yang terkait
   attention: Perhatian
@@ -1586,7 +1588,7 @@ id:
   #Title of the moderation note editor
   edit_moderator_note: Edit Catatan Moderator
   edit_a_batch_of_observations: Ubah Sejumlah Pengamatan
-  edit_account_settings_and_profile: "Rubah pengaturan akun &amp; profil"
+  edit_account_settings_and_profile: "Ubah pengaturan akun &amp; profil"
   edit_assessment: Ubah Penilaian
   edit_atlas: Ubah Atlas
   edit_atlas_for_taxon_html: Ubah Atlas untuk %{taxon}
@@ -1700,6 +1702,7 @@ id:
   everywhere: di mana saja
   exact: Pasti
   exact_date: Tanggal Pasti
+  #Taxonomic rank, e.g. "genus," "subfamily", "kingdom", etc.
   exact_rank: Tingkat Pasti
   except: kecuali
   exclude_places: Tempat Yang Dikecualikan
@@ -1833,6 +1836,7 @@ id:
     Tanda untuk Pengguna: %{title}
   flag_it!: Tandai ini!
   flag_marked_as_resolved_html: '<span class="meta">Tanda dianggap</span> <strong>sudah diselesaikan.</strong>'
+  flag_marked_as_unresolved_html: '<span class="meta">Tanda ditandai sebagai</span> <strong>belum selesai</strong>'
   #Label for the object that was flagged, e.g. a table header
   flag_object: Benda
   flag_reason: "&ldquo;Saya menandai %{record} ini karena"
@@ -1870,7 +1874,10 @@ id:
   #Adjective, as in a fluid layout of images
   fluid: mengalir
   follow: Ikuti
+  #Text for a button to follow updates on an observation
+  follow_observation: Ikuti pengamatan ini
   follow_receive_updates_about_new_observations: Ikuti (dapatkan informasi terbaru tentang pengamatan baru)
+  #Text for a button to follow updates from a specific user
   follow_user: "Ikuti %{user}"
   followers: Pengikut
   following: Mengikuti
@@ -1910,6 +1917,9 @@ id:
   generate_your_year_in_review_caps: BUAT ULASAN TAHUN %{year} KAMU
   generating_mobile_archive: "Buat arsip ponsel"
   Genus: Genus
+  geomodel_expected_nearby_label_is_derived: |
+    Label "Perkiraan Terdekat" berasal dari Geomodel.
+    <a href="%{url}">Pelajari lebih lanjut tentang Geomodel di sini</a>.
   geoprivacy: Geoprivasi
   geoprivacy_is_obscured: Geoprivasi dikaburkan
   geoprivacy_is_obscured_desc: Pengamat telah memilih untuk mengkaburkan koordinatnya.
@@ -2006,6 +2016,8 @@ id:
   hide_running_total: Sembunyikan Total Akumulasi
   hide_uncountable_species: Sembunyikan Spesies Yang Tidak Terhitung
   high: Tinggi
+  #Highest taxonomic rank to filter by, where the "highest" possible rank is
+  #kingdom
   highest_rank: Tingkat tertinggi
   highlights_and_stats_from_year_on_site: "Sorotan dan statistik pada %{year} di %{site}"
   history: Sejarah
@@ -2196,6 +2208,7 @@ id:
   journal: Jurnal
   journal_archives_for: Arsip jurnal untuk
   journal_post: Posting jurnal
+  journal_post_: posting jurnal
   journal_post_deleted: Posting jurnal dihapus.
   journal_posts: Posting Jurnal
   jpg_png_or_gif: "JPG, PNG, atau GIF"
@@ -2538,6 +2551,8 @@ id:
   looks_like_no_species_in_guide: Sepertinya Anda belum memiliki spesies apapun pada panduan Anda.
   lookup: Cari
   low: Rendah
+  #Lowest taxonomic rank to filter by, where the "lowest" possible rank is
+  #subspecies or variety
   lowest_rank: TIngkat Terendah
   #Name of a website showing geologic maps around the world: https://macrostrat.org
   Macrostrat: Macrostrat
@@ -2996,6 +3011,87 @@ id:
     Koordinat publik yang ditampilkan sebagai titik acak dalam jangkauan 0.2 derajat lin/buj yang memiliki koordinat sebenarnya.
   observation: Pengamatan
   observation_: pengamatan
+  observation_accuracy_experiment_the_sample_for: "Sampel untuk eksperimen ini belum dibuat"
+  observation_accuracy_experiment_our_accuracy_estimate: "Akurasi dari eksperimen ini diperkirakan sebesar %{percent}."
+  observation_accuracy_experiment_our_goak: "Target kami untuk Akurasi dan Presisi subset Kelas Riset lebih besar dari 95% (garis putus-putus)"
+  observation_accuracy_experiment_precision_results: "Hasil presisi berdasarkan subset"
+  observation_accuracy_experiment_taxon_rank_level: "Tingkat Kategori Takson"
+  observation_accuracy_experiment_taxon_observations_count: "Jumlah Pengamatan Takson"
+  observation_accuracy_experiment_iconic_taxon_name: "Nama Ikonik Takson"
+  observation_accuracy_experiment_continent: "Benua"
+  observation_accuracy_experiment_year: "Tahun"
+  observation_accuracy_experiment_quality_grade: "Tingkat Kualitas"
+  observation_accuracy_experiment_show_frequency: "tampilkan frekuensi"
+  observation_accuracy_experiment_click_on_bars: "Klik batangnya untuk melihat subset-subsetnya."
+  observation_accuracy_experiment_accuracy_results: "Hasil akurasi berdasarkan subset"
+  observation_accuracy_experiment_as_observations: "Karena pengamatan dari sampel ini sudah divalidasi, persentase ketidakpastian akan menurun dan persentase sampel benar dan salah akan meningkat."
+  observation_accuracy_experiment_experiment_still: "Eksperimen masih berlangsung. Statistik akan diperbarui setiap hari hingga tenggat waktu validasi sampel pada %{date}"
+  observation_accuracy_experiment_observation_accuracy_experiment: "Eksperimen Akurasi Pengamatan"
+  observation_accuracy_experiment_validators: "Validator:"
+  observation_accuracy_experiment_show_additional_validators: "(tampilkan validator tambahan)"
+  observation_accuracy_experiment_hide_additional_validators: "(sembunyikan validator tambahan)"
+  observation_accuracy_experiment_additional_validators: "(%{number} validator tambahan)"
+  observation_accuracy_experiment_abstract: "Abstrak: Kami mengumpulkan sampel pengamatan pada %{sample_generation_date} dan berkoordinasi dengan tim validator untuk menilai akurasinya sebelum %{deadline_date}. Semua hasil di bawah ini menunjukkan ciri-ciri pengamatan-pengamatan sampel pada waktu sampelnya dibuat (contohnya Kelas Riset atau bukan). Akurasi pengamatan-pengamatan sampel dinilai pada %{assessment_date}. Lihat tab metode untuk detail lebih lanjut."
+  observation_accuracy_experiment_research_grade_results: "Hasil Kelas Riset"
+  observation_accuracy_experiment_verifiable_results: "Hasil yang Dapat Diverifikasi"
+  observation_accuracy_experiment_all_results: "Semua Hasil"
+  observation_accuracy_experiment_methods: "Metode"
+  observation_accuracy_experiment_step_1: "Langkah 1: Pembuatan serta Pelabelan Sampel"
+  observation_accuracy_experiment_from_the: "Dari basis data pengamatan iNaturalist (A), kami membuat sampel acak (B). Subsampel diberikan kepada kandidat validator berdasarkan kriteria yang dijelaskan di bawah ini. Kami ingin menugaskan setiap pengamatan sampel ke beberapa kandidat validator (\"Redundansi validator target\")."
+  observation_accuracy_experiment_sample_generated: "Sampel dibuat pada: %{date}"
+  observation_accuracy_experiment_sample_size: "Jumlah sampel: %{number}"
+  observation_accuracy_experiment_target_validator: "Redundansi validator target: %{number}"
+  observation_accuracy_experiment_number_of: "Jumlah validator kandidat: %{number}"
+  observation_accuracy_experiment_mean_subsample: "Rerata jumlah subsampel per kandidat validator: %{number}"
+  observation_accuracy_experiment_mean_number: "Rerata jumlah validator per pengamatan sampel: %{number}"
+  observation_accuracy_experiment_validator_candidate: "Kriteria kandidat validator"
+  observation_accuracy_experiment_if_an_identifier: "Jika seorang pengidentifikasi telah membuat setidaknya 3 identifikasi pengembang untuk suatu takson, kami menganggap identifikasi-identifikasi ini cukup untuk memvalidasi takson tersebut. Identifikasi pengembang ini adalah usulan takson pertama yang kemudian disetujui oleh komunitas."
+  observation_accuracy_experiment_for_example: "Sebagai contoh, Pengidentifikasi 1 menambahkan ID A untuk suatu pengamatan. Jika Pengidentifikasi 2 kemudian menambahkan ID pemimpin B, ID A dari Pengidentifikasi 1 menjadi ID pengembang. Jika Pengidentifikasi 3 kemudian menambahkan ID pendukung untuk B, ID Pengidentifikasi 2 pada B menjadi ID pengembang."
+  observation_accuracy_experiment_step_2: "Langkah 2: Validasi sampel"
+  observation_accuracy_experiment_we_contacted: "Kami menghubungi kandidat validator dan meminta mereka untuk menambahkan identifikasi untuk subsampel mereka. Grafik di kanan mengelompokkan pengamatan sampel berdasarkan jumlah validator."
+  observation_accuracy_experiment_number_percent_of: "Jumlah validator yang ikut: %{number} (%{percentage})"
+  observation_accuracy_experiment_percent_of: "Jumlah sampel yang divalidasi: %{percent}"
+  observation_accuracy_experiment_step_3: "Langkah 3: Menilai pengamatan sampel dari validasi"
+  observation_accuracy_experiment_we_scored: "Kami memberikan penilaian Benar, Tidak Pasti, atau Salah pada pengamatan-pengamatan sampelnya dengan membandingkan identifikasi dari validator dengan takson dari setiap pengamatan sampelnya. Identifikasi yang sesuai atau lebih spesifik dari takson pengamatan sampel dinilai sebagai Benar. Identifikasi yang kurang spesifik dan tidak ada keberatan dinilai sebagai Tidak Pasti, sama juga halnya seperti skenario-skenario di mana validator-validator saling tidak setuju. Identifikasi yang kurang spesifik dan ada yang tidak setuju atau identifikasi yang ada pada cabang yang berbeda dinilai sebagai Salah."
+  observation_accuracy_experiment_correct: "Benar"
+  observation_accuracy_experiment_uncertain: "Tidak pasti"
+  observation_accuracy_experiment_incorrect2: "Salah"
+  observation_accuracy_experiment_step_4: "Langkah 4: Perhitungan Akurasi dan Presisi"
+  observation_accuracy_experiment_accuracy: "Akurasi"
+  observation_accuracy_experiment_we_calculated: "Kami menghitung akurasi sebagai persentase benar dari keseluruhan sampel beserta subsetnya seperti subset Kelas Riset. Kami juga menghitung persentase Tidak Pasti serta persentasi Salah. Pada gambar contoh di kanan, persentase benar adalah 83, persentase tidak pasti adalah 6, dan persentase salah adalah 11."
+  observation_accuracy_experiment_precision: "Presisi"
+  observation_accuracy_experiment_if_every_sample: "Jika setiap pengamatan sampel berada pada takson yang kurang spesifik, seperti kingdom, akurasi iNaturalist dataset mungkin menjadi tinggi, tapi presisinya mungkin menjadi sangat rendah sehingga datasetnya kurang berguna. Untuk memperkirakan presisi, kami menghitung jumlah keturunan daun (ujung) pada taksonomi iNaturalist untuk masing-masing takson yang diasosiasikan dengan masing-masing pengamatan sampel. Perhitungan presisi kami adalah 1 dibagi jumlah keturunan daun. Jika taksonnya merupakan takson daun, presisinya 100%. Kami mengabaikan kategori-kategori di bawah spesies di dalam perhitungan presisi ini."
+  observation_accuracy_experiment_in_the_example: "Pada gambar contoh di kanan, rerata presisi dari tiga pengamatan sampel adalah 51%."
+  observation_accuracy_validator_email_subject: "Bisakah kamu membantu kami mengestimasi akurasi pengamatan-pengamatan iNaturalist?"
+  observation_accuracy_validator_email_will_you_help_us: |
+    Bisakah kamu membantu kami dalam sebuah eksperimen untuk mengestimasi akurasi pengamatan-pengamatan iNaturalist?
+  observation_accuracy_validator_email_if_so2_html: |
+    <ol>
+    <li>Identifikasi semua pengamatan pada tautan di bawah ini sespesifik mungkin, bahkan walaupun sudah Kelas Riset dan ID terspesifiknya masih ada pada tingkat taksonomi yang relatif tinggi (bahkan kingdom sekalipun). </li>
+    <li>Jika kamu melihat tampilan “Kemungkinan Ketidaksepakatan”…
+    <ul>
+    <li>dan kamu yakin IDnya salah, klik tombol oranye,</li>
+    <li>atau jika kamu tidak yakin, klik tombol hijau</li>
+    </ul>
+    </li>
+    <li>Lakukan hal ini sebelum <b>%{validator_deadline_date}</b></li>
+    </ol>
+    Ini adalah suatu <a href="%{sample_url}">subset dari %{num_obs} pengamatan</a>
+    yang kami pikir bisa kamu identifikasi berdasarkan aktivitasmu di iNat. <b>Harap tambahkan ID sespesifik mungkin untuk setiap pengamatan sebelum %{validator_deadline_date}</b>.
+  observation_accuracy_validator_email_we_will_calculate: |
+    Kami akan menghitung akurasi dengan membandingkan ID kamu dengan Takson Pengamatan. 
+    Kamu bisa melewati pengamatan-pengamatan yang IDnya sudah ditambahkan jika IDnya masih relevan. Untuk selebihnya tentang bagaimana kita menghitung kesepakatan dan ketidaksepakatan, teruslah membaca.
+  observation_accuracy_validator_email_ids_equal_to: |
+    ID yang sama dengan (A) atau lebih rinci dari (B), Takson Pengamatannya akan dihitung sebagai Kesepakatan.
+  observation_accuracy_validator_email_ids_sibling_to: |
+    ID yang berada pada cabang (C) yang berbeda atau kurang spesifik dari Takson Pengamatan yang kamu pilih 'Tidak, tapi…' untuk dialog (D) 'Potensi Ketidaksetujuan' akan dihitung sebagai Ketidaksetujuan.
+  observation_accuracy_validator_email_ids_coarser_than: |
+    ID yang kurang spesifik dari Takson Pengamatan yang kamu pilih 'Saya tidak tahu, tapi…' untuk dialog (E) 'Potensi Ketidaksetujuan' akan dihitung sebagai Tidak Pasti.
+  observation_accuracy_validator_email_we_are_so_grateful_html: |
+    Kami berterima kasih atas bantuanmu sebagai pengidentifikasi, dan terima kasih 
+    banyak atas partisipasimu dalam penelitian ini. Silakan membaca <a href="%{url}">postingan blog ini</a> untuk mencari jawaban dari pertanyaan-pertanyaan umum tentang eksperimen ini.
+  observation_accuracy_validator_email_with_gratitude: Dengan terima kasih,
+  observation_accuracy_validator_email_the_inaturalist_team: Tim iNaturalist
   observation_added_to_the_project: "Pengamatan yang ditambahkan ke proyek \"%{project}\""
   observation_aggregation: Kumpulan Pengamatan
   #Attributes an observation to a user. %{user} can be a username or a full
@@ -3227,7 +3323,9 @@ id:
   only_the_project_admin_can_delete_this_project: Hanya pengelola proyek yang dapat menghapus proyek ini.
   only_view_nearby_suggestions: Hanya tampilkan rekomendasi yang ditemui di sekitar
   only_you: Hanya Anda
+  #Geoprivacy status in which no privacy has been applied
   open: terbuka
+  #Geoprivacy status in which no privacy has been applied
   open_: Buka
   open_description: "Semua orang dapat melihat koordinatnya kecuali takson yang terancam."
   open_street_map: OpenStreetMap
@@ -3243,6 +3341,7 @@ id:
   organism_is_wild: Organisme ini liar
   organisms: Organisme
   original: Asli
+  original_flag: Tanda asli
   originally_flagged_by: Aslinya ditandai oleh
   originally_imported_from_url_html: "Aslinya diimpor dari <a href='%{url}'>%{url}</a>"
   original_page_url_for_this_photo: "URL halaman asli untuk foto ini."
@@ -3729,6 +3828,7 @@ id:
     north_korea: Korea Utara
     northern_cyprus: Siprus Utara
     norway: Norwegia
+    oceania: Oseania
     oman: Oman
     pakistan: Pakistan
     palau: Palau
@@ -3972,7 +4072,11 @@ id:
   radius_value: "Radius (m): %{radius}"
   random: Acak
   range: Jangkauan
+  #Taxonomic rank, e.g. "genus," "subfamily", "kingdom", etc.
   rank: Tingkat
+  #A person's rank on an ordinal scale (e.g. "first place," "second place,"
+  #etc.). Generally used as a column header in lists of observers and
+  #identifiers
   rank_position: Tingkat
   #When a scientific name is displayed with its rank, e.g. Family Noctuidae or
   #Genus Noctua (but generally not Species Noctua pronuba)
@@ -4248,6 +4352,14 @@ id:
   rotate_left: Putar ke Kiri
   rotate_right: Putar ke Kanan
   row_singular_or_plural: Baris
+  #Prompt to join a test of right-to-left layouts, e.g. for languages like
+  #Arabic and Hebrew
+  rtl_test_prompt: |
+    Uji tampilan kanan ke kiri? Anda juga bisa menggunakan param URL test=rtl. Harap diperhatikan bahwa masih ada beberapa halaman yang belum dikonversi ke tampilan kanan ke kiri
+  #Message displayed when you have joined a test of right-to-left layouts,
+  #e.g. for languages like Arabic and Hebrew. Could also be translated
+  #as "You have joined..."
+  rtl_test_joined_status: Bergabung uji tampilan kanan ke kiri
   rules_and_formatting: "Aturan & Format"
   rules_for_adding_observations: Aturan untuk Penambahan Pengamatan
   rules_for_becoming_a_member: Aturan untuk Menjadi Anggota
@@ -4761,6 +4873,7 @@ id:
     Harap menggunakan kolom deskripsi untuk menjelaskan dari mana petanya berasal dan menghubungkan tanda-tanda yang relevan, pemisahan taksonomi, dan diskusi-diskusi lainnya tentang mengapa jangkauan Daftar Merah IUCN yang diterbitkan memerlukan perubahan.
   taxon_range_guidelines_learn_more_about_taxon_ranges: Pelajari lebih lanjut tentang jangkauan takson
   taxon_range_updated_notice: Jangkauan takson sukses diperbarui. Harap menunggu beberapa menit hingga jangkauannya muncul di peta.
+  #Taxonomic ranks, e.g. "genus," "subfamily", "kingdom", etc.
   taxon_ranks: Tingkat Takson
   taxon_removed_from_list: Takson dihapus dari daftar.
   taxon_scheme: Skema takson
@@ -5114,7 +5227,10 @@ id:
   unknown: Tidak diketahui
   unknown_error: Eror tidak diketahui
   unknown_rank: '(Peringkat Tidak Diketahui)'
-  unfollow: Berhenti Ikuti
+  #Text for a button to stop following updates on an observation
+  unfollow_observation: Berhenti mengikuti pengamatan ini
+  #Text for a button to stop following updates from a user
+  unfollow_user: Berhenti mengikuti pengguna
   unlink_your_google_account: Putuskan Akun Google Anda
   unlink_your_flickr_account: "Putuskan Akun Flickr Anda"
   unmute: Bunyikan
@@ -5784,6 +5900,34 @@ id:
             Jika ya, silakan membaca <a href="%{url}">Panduan Guru</a> untuk beberapa tips dalam menggunakan %{site_name} bersama dengan pelajar.
     donate:
       donate_short_desc: "Donasi sekarang untuk memberikan dukungan!"
+      donate_desc_moore_html: |
+        <p class="lead">
+        <strong>Dapatkan hadiah <u>dua</u> atau <u>tiga</u> kali lipat untuk Anda! Terima kasih kepada
+        Gordon and Betty Moore Foundation, semua donasi bulanan, kuartalan, dan
+        donasi berulang tahunan akan dilipatgandakan dan donasi satu kali akan
+        dua kali lipat hingga 31 Desember 2023.</strong>
+        </p>
+        <p class="lead">
+        iNaturalist adalah salah satu komunitas terbesar di dunia yang didedikasikan untuk
+        keanekaragaman hayati. Terima kasih telah menjadi bagian darinya!
+        </p>
+        <p class="lead">
+        Jika Anda percaya pada kekuatan komunitas global pecinta alam ini
+        pecinta alam global ini untuk berbagi pengetahuan dan menghasilkan keanekaragaman hayati yang tak tergantikan
+        keanekaragaman hayati yang tak ternilai harganya, mohon pertimbangkan untuk memberikan hadiah satu kali atau berulang secara online, atau
+        jelajahi <a href="https://www.inaturalist.org/pages/giving">cara lain
+        cara lain untuk memberi</a>.
+        </p>
+        <p class="lead">
+        Donasi Anda sangat penting bagi iNaturalist seiring dengan pertumbuhan komunitas kami, mulai dari
+        meningkatkan teknologi kami untuk mengidentifikasi spesies secara akurat dan
+        mengimplementasikan fitur-fitur baru hingga mendukung server dan staf kami.
+        </p>
+        <p class="text-muted">
+        iNaturalist adalah organisasi nirlaba 501(c)(3) independen, bebas pajak, dan nirlaba
+        nirlaba, bebas pajak, dan berbasis di Amerika Serikat (Tax ID:
+        92-1296468).
+        </p>
       donate_desc3_html: |
         <p class="lead">
         <strong>iNaturalist merupakan salah satu komunitas terbesar di dunia yang didekasikan untuk menjelajah keanekaragaman hayati. Terima kasih telah menjadi bagian dari kami!</strong>
@@ -5801,6 +5945,37 @@ id:
       monthly_supporters:
         become_a_monthly_supporter_of_inaturalist: Jadi Pendukung Bulanan iNaturalist
         become_a_monthly_supporter_of_inaturalist_caps: MENJADI PENDUKUNG BULANAN INATURALIST
+        desc_moore_html: |
+          <p class="lead">
+          <strong>Dapatkan hadiah <u>tiga kali lipat</u> unuk Anda! Terima kasih kepada Gordon dan Betty
+          Moore Foundation, semua donasi Pendukung Bulanan akan
+          dilipatgandakan tiga kali lipat hingga 31 Desember 2023.</strong>
+          </p>
+          <p class="lead">
+          iNaturalist adalah salah satu komunitas terbesar di dunia yang didedikasikan untuk
+          mengeksplorasi keanekaragaman hayati. Terima kasih telah menjadi bagian darinya!
+          </p>
+          <p class="lead">
+          Jika Anda menyukai iNaturalist, mohon pertimbangkan untuk menjadi
+          Pendukung Bulanan. Hadiah berulang membantu memastikan bahwa iNaturalist dapat
+          terus meningkatkan infrastruktur dan staf kami dengan menyediakan
+          pendapatan yang dapat diprediksi. Dan hadiah bulanan Anda memiliki dampak tiga kali lipat!
+          Anda juga dapat memilih untuk menampilkan status Pendukung Bulanan Anda di
+          Anda di profil pengguna.
+          </p>
+          <p class="lead">
+          Donasi amal Anda membantu mendukung iNaturalist sebagai
+          komunitas tumbuh, dari memajukan visi komputer dan mengimplementasikan
+          fitur-fitur baru hingga mendukung server dan staf kami. Anda juga dapat
+          memberikan <a href="%{donate_url}">donasi satu kali</a> dan jelajahi
+          <a href="https://www.inaturalist.org/pages/giving">cara lain untuk
+          berdonasi</a>.
+          </p>
+          <p class="text-muted">
+          iNaturalist adalah organisasi independen 501(c)(3), bebas pajak,
+          organisasi nirlaba yang berbasis di Amerika Serikat
+          Amerika Serikat (ID Pajak: 92-1296468).
+          </p>
         desc3_html: |
           <p class="lead">
           <strong>iNaturalist merupakan salah satu komunitas terbesar di dunia yang didekasikan untuk menjelajah keanekaragaman hayati. Terima kasih telah menjadi bagian dari kami!</strong>
@@ -5828,34 +6003,103 @@ id:
       explain:
         geomodel_predictions_of_taxon: |
           Prediksi Geomodel %{taxon}
+        the_geo_model_makes_predictions: |
+          Geomodel membuat prediksi tentang di mana spesies muncul dan di mana mereka tidak ada.
+          Kami menggunakan Geomodel untuk menerapkan label "Diperkirakan Ada di Sekitar" bersama dengan saran dan untuk membobotkan saran-saran ini berdasarkan lokasi pengamatan.
+        the_geo_model_is_trained: |
+          Seperti Model Visi Komputer, Geomodel dilatih berdasarkan pengamatan iNaturalis
+          untuk set spesies yang sama dengan sekitar lebih dari 100 foto. Geomodel tidak
+          membuat prediksi yang sempurna. Anda dapat membaca lebih lanjut tentang bagaimana Geomodel dibuat
+          <a href="%{url}">di sini</a>.
         nearby_map:
           expected_nearby_map: Peta Terlihat Di Sekitar
+          we_use_this_map: |
+            Kami menggunakan peta ini untuk menerapkan label Terdekat yang Diharapkan pada saran berdasarkan
+            lokasi pengamatan.
+          for_example: |
+            Sebagai contoh, pengamatan seekor kadal di pusat Amerika Serikat mungkin
+            memiliki label Diharapkan Terdekat yang diterapkan pada saran <i>Sceloporus consobrinus</i>
+            tetapi tidak untuk <i>Sceloporus occidentalis</i> berdasarkan Peta Ekspektasi Terdekat masing-masing.
+          you_can_think: |
+            Anda dapat menganggap Peta Terdekat yang Diharapkan sebagai perkiraan apakah spesies
+            ada di suatu tempat di dalam sel kisi atau sama sekali tidak ada.
+          figure_alt_text: Geomodel menerapkan label Ekspektasi Terdekat
         unthresholded_map:
           unthresholded_map: Peta Tanpa Ambang
+          we_use_the_unthresholded_map: |
+            Kami menggunakan Peta Tanpa Ambang Batas untuk memberi bobot skor visi komputer berdasarkan lokasi saat
+            menawarkan saran.
+          for_example: |
+            Sebagai contoh, pengamatan terhadap seekor kadal di pusat Amerika Serikat mungkin
+            memiliki saran dari <i>Sceloporus consobrinus</i> yang lebih berbobot daripada saran
+            dari <i>Sceloporus occidentalis</i> berdasarkan perbandingan Peta Tanpa Ambang Batas, meskipun
+            secara visual mirip.
+          you_can_think: |
+            Anda dapat menganggap Peta Tanpa Ambang Batas sebagai probabilitas relatif bahwa suatu spesies
+            terjadi dalam sel kisi.
+          figure_alt_text: Geomodel membobotkan hasil Visi Komputer
         range_comparison:
           expected_nearby_vs_taxon_range: Terlihat Di Sekitar vs Jangkauan Takson
-          #Areas where both of the Expected Nearby Map and Taxon Range predict that the taxon exists
+          this_map_shows: |
+            Peta ini menunjukkan Kisaran Takson untuk spesies ini yang tumpang tindih dengan Peta Terdekat yang Diharapkan
+            yang kami gunakan untuk mengevaluasi Geomodel.
+          this_gridded_version: |
+            Versi kisi-kisi dari Kisaran Takson ini adalah cuplikan yang diambil ketika model
+            dilatih dan di-grid pada resolusi yang sama dengan Peta Terdekat yang Diharapkan. Kami hanya
+            menggunakan Rentang Takson di mana setidaknya 90% dari data pelatihan untuk spesies tersebut
+            berada di dalam Rentang Takson untuk mengontrol kesalahan dalam Rentang Takson.
+          by_combining: |
+            Dengan menggabungkan Peta Terdekat yang Diharapkan dengan Jangkauan Takson, kami menghitung statistik
+            untuk memperkirakan seberapa baik kinerja Geomodel.
+          figure_alt_text: Peta Terdekat yang Diharapkan dan Jangkauan Takson dibandingkan
+          combining_these_maps_produces: |
+            Menggabungkan peta-peta ini menghasilkan 3 jenis sel:
+          #Areas where both the Expected Nearby Map and Taxon Range predict that the taxon exists
           true_presences_colon: |
             Keberadaan Benar:
+          true_presences_definition2: Area di mana Peta Terlihat Di Sekitar dan Jangkauan Takson memprediksi bahwa takson tersebut ada
           #Areas where only the Expected Nearby Map predicts the taxon exists
           false_presences_colon: |
             Keberadaan Salah:
+          false_presences_definition: Area di mana hanya Peta Terdekat yang memprediksi keberadaan takson
           #Areas where only the Taxon Range is present
           false_absences_colon: |
             Ketidakberadaan Salah:
+          false_absences_definition: Area yang hanya memiliki Rentang Takson
           evaluation_statistics_for_taxon: Statistik evaluasi untuk %{taxon}
           #The fraction of the Expected Nearby Map that are True Presences
           precision_colon: |
             Precision:
+          precision_description: Fraksi Peta Terdekat yang Diharapkan yang Benar-Benar Ada
+          #Equation showing how we calculate precision of the Expected Nearby Map
+          #True Presences: areas where both the Expected Nearby Map and the Taxon Range predict that the taxon exists
+          #False Presences: areas where only the Expected Nearby Map predicts the taxon exists
+          precision_equation: |
+            Kehadiran Benar / (Kehadiran Benar + Kehadiran Salah) = %{precision}
           #The fraction of the Taxon Range that are True Presences
           recall_colon: |
             Recall:
+          recall_description: Fraksi dari Rentang Takson yang Benar-Benar Ada
+          #Equation showing how we calculate recall of the Expected Nearby Map
+          #True Presences: areas where both the Expected Nearby Map and the Taxon Range predict that the taxon exists
+          #False Absences: areas where only the Taxon Range is present
+          recall_equation: |
+            Kehadiran Benar / (Kehadiran Benar + Ketidakhadiran Salah) = %{recall}
           #The average (harmonic mean) of Precision (fraction of the Expected
           #Nearby Map that are True Presences) and Recall (fraction of the
           #Taxon Range that are True Presences)
           f1_colon: |
             F1:
           f1_description: Rata-rata (harmonik) Precision dan Recall
+          #Equation showing how we calculate the F1 statstitic of the Expected Nearby Map
+          #True Presences: areas where both the Expected Nearby Map and the Taxon Range predict that the taxon exists
+          #False Presences: areas where only the Expected Nearby Map predicts the taxon exists
+          #False Absences: areas where only the Taxon Range is present
+          f1_equation: |
+            2 × Kehadiran Benar / (2 × Kehadiran Benar + Kehadiran Salah + Ketidakhadiran Salah) = %{f1}
+          perfect_overlap: |
+            Tumpang tindih sempurna akan dievaluasi dengan Precision, Recall, dan F1 sebesar 1. Tidak ada tumpang tindih
+            akan dievaluasi dengan Precision, Recall, dan F1 sebesar 0.
     guides:
       index:
         deprecated_banner: |
@@ -7520,6 +7764,7 @@ id:
       #iNaturalist Android app or an app made by a third party
       OauthApplication: Aplikasi
       Photo: Foto
+      Post: Pos Jurnal
       TaxonLink: Tautan Takson
     attributes:
       announcement:

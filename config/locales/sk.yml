@@ -864,6 +864,7 @@ sk:
   everywhere: všade
   exact: Presný
   exact_date: Presný dátum
+  #Taxonomic rank, e.g. "genus," "subfamily", "kingdom", etc.
   exact_rank: Presné poradie
   except: okrem
   exclusion_filters: Vylučovacie filtre
@@ -973,6 +974,7 @@ sk:
   fluid: premenlivé
   follow: Sledovať
   follow_receive_updates_about_new_observations: Sledujte (dostanete informácie o nových pozorovaniach)
+  #Text for a button to follow updates from a specific user
   follow_user: "Sledovať %{user}"
   followers: Sledovatelia
   following: Sledovať
@@ -1058,6 +1060,8 @@ sk:
   hide_content: Skryť obsah
   hide_uncountable_species: Skryť nespočítateľné druhy
   high: Vysoká
+  #Highest taxonomic rank to filter by, where the "highest" possible rank is
+  #kingdom
   highest_rank: Najvyššie poradie
   highlights_and_stats_from_year_on_site: "Najvýznamnejšie udalosti a štatistiky z roku %{year} v %{site}"
   history: História
@@ -1359,6 +1363,8 @@ sk:
   looks_like_no_species_in_guide: Vyzerá to, že vo svojom sprievodcovi nemáte ešte žiadny druh.
   lookup: Vyhľadať
   low: Nízka
+  #Lowest taxonomic rank to filter by, where the "lowest" possible rank is
+  #subspecies or variety
   lowest_rank: Najnižšia hodnosť
   make_admin: Vytvoriť admina
   #Header for main content section of the project detail page when editing custom project data.
@@ -1756,7 +1762,9 @@ sk:
   only_staff_can_edit_large_places: Iba personál stránky môže upravovať veľmi veľké miesta
   only_staff_can_edit_standard_places: Iba personál stránky môže upraviť miesta v štandardnej hierarchii
   only_you: Iba vy
+  #Geoprivacy status in which no privacy has been applied
   open: otvorený
+  #Geoprivacy status in which no privacy has been applied
   open_: Otvorený
   optional: voliteľný
   or: alebo
@@ -2264,7 +2272,11 @@ sk:
   radius_value: "Polomer (m): %{radius}"
   random: Náhodný
   range: Rozsah
+  #Taxonomic rank, e.g. "genus," "subfamily", "kingdom", etc.
   rank: Klasifikácia
+  #A person's rank on an ordinal scale (e.g. "first place," "second place,"
+  #etc.). Generally used as a column header in lists of observers and
+  #identifiers
   rank_position: Klasifikácia
   ranks:
     stateofmatter: Stav veci
@@ -2709,6 +2721,7 @@ sk:
   taxon_range: Rozsah taxónu
   taxon_range_created_notice: Rozsah taxónu bol úspešne vytvorený. Počkajte prosím pár minút, než sa objaví na mapách.
   taxon_range_updated_notice: Rozsah taxónu bol úspešne aktualizovaný. Počkajte prosím pár minut, než sa objaví na mapách.
+  #Taxonomic ranks, e.g. "genus," "subfamily", "kingdom", etc.
   taxon_ranks: Poradie taxónu
   taxon_removed_from_list: Taxón bol odstránený zo zoznamu.
   taxon_scheme: Plán taxónu
@@ -2820,7 +2833,6 @@ sk:
   unknown: Neznámy
   unknown_error: Neznáma chyba
   unknown_rank: '(Neznáme zaradenie)'
-  unfollow: Prestať sledovať
   unlink_your_google_account: Zrušiť pripojenie vášho účtu Google
   unmute: Zapnúť zvuk
   updates_notification_email_subject: "%{prefix} Nové aktualizácie %{date}"
