@@ -1,4 +1,4 @@
-version: "2"
+version: "3.8"
 services:
 
   # redis:
@@ -50,6 +50,9 @@ services:
       INAT_DB_HOST: pg
       INAT_DB_USER : 'inaturalist'
       INAT_DB_PASS: 'inaturalist'
+    depends_on:
+      - pg
+      - es
     ports:
       - 3000:3000
 
