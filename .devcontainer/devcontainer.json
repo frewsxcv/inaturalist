@@ -1,7 +1,8 @@
 {
-    "onCreateCommand": ["bash", ".devcontainer/onCreateCommand.sh"],
+    // "onCreateCommand": ["bash", ".devcontainer/onCreateCommand.sh"],
     "forwardPorts": [3000],
     "dockerComposeFile": "../docker/docker-compose.local.yml",
+    "workspaceFolder": ".",
     "service": "rails",
     "portsAttributes": {
         "3000": {

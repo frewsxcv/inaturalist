@@ -1,19 +1,19 @@
 version: "2"
 services:
 
-  redis:
-    container_name: redis
-    image: redis:6.0.3
-    ports:
-      - 6379:6379
-    volumes:
-      - redis_data:/data
+  # redis:
+  #   container_name: redis
+  #   image: redis:6.0.3
+  #   ports:
+  #     - 6379:6379
+  #   volumes:
+  #     - redis_data:/data
 
-  memcached:
-    container_name: memcached
-    image: memcached:1.6.6
-    ports:
-      - 11211:11211
+  # memcached:
+  #   container_name: memcached
+  #   image: memcached:1.6.6
+  #   ports:
+  #     - 11211:11211
 
   pg:
     container_name: pg
